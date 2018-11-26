@@ -1,0 +1,139 @@
+
+.box_394X2{
+	width: 844rpx;
+	height: 1500rpx;
+	color: rgba(80, 80, 80, 1);
+	background-color: rgba(166, 166, 166, 0.31);
+	font-size: 33rpx;
+	line-height: 150%;
+}
+
+.box_395X2{
+	width: 844rpx;
+	height: 109rpx;
+	left: 1rpx;
+	color: rgba(80, 80, 80, 1);
+	background-color: rgba(0, 186, 173, 1);
+	font-size: 37rpx;
+	line-height: 150%;
+}
+
+.text_396X2{
+	width: 148rpx;
+	height: 73rpx;
+	left: 333rpx;
+	top: 19rpx;
+	color: rgba(80, 80, 80, 1);
+	font-size: 47rpx;
+	line-height: 150%;
+}
+
+.image_25X2{
+	width: 190rpx;
+	height: 190rpx;
+	left: 291rpx;
+	top: 255rpx;
+	border-radius: 234rpx;
+}
+
+.image_25X2 image{
+	width: 190rpx;
+	height: 285rpx;
+	top: -48rpx;
+}
+
+.text_397X2{
+	width: 103rpx;
+	height: 61rpx;
+	left: 509rpx;
+	top: 518rpx;
+	color: rgba(80, 80, 80, 1);
+	font-size: 37rpx;
+	line-height: 150%;
+}
+
+.box_398X2{
+	width: 712rpx;
+	height: 77rpx;
+	left: 89rpx;
+	top: auto;
+	opacity: 0.6;
+	bottom: 614rpx;
+	color: rgba(80, 80, 80, 1);
+	background-color: rgba(255, 255, 255, 1);
+	font-size: 37rpx;
+	line-height: 150%;
+	box-shadow: 0 NaNrem NaNrem 0rem rgba(0,0,0,.5);
+}
+
+.text_399X2{
+	width: 84rpx;
+	height: 63rpx;
+	left: 89rpx;
+	top: 654rpx;
+	opacity: 0.8;
+	color: rgba(80, 80, 80, 0.6642857142857143);
+	font-size: 42rpx;
+	line-height: 150%;
+}
+
+.box_400X2{
+	width: 712rpx;
+	height: 77rpx;
+	left: 89rpx;
+	top: auto;
+	opacity: 0.6;
+	bottom: 476rpx;
+	color: rgba(80, 80, 80, 1);
+	background-color: rgba(255, 255, 255, 1);
+	font-size: 37rpx;
+	line-height: 150%;
+	box-shadow: 0 NaNrem NaNrem 0rem rgba(0,0,0,.5);
+}
+
+.text_401X2{
+	width: 84rpx;
+	height: 63rpx;
+	left: 89rpx;
+	top: 792rpx;
+	opacity: 0.8;
+	color: rgba(80, 80, 80, 0.6642857142857143);
+	font-size: 42rpx;
+	line-height: 150%;
+}
+
+.text_402X2{
+	width: 521rpx;
+	height: 105rpx;
+	left: 162rpx;
+	top: 989rpx;
+	color: rgba(255, 255, 255, 1);
+	background-color: rgba(0, 186, 173, 1);
+	border-radius: 12rpx;
+	font-size: 37rpx;
+	line-height: 150%;
+}
+
+.text_403X2{
+	width: 162rpx;
+	height: 57rpx;
+	left: 429rpx;
+	top: 1121rpx;
+	color: rgba(56, 56, 56, 1);
+	box-shadow: 2rpx solid rgba(204, 204, 204, 1);
+	border-radius: 12rpx;
+	font-size: 37rpx;
+	line-height: 150%;
+}
+
+.text_404X2{
+	width: 215rpx;
+	height: 57rpx;
+	left: 611rpx;
+	top: 1120rpx;
+	color: rgba(56, 56, 56, 1);
+	box-shadow: 2rpx solid rgba(204, 204, 204, 1);
+	border-radius: 12rpx;
+	font-size: 37rpx;
+	line-height: 150%;
+}

@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/main/main",
+    "pages/common/common",
+    "pages/persional/persional",
+    "pages/student_inf/student_inf"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#00baad",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "上学宝",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "backgroundColor": "#00baad",
+    "color": "#FFF",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "首页",
+        "iconPath": "images/tab1.png",
+        "selectedIconPath": "images/seltab1.png"
+      },
+      {
+        "pagePath": "pages/student_inf/student_inf",
+        "text": "学生信息",
+        "iconPath": "images/tab2.png",
+        "selectedIconPath": "images/seltab2.png"
+      },
+      {
+        "pagePath": "pages/common/common",
+        "text": "评论墙",
+        "iconPath": "images/tab3.png",
+        "selectedIconPath": "images/seltab3.png"
+      },
+      {
+        "pagePath": "pages/persional/persional",
+        "text": "个人中心",
+        "iconPath": "images/tab4.png",
+        "selectedIconPath": "images/seltab4.png"
+      }
+    ]
+  }
+}
