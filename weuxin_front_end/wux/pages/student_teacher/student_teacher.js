@@ -1,4 +1,4 @@
-// pages/student_inf/student_inf.js
+// pages/student_teacher/student_teacher.js
 Page({
 
   /**

@@ -4,7 +4,8 @@
     "pages/main/main",
     "pages/common/common",
     "pages/persional/persional",
-    "pages/student_inf/student_inf"
+    "pages/student_teacher/student_teacher",
+    "pages/student_parent/student_parent"
   ],
   "window": {
     "navigationBarBackgroundColor": "#00baad",
@@ -25,7 +26,7 @@
         "selectedIconPath": "images/seltab1.png"
       },
       {
-        "pagePath": "pages/student_inf/student_inf",
+        "pagePath": "pages/student_parent/student_parent",
         "text": "学生信息",
         "iconPath": "images/tab2.png",
         "selectedIconPath": "images/seltab2.png"
