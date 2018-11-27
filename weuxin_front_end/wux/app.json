@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/common/common",
     "pages/login/login",
     "pages/main/main",
-    "pages/common/common",
     "pages/persional/persional",
     "pages/student_inf/student_inf"
   ],

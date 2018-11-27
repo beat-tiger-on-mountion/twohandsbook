@@ -1,2 +1,20 @@
 <!--pages/common/common.wxml-->
-<text>pages/common/common.wxml</text>
+
+  <view class="page">
+   
+    <view class="page__bd">
+      
+                <wux-cell>匿名
+                    <wux-switch  slot="footer" color="#00baad" value="{{ value1 }}" bind:change="onChange1" />
+                </wux-cell>
+                
+    </view>
+  </view>
+
+  <view class="itemView">
+     <form bindsubmit="bindFormSubmit">
+
+     <textarea placeholder="分享新鲜事"  auto-focus="true" />
+     <button size='mini'  form-type="submit" type="primary"> 提交 </button>
+     </form>
+  </view>
