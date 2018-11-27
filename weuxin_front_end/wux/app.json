@@ -1,11 +1,11 @@
 {
   "pages": [
-	pages/feedback/feedback",
+	  "pages/feedback/feedback",
     "pages/login/login",
     "pages/password_reset/passwod_reset",	"pages/homework_parent/homework_parent",
     "pages/main/main",
     "pages/common/common",
-    
+    "pages/persional/persional",
     "pages/student_teacher/student_teacher",
     "pages/student_parent/student_parent"
   ],
