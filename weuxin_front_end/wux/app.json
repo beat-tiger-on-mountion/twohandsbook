@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/homework_parent/homework_parent",
     "pages/login/login",
     "pages/main/main",
     "pages/common/common",
