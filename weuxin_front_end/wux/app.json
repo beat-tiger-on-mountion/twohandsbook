@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/persional/persional",
     "pages/homework_parent/homework_parent",
     "pages/login/login",
     "pages/main/main",
     "pages/common/common",
-    "pages/persional/persional",
+    
     "pages/student_teacher/student_teacher",
     "pages/student_parent/student_parent"
   ],

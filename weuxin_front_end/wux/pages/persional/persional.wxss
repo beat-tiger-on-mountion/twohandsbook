@@ -1,1 +1,32 @@
 /* pages/persional/persional.wxss */
+.head{
+  left: 200px;
+}
+.head1{
+  height: 0px;
+  width: 130px;
+}
+.headImg{
+  height: 90px;
+  width: 90px;
+  border-radius: 25px;
+}
+.image1{
+  height: 30px;
+  width: 30px;
+  float: left;
+  margin-top:5px; 
+  border-radius: 25px;
+}
+.name{
+  height: 10px;
+  margin-left: 150px;
+}
+.function{
+  width: 100%;
+  margin-top: 80rpx;  
+}
+
+.text1{
+  float: left;
+}
