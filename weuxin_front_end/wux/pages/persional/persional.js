@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    head: "/images/1.png"
+    head: "/images/news5.jpg"
   },
 
   /**

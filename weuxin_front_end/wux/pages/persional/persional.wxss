@@ -1,32 +1,37 @@
 /* pages/persional/persional.wxss */
-.head{
-  left: 200px;
-}
-.head1{
-  height: 0px;
-  width: 130px;
-}
+/* 可以添加背景颜色 */
+/* page{
+  background-color: #eaeaea;
+} */
+
+/* 用户头像 */
 .headImg{
-  height: 90px;
-  width: 90px;
-  border-radius: 25px;
+  width: 191rpx;
+	height: 191rpx;
+	left: 300rpx;
+  margin-top: 60rpx;
+  margin-left: 280rpx;
+	top: 216rpx;
+	border-radius: 96rpx;
 }
-.image1{
-  height: 30px;
-  width: 30px;
-  float: left;
-  margin-top:5px; 
-  border-radius: 25px;
-}
+/* 用户姓名 */
 .name{
-  height: 10px;
-  margin-left: 150px;
+  height: 20rpx;
+  margin-top: 40rpx;
+  font-weight:bold;
+  text-align:center; 
 }
+/* 功能按钮版块 */
 .function{
   width: 100%;
-  margin-top: 80rpx;  
+  margin-top: 100rpx;  
+  font-weight:bold;
 }
-
-.text1{
+/* 功能按钮样式*/
+.image1{
+  height: 60rpx;
+  width: 60rpx;
   float: left;
+  margin-top:10rpx; 
+  border-radius: 50rpx;
 }
