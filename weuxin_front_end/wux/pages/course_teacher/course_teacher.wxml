@@ -1,0 +1,41 @@
+<view>
+  <image src='{{head}}' class='headImg'></image>
+</view>
+<view class="nickName">韩泽豪爸爸</view>
+
+
+
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th "></view>
+    <view class="th">周一</view>
+    <view class="th">周二</view>
+    <view class="th ">周三</view>
+    <view class="th">周四</view>
+    <view class="th ">周五</view>
+    
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 1}}">
+      <view class="td">{{item.code}}</view>
+      <view class="td">{{item.text}}</view>
+      <view class="td">{{item.type1}}</view>
+      <view class="td">{{item.type2}}</view>
+      <view class="td">{{item.type3}}</view>
+      <view class="td">{{item.type4}}</view>
+      <view class="td">{{item.type5}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.code}}</view>
+      <view class="td">{{item.text}}</view>
+      <view class="td">{{item.type1}}</view>
+      <view class="td">{{item.type2}}</view>
+      <view class="td">{{item.type3}}</view>
+      <view class="td">{{item.type4}}</view>
+      <view class="td">{{item.type5}}</view>
+    </view>
+  </block>
+</view>
+
+
+<view class='viewbutton'><button class='submit'>添加课程表</button></view>

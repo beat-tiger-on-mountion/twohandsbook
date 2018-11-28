@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "上学宝",
+  "usingComponents": {
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-select": "../../dist/select/index"
+  }
+}

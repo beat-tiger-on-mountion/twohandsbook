@@ -1,0 +1,97 @@
+ /* pages/common/class_join.wxss */
+ /* 可以添加背景颜色 */
+/* page{
+  background-color: #eaeaea;
+} */
+
+/* 用户头像 */
+.headImg{
+  width: 191rpx;
+	height: 191rpx;
+	left: 300rpx;
+  margin-top: 60rpx;
+  margin-left: 280rpx;
+	top: 216rpx;
+	border-radius: 96rpx;
+}
+/* 用户姓名 */
+.name{
+  height: 20rpx;
+  margin-top: 40rpx;
+  font-weight:bold;
+  text-align:center; 
+}
+/* 年级班级总体样式 */
+.wrapper{
+  margin-top: 100rpx;
+  margin-left: 0rpx;
+}
+
+/* 年级样式 */
+.grade{
+  width: 30%;
+	height: 59rpx;
+	left: 108rpx;
+	color: rgba(0, 0, 0, 1);
+	
+	line-height: 150%;
+  margin-left: 80rpx;
+  
+}
+/* 年级班级图标 */
+.classimage{
+  height: 59rpx;
+  width: 70rpx;
+  float: left;
+}
+/* 年级班级字体样式 */
+.text-content{
+  margin-left: 10rpx;
+}
+/* 年级选择框 */
+.gradeselect{
+  width: 50%;
+  height:59rpx;
+  border: 2rpx solid #ddd;
+  margin-left:300rpx;
+  margin-top: -60rpx;
+}
+/* 班级样式 */
+.bclass{
+  width: 171rpx;
+	height: 59rpx;
+	left: 150rpx;
+	top: 124rpx;
+	color: rgba(0, 0, 0, 1);
+	
+	line-height: 150%;
+  margin-top: 60rpx;
+  margin-left: 80rpx;
+}
+/* 班级选择框 */
+.bclassselect{
+  width: 50%;
+  height:59rpx;
+  border: 1px solid #ddd;
+  margin-left:300rpx;
+  margin-top: -60rpx;
+}
+/* 底部加入班级 */
+.jionclass{
+  margin-left: 160rpx;
+  margin-top: 200rpx;
+}
+/* 底部图标样式 */
+.classimage2{
+  width: 100rpx;
+  height: 100rpx;
+}
+/* 底部文本样式 */
+.text-footer{
+  font-size: 80rpx;
+}
+/* 文本位置调整 */
+.a{
+  margin-left: 150rpx;
+  margin-top: -110rpx;
+}

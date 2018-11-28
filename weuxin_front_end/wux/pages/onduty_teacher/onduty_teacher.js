@@ -1,11 +1,22 @@
-// pages/persional/persional.js
+// pages/onduty_teacher/onduty_teacher.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    head: "/images/news5.jpg"
+    head: "/images/1.png",
+
+    listData: [
+      { "code": "   1", "text": "一组", "type1": "三组", "type2": "六组", "type3": "九组", "type4": "七组" },
+
+      { "code": "2", "text": "一组", "type1": "三组", "type2": "六组", "type3": "九组", "type4": "七组" },
+
+      { "code": "3", "text": "一组", "type1": "三组", "type2": "六组", "type3": "九组", "type4": "七组" },
+
+      { "code": "4", "text": "一组", "type1": "三组", "type2": "六组", "type3": "九组", "type4": "七组" },
+
+    ]
   },
 
   /**

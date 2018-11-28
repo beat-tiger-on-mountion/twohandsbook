@@ -1,2 +1,16 @@
 <!--pages/persional/persional.wxml-->
-<text>pages/persional/persional.wxml</text>
+<!-- 整体 -->
+<view class="persional">
+<!-- 用户信息 -->
+<view>
+  <image src='{{head}}' class='headImg'></image>
+</view>
+<view class='name'>用户名</view>
+<!-- 功能展示 -->
+<view class='function'>
+<wux-button block outline type="dark" class='a'><image  src='/images/seltab4.png' class='image1'></image>我的账户</wux-button>
+<wux-button block outline type="dark"><image  src='/images/seltab4.png' class='image1'></image>用户姓名</wux-button>
+<wux-button block outline type="dark"><image  src='/images/seltab3.png' class='image1'></image>修改资料</wux-button>
+<wux-button block outline type="dark"><image  src='/images/seltab1.png' class='image1'></image>意见反馈</wux-button>
+</view>
+</view>
