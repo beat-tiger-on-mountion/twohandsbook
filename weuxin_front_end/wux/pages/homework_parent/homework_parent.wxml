@@ -1,0 +1,16 @@
+<view class="table">
+        <view class="tr">
+            <view class="th">星期一</view>
+            <view class="th">星期二</view>
+            <view class="th">星期三</view>
+            <view class="th">星期四</view>
+            <view class="th">星期五</view>
+        </view>
+        <view class="tr" wx:for="{{5}}">
+            <view class="td">{{name1}}</view>
+            <view class="td">{{name2}}</view>
+            <view class="td">{{name3}}</view>
+            <view class="td">{{name4}}</view>
+            <view class="td">{{name5}}</view>
+        </view>
+    </view>

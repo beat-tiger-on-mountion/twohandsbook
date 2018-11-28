@@ -1,12 +1,20 @@
 {
   "pages": [
     "pages/main/main",
+    "pages/addnotice/addnotice",
+    "pages/notice_teacher/notice_teacher",
+    "pages/notice/notice",
     "pages/News_detail_page/News_detail_page",
     "pages/login/login",
     "pages/common/common",
     "pages/persional/persional",
     "pages/student_inf/student_inf",
-    "pages/notice/notice"
+    "pages/onduty_parent/onduty_parent",
+    "pages/course_teacher/course_teacher",
+    "pages/homework_parent/homework_parent",
+    "pages/student_teacher/student_teacher",
+    "pages/student_parent/student_parent"
+    
   ],
   "window": {
     "navigationBarBackgroundColor": "#00baad",
@@ -27,7 +35,7 @@
         "selectedIconPath": "images/seltab1.png"
       },
       {
-        "pagePath": "pages/student_inf/student_inf",
+        "pagePath": "pages/student_parent/student_parent",
         "text": "学生信息",
         "iconPath": "images/tab2.png",
         "selectedIconPath": "images/seltab2.png"

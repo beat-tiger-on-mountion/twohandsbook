@@ -1,0 +1,29 @@
+<!--pages/class_creat/class_creat.wxml-->
+<view>
+  <image src='/images/news5.jpg' class='headImg'></image>
+</view>
+<view class='name'>用户名</view>
+<wux-select id="wux-select1" />
+<wux-select id="wux-select2" />
+<wux-select id="wux-select3" />
+<!-- 年级班级板块 -->
+<view class='wrapper'>
+<view class="grade"><image class='classimage' src='/images/seltab4.png'></image><text class="text-content">添加年级</text></view>
+<view class='gradeselect'>
+<wux-cell title="" extra="{{ title1 }}" bind:click="onClick1"></wux-cell>
+</view>
+<view class="bclass"><image class='classimage' src='/images/seltab4.png'></image><text class="text-content">添加班级</text></view>
+<view class='bclassselect'>
+<wux-cell title="" extra="{{ title2 }}" bind:click="onClick2"></wux-cell>
+</view>
+<view class="teacher"><image class='classimage' src='/images/seltab4.png'></image><text class="text-content">添加老师</text></view>
+<view class='teacherselect'>
+<wux-cell title="" extra="{{ title3 }}" bind:click="onClick3"></wux-cell>
+</view>
+</view>
+
+<!-- 底部加入班级板块 -->
+<view class='jionclass'>
+<image class='classimage2' src='/images/seltab1.png'></image>
+<view class='a'><text class="text-footer">创建</text></view>
+</view>

@@ -1,4 +1,4 @@
-// pages/student_inf/student_inf.js
+// pages/password-reset/passwod_reset.js
 Page({
 
   /**
@@ -62,5 +62,11 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  login: function () {
+    wx.switchTab({
+      url: '../main/main',
+    })
+  },
+ 
 })

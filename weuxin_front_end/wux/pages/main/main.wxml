@@ -13,7 +13,7 @@
     </swiper>
   </view>
   <view class='list'>
-    <view class='list-item'>
+    <view class='list-item' bindtap='notice'>
       <view class='ico'>
         <image class='ico-img' src='/images/ico1.png'></image>
       </view>

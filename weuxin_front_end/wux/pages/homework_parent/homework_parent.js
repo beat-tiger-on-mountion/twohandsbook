@@ -1,11 +1,16 @@
-// pages/persional/persional.js
+// pages/homework_parent/homework_parent.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    head: "/images/news5.jpg"
+    name1:"asd",
+    name2:"asas",
+    name3: "asd",
+    name4: "asas",
+    name5: "asd",
+    
   },
 
   /**
