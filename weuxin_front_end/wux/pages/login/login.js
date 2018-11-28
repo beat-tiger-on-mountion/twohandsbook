@@ -71,6 +71,9 @@ Page({
   onShareAppMessage: function () {
     
   },
+  /**
+   * 学校选择事件
+   */
   onClick1() {
     $wuxSelect('#wux-select1').open({
       value: this.data.value1,
@@ -128,6 +131,9 @@ Page({
       showCancel: !1,
     })
   },
+  /**
+   * 登录验证信息后跳到主页
+   */
   login:function(){
     wx.switchTab({
        url: '../main/main',

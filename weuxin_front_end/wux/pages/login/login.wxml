@@ -4,14 +4,17 @@
   <image src='{{head}}' class='headImg'></image>
 </view>
 
+<!-- 登录表单-->
 <form>
+
+<!-- 学校选择 -->
 <wux-select id="wux-select1" />
 <view class="page">
   <view class="page__bd">
     <wux-cell title="学校" extra="{{ title1 }}" bind:click="onClick1"></wux-cell>
   </view>
 </view>
-
+<!-- 信息输入 -->
 <view class="page__bd">
   <wux-cell-group>
     <wux-cell hover-class="none">

@@ -4,7 +4,7 @@
    
     <view class="page__bd">
       
-                <wux-cell>匿名
+                <wux-cell class="wux-text--right">匿名
                     <wux-switch  slot="footer" color="#00baad" value="{{ value1 }}" bind:change="onChange1" />
                 </wux-cell>
                 
@@ -13,8 +13,9 @@
 
   <view class="itemView">
      <form bindsubmit="bindFormSubmit">
-
-     <textarea placeholder="分享新鲜事"  auto-focus="true" />
-     <button size='mini'  form-type="submit" type="primary"> 提交 </button>
+        <view>
+     <textarea  placeholder="分享新鲜事"  auto-focus="false" ></textarea>
+     </view>
+     <button class="btn" size='mini'  form-type="submit" type="primary"> 提交 </button>
      </form>
   </view>

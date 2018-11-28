@@ -1,1 +1,3 @@
 /* pages/common/common.wxss */
+@import '../../dist/styles/index.wxss';
+
