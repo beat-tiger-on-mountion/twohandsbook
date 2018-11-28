@@ -1,31 +1,25 @@
-{
+﻿{
   "pages": [
-<<<<<<< HEAD
-=======
     "pages/activity_newbuilt/activity_newbuilt",
     "pages/onduty_teacher/onduty_teacher",
     "pages/onduty_parent/onduty_parent",
     "pages/course_teacher/course_teacher",
     "pages/course_parent/course_parent",
->>>>>>> ccbc333aa1fd8f44fdbdaee51ab12393ea4361b1
     "pages/main/main",
     "pages/addnotice/addnotice",
     "pages/notice_teacher/notice_teacher",
     "pages/notice/notice",
     "pages/News_detail_page/News_detail_page",
     "pages/login/login",
-<<<<<<< HEAD
     "pages/common/common",
     "pages/persional/persional",
     "pages/student_inf/student_inf",
     "pages/onduty_parent/onduty_parent",
     "pages/course_teacher/course_teacher",
     "pages/homework_parent/homework_parent",
-=======
     "pages/homework_parent/homework_parent",
     "pages/common/common",
     "pages/persional/persional",
->>>>>>> ccbc333aa1fd8f44fdbdaee51ab12393ea4361b1
     "pages/student_teacher/student_teacher",
     "pages/student_parent/student_parent"
     
