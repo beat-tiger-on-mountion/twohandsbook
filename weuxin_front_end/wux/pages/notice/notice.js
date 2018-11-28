@@ -1,4 +1,4 @@
-// pages/main/main.js
+// pages/notice/notice.js
 Page({
 
   /**
@@ -62,10 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  onclick:function(){
-    wx.navigateTo({
-      url: '../News_detail_page/News_detail_page',
-    })
   }
 })

@@ -1,10 +1,12 @@
 {
   "pages": [
-    "pages/login/login",
     "pages/main/main",
+    "pages/News_detail_page/News_detail_page",
+    "pages/login/login",
     "pages/common/common",
     "pages/persional/persional",
-    "pages/student_inf/student_inf"
+    "pages/student_inf/student_inf",
+    "pages/notice/notice"
   ],
   "window": {
     "navigationBarBackgroundColor": "#00baad",

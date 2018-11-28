@@ -1,4 +1,4 @@
-// pages/main/main.js
+// pages/News_detail_page/News_detail_page.js
 Page({
 
   /**
@@ -61,11 +61,5 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
-  },
-  onclick:function(){
-    wx.navigateTo({
-      url: '../News_detail_page/News_detail_page',
-    })
   }
 })
