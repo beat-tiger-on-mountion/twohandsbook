@@ -1,21 +1,25 @@
 <!--pages/common/common.wxml-->
 
-  <view class="page">
-   
-    <view class="page__bd">
+  
+   <!--匿名按钮-->
+  <view class="page__bd">
       
                 <wux-cell class="wux-text--right">匿名
                     <wux-switch  slot="footer" color="#00baad" value="{{ value1 }}" bind:change="onChange1" />
                 </wux-cell>
                 
-    </view>
   </view>
-
+ 
+<!--表单提交-->
   <view class="itemView">
      <form bindsubmit="bindFormSubmit">
+        <view class='textarea'>
+     <textarea bindblur="bindTextAreaBlur" placeholder="分享新鲜事"  focus="false" ></textarea>
+        </view>
         <view>
-     <textarea  placeholder="分享新鲜事"  auto-focus="false" ></textarea>
-     </view>
-     <button class="btn" size='mini'  form-type="submit" type="primary"> 提交 </button>
+     <button class="btn" size='mini'  form-type="submit"  bindtap='onclick'> 提交 </button>
+        </view>
      </form>
+     <!--读数据-->
+     <view>{{ceshis}}</view>
   </view>

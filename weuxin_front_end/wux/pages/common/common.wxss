@@ -1,3 +1,14 @@
 /* pages/common/common.wxss */
 @import '../../dist/styles/index.wxss';
-
+.textarea{
+  
+  border:8rpx ridge #DDDDDD;
+   margin-top: 20px;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+.btn{
+  margin-top: 20px;
+  margin-left: 250px;
+  background-color: #00baad
+}

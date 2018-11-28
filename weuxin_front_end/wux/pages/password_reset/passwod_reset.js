@@ -1,11 +1,11 @@
-// pages/persional/persional.js
+// pages/password-reset/passwod_reset.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    head: "/images/news5.jpg"
+
   },
 
   /**
@@ -62,5 +62,11 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  login: function () {
+    wx.switchTab({
+      url: '../main/main',
+    })
+  },
+ 
 })
