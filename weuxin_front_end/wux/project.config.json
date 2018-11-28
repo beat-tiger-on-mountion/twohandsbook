@@ -13,7 +13,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.0",
-	"appid": "wx82254f9971cee04a",	"projectname": "wux",
+	"appid": "wx82254f9971cee04a",
+	"projectname": "wux",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
