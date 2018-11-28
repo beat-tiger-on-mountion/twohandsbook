@@ -13,7 +13,11 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.0",
+<<<<<<< HEAD
 	"appid": "touristappid",
+=======
+	"appid": "wx82254f9971cee04a",
+>>>>>>> ccbc333aa1fd8f44fdbdaee51ab12393ea4361b1
 	"projectname": "wux",
 	"debugOptions": {
 		"hidedInDevtools": []
