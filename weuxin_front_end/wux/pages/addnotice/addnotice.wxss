@@ -1,0 +1,22 @@
+/* pages/addnotice/addnotice.wxss */
+.btn{
+  margin-top: 20px;
+  margin-left: 250px;
+  background-color: #00baad
+}
+
+.title{
+  border:1rpx ridge rgb(153, 151, 151);
+  width: 650rpx;
+  height: 60rpx;
+  margin-left: 30rpx;
+  margin-top: 15px;
+}
+
+.text{
+  border:1rpx ridge rgb(153, 151, 151);
+  width: 650rpx;
+  height: 400rpx;
+  margin-left: 30rpx;
+  margin-top: 30px;
+}

@@ -26,7 +26,7 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  height: 2rem;
+  height: 1.7rem;
   align-items: center;
 }
 .td {
@@ -36,12 +36,12 @@
     
 }
 .bg-w{
-  height: 1.5rem;
+  height: 1.7rem;
   background: snow;
   width: 100%;
 }
 .bg-g{
-  height: 1.5rem;
+  height: 1.7rem;
   background: #E6F3F9;
   width: 100%;
 }
@@ -51,7 +51,7 @@
   background: #00baad;
   color: #fff;
   display: flex;
-  height: 1.5rem;
+  height:1.7rem;
   align-items: center;
 
 }

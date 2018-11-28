@@ -1,0 +1,8 @@
+<!--pages/addnotice/addnotice.wxml-->
+<view>
+  <textarea class="title">标题</textarea>
+</view>
+<view>
+  <textarea class="text">内容</textarea> 
+</view>
+<button class="btn" size='mini'  form-type="submit"  bindtap='onclick'> 提交 </button>

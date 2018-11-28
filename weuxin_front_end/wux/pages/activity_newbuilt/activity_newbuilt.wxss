@@ -1,0 +1,39 @@
+.titleview{
+
+  margin-left: 90rpx;
+  width: 30%; 
+  font-weight: bolder;
+
+  
+}
+
+
+.viewline{
+  height: 1rpx;
+  background:#dcdcdc ;
+
+}
+
+
+.addimg{
+  width: 30%;
+  margin-left: 70%;
+  margin-top: 40rpx;
+  background: #adadad;
+}
+.testview{
+  margin-top: 20rpx;
+  width: 80%;
+  height: 700rpx;
+  margin-left: 10%;
+  border: 1px solid #dcdcdc ;
+}
+
+
+.releasebutton{
+  width: 30%;
+  margin-left: 60%;
+  margin-top: 40rpx;
+  background-color: #00baad;
+  /* background:; */
+}
