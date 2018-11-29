@@ -1,4 +1,4 @@
-  <!-- pages/common/class_join.wxml -->
+  <!-- pages/class_join/class_join.wxml -->
   <!-- 用户板块 -->
 <view>
   <image src='/images/news5.jpg' class='headImg'></image>

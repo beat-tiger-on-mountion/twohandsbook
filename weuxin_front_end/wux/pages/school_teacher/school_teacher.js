@@ -1,78 +1,70 @@
-// pages/main/main.js
+// pages/achool_teacher/school_teacher.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    value1: '',
+    title1: '8:00',
+    value2: '',
+    title2: '5:00',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
 
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
-  },
-
-  onclick: function() {
-    wx.navigateTo({
-        url: '../News_detail_page/News_detail_page',
-      })
-  },
-
-  notice: function() {
-    wx.navigateTo({
-      url: '../notice_teacher/notice_teacher',
-    })
-  },
+  }
 })

@@ -1,0 +1,46 @@
+ <!-- pages/school_parent/school_parent.wxml -->
+  <view class='school_teacher'>
+<form>
+ <image class='image' src='/images/122.png'></image>
+ <view class='text'>上学时间</view>
+ <view>
+<input class='time' value="{{title1}}"></input>
+</view>
+
+ <view class='img'><image class='image' src='/images/122.png'></image></view>
+ <view class='text'>下学时间</view>
+ <view>
+<input class='time' value="{{title1}}"></input>
+</view>
+
+ <view class='img'><image class='image' src='/images/132.png'></image></view>
+ <view class='text'>添加备注</view>
+ <view>
+<input class='time' value="{{title1}}"></input>
+</view>
+
+<!-- 表格 -->
+
+ <view class='history-table-wrap'>
+    <view class="table">
+      <view class="tr">
+          <view class="th th1"></view>
+          <view class="th th2">上学时间</view>
+          <view class="th th3">放学时间</view>
+          <view class="th th4">备注</view>
+      </view>
+      <view class="tr">
+          <view class="td td1">提示展示</view>
+          <view class="td td2"></view>
+          <view class="td td3"></view>
+          <view class="td td4"></view>
+      </view>
+    </view>
+ </view>
+<!-- 提交按钮 -->
+<view class='button'>
+<wux-button block type="positive">提交</wux-button>
+</view>
+
+</form>
+</view>
