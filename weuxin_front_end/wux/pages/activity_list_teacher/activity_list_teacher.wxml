@@ -1,0 +1,27 @@
+<!-- pages/activity_list_teacher/activity_list_teacher.wxml -->
+
+<view class='list'>
+
+<image class='image' src='/images/news1.jpg'></image>
+<view class='text1'><text>今天，天气真好！</text></view>
+<view class='text2'><text>2018-11-28</text></view>
+<!-- 添加活动按钮 -->
+<view class=''><image class='image1' src='/images/seltab3.png'></image></view>
+
+<image class='image' src='/images/news1.jpg'></image>
+<view class='text1'><text>今天，天气真好！</text></view>
+<view class='text2'><text>2018-11-28</text></view>
+
+<image class='image' src='/images/news1.jpg'></image>
+<view class='text1'><text>今天，天气真好！</text></view>
+<view class='text2'><text>2018-11-28</text></view>
+
+<image class='image' src='/images/news1.jpg'></image>
+<view class='text1'><text>今天，天气真好！</text></view>
+<view class='text2'><text>2018-11-28</text></view>
+
+<image class='image' src='/images/news1.jpg'></image>
+<view class='text1'><text>今天，天气真好！</text></view>
+<view class='text2'><text>2018-11-28</text></view>
+
+</view>

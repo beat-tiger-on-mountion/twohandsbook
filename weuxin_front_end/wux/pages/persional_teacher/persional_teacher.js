@@ -1,11 +1,11 @@
-// pages/student_parent/student_parent.js
+// pages/persional_teacher/persional_teacher.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    head: "/images/news5.jpg"
   },
 
   /**

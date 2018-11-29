@@ -1,11 +1,15 @@
-// pages/student_parent/student_parent.js
+// pages/achool_teacher/school_teacher.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    value1: '',
+    title1: '8:00',
+    value2: '',
+    title2: '5:00',
   },
 
   /**

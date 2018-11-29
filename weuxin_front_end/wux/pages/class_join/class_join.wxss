@@ -1,4 +1,4 @@
- /* pages/common/class_join.wxss */
+ /* pages/class_join/class_join.wxss */
  /* 可以添加背景颜色 */
 /* page{
   background-color: #eaeaea;
@@ -72,7 +72,7 @@
 .bclassselect{
   width: 50%;
   height:59rpx;
-  border: 1px solid #ddd;
+  border: 2rpx solid #ddd;
   margin-left:300rpx;
   margin-top: -60rpx;
 }

@@ -1,0 +1,46 @@
+/* pages/activity_detail/activity_detail.wxss */
+/* 背景颜色 */
+page{
+  background-color: #e9f3dd;
+}
+/* 标题 */
+.title{
+  font-size: 45rpx;
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+  font-weight: bold;
+}
+/* 作者 */
+.author{
+  font-size: 30rpx;
+  margin-left: 40rpx;
+  margin-top: 30rpx;
+}
+/* 时间 */
+.time{
+  font-size: 30rpx;
+  margin-left: 150rpx;
+  margin-top: -40rpx;
+}
+/* 正文部分 */
+.content{
+   margin-left: 40rpx;
+   margin-top: 30rpx;
+}
+/* 正文标题 */
+.title_content{
+  font-size: 45rpx;
+  text-align:center;
+}
+/* 正文图片 */
+.image{
+  width: 400rpx;
+  height: 300rpx;  
+  margin-left: 120rpx;
+  margin-top: 20rpx;
+}
+/* 正文内容 */
+.text{
+  margin-top: 20rpx;
+  text-indent:2em;
+}

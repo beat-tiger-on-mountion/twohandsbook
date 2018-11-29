@@ -1,0 +1,23 @@
+<!-- pages/activity_list/activity_list.wxml -->
+<view class='list'>
+<image class='image' src='/images/news1.jpg'></image>
+<view class='text1'><text>今天，天气真好！</text></view>
+<view class='text2'><text>2018-11-28</text></view>
+
+<image class='image' src='/images/news1.jpg'></image>
+<view class='text1'><text>今天，天气真好！</text></view>
+<view class='text2'><text>2018-11-28</text></view>
+
+<image class='image' src='/images/news1.jpg'></image>
+<view class='text1'><text>今天，天气真好！</text></view>
+<view class='text2'><text>2018-11-28</text></view>
+
+<image class='image' src='/images/news1.jpg'></image>
+<view class='text1'><text>今天，天气真好！</text></view>
+<view class='text2'><text>2018-11-28</text></view>
+
+<image class='image' src='/images/news1.jpg'></image>
+<view class='text1'><text>今天，天气真好！</text></view>
+<view class='text2'><text>2018-11-28</text></view>
+
+</view>

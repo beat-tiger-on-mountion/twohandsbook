@@ -1,11 +1,11 @@
-// pages/student_parent/student_parent.js
+// pages/activity_list_teacher/activity_list_teacher.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+
   },
 
   /**

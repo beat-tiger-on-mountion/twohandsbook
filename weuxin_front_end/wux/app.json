@@ -1,5 +1,13 @@
 ﻿{
   "pages": [
+    "pages/school_teacher/school_teacher",
+    "pages/school_parent/school_parent",
+	"pages/activity_list_teacher/activity_list_teacher",
+	"pages/activity_detail/activity_detail",
+    "pages/persional_teacher/persional_teacher",
+	"pages/activity_list/activity_list",
+	"pages/class_join/class_join",
+    "pages/class_creat/class_creat",
     "pages/activity_newbuilt/activity_newbuilt",
     "pages/onduty_teacher/onduty_teacher",
     "pages/onduty_parent/onduty_parent",
@@ -17,8 +25,6 @@
     "pages/onduty_parent/onduty_parent",
     "pages/course_teacher/course_teacher",
     "pages/homework_parent/homework_parent",
-    "pages/homework_parent/homework_parent",
-    "pages/common/common",
     "pages/persional/persional",
     "pages/student_teacher/student_teacher",
     "pages/student_parent/student_parent"

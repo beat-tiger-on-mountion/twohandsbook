@@ -1,0 +1,126 @@
+/* pages/school_teacher/school_teacher.wxss */
+/* 上学图标 */
+.image{
+  width: 55rpx;
+  height: 55rpx;
+  margin-left: 100rpx;
+  margin-top: 50rpx;
+}
+/* 上学 */
+.text{
+  margin-left: 180rpx;
+  margin-top: -60rpx;
+}
+/* 下学图标位置 */
+.img{
+  margin-left:0rpx;
+  margin-top: -50rpx;
+}
+/* 下学图标 */
+.image2{
+  width: 55rpx;
+  height: 55rpx;
+  margin-left:400rpx;
+}
+/* 下学 */
+.text2{
+  margin-left: 480rpx;
+  margin-top: -60rpx;
+}
+/* 上学时间选择框 */
+.time{
+  width: 260rpx;
+  height: 50rpx;
+  margin-left: 100rpx;
+  margin-top: 20rpx;
+  border: 2rpx solid rgb(134, 234, 241);
+}
+/* 上学时间选择框 */
+.time2{
+  width: 260rpx;
+  height: 50rpx;
+  margin-left: 400rpx;
+  margin-top: -205rpx;
+  border: 2rpx solid rgb(134, 234, 241);
+}
+.time3{
+  width: 260rpx;
+  height: 50rpx;
+  margin-left: 400rpx;
+  margin-top: 20rpx;
+  border: 2rpx solid rgb(134, 234, 241);
+}
+.time4{
+  width: 260rpx;
+  height: 50rpx;
+  margin-left: 400rpx;
+  margin-top: 20rpx;
+  border: 2rpx solid rgb(134, 234, 241);
+}
+/* 按钮 */
+.button{
+  width: 260rpx;
+  height: 50rpx;
+  margin-left: 250rpx;
+  margin-top: 60rpx;
+}
+/* 名单展示图标 */
+.image3{
+  width: 55rpx;
+  height: 55rpx;
+  margin-left: 50rpx;
+  margin-top: 150rpx;
+}
+/* 名单展示 */
+.text3{
+  margin-left: 120rpx;
+  margin-top: -65rpx;
+}
+
+/* 表格 */
+.history-table-wrap{
+  width: 700rpx;
+  height: 260rpx;
+  left: 50%;
+  margin-left: 50rpx;
+  margin-top: 100rpx;
+  top: 70rpx;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* 表格代码   */
+.table{
+  border:1px solid #96f3f3;
+  border-right:0;
+  border-bottom: 0;
+  font-size: 30rpx;
+  width: 90%;
+  height: 30rpx;
+  margin-left: 10rpx;
+  }
+.tr{
+  width:100%;
+  
+  display: flex;
+  justify-content: space-between;
+}
+.th,.td{
+  padding: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  text-align: center;
+  width: 100%;
+}
+.th1,.th2,.td1,.td2{
+  width: 100%;
+}
+.th{
+  font-weight: 800;
+  background-color: #ccc7c5;
+  font-size: 28rpx;
+  color: #330e0e;
+}
+.td{
+  font-size: 20rpx;
+  color: #141212;
+}
