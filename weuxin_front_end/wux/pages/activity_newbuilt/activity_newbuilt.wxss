@@ -1,3 +1,13 @@
+/* 添加图片按钮 */
+.addimg{
+  width: 30%;
+  margin-left: 70%;
+  margin-top: 40rpx;
+  background: #adadad;
+}
+
+
+/* 标题 */
 .titleview{
 
   margin-left: 90rpx;
@@ -15,12 +25,7 @@
 }
 
 
-.addimg{
-  width: 30%;
-  margin-left: 70%;
-  margin-top: 40rpx;
-  background: #adadad;
-}
+
 .testview{
   margin-top: 20rpx;
   width: 80%;

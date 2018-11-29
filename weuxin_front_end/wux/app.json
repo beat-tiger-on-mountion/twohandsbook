@@ -1,12 +1,13 @@
 {
   "pages": [
+    "pages/myclass/myclass",
+    "pages/login/login",
     "pages/activity_newbuilt/activity_newbuilt",
     "pages/onduty_teacher/onduty_teacher",
     "pages/onduty_parent/onduty_parent",
     "pages/course_teacher/course_teacher",
     "pages/course_parent/course_parent",
     "pages/main/main",
-    "pages/login/login",
     "pages/homework_parent/homework_parent",
     "pages/common/common",
     "pages/persional/persional",
