@@ -1,0 +1,26 @@
+<!--pages/comments/comments.wxml-->
+<view class="page">
+    
+    <view class="page__bd">
+        <wux-icon class="add" type="md-add-circle" color="#00baad" bindtap='onclick' position="fixed"/>
+    </view>
+    
+
+
+<view class="one">
+  <view>
+    <image src='/images/seltab4.png' class='headImg'></image>
+  </view>
+  <view class="title">
+    六一活动通知
+  </view>
+  <view class="time">
+  作者  <view class="">{{date1}}</view>
+  </view>
+  <view class="text">
+    <form>和平路小学将于2018年六月一日举办“美好童年”的六一庆祝活动，届时请各位同学家长到场</form>
+  </view>
+  <view class='line'></view>
+</view>
+
+</view>

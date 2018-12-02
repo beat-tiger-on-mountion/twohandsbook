@@ -1,13 +1,25 @@
 {
   "pages": [
+
     "pages/comments/comments",
     "pages/homework_parent/homework_parent",
     "pages/login/login",
     "pages/main/main",
+
+
+    "pages/onduty_parent/onduty_parent",
+    "pages/course_teacher/course_teacher",
+    
+    
+ 
+    
+    "pages/common/common",
+
     "pages/persional/persional",
+    
     "pages/student_teacher/student_teacher",
-    "pages/student_parent/student_parent",
-    "pages/common/common"
+    "pages/student_parent/student_parent"
+   
   ],
   "window": {
     "navigationBarBackgroundColor": "#00baad",

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "评论墙",
+  "usingComponents": {
+    "wux-icon": "../../dist/icon/index"
+  }
+}
