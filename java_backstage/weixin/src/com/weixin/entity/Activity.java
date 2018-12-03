@@ -1,3 +1,4 @@
+
 package com.weixin.entity;
 
 import javax.persistence.Entity;

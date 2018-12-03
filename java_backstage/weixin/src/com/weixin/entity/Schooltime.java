@@ -1,4 +1,8 @@
 package com.weixin.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * 
     * @ClassName: Schooltime  
@@ -7,6 +11,7 @@ package com.weixin.entity;
     * @date 2018年12月3日 
     *
  */
+
 public class Schooltime {
 	private int id;
 	private int classId;

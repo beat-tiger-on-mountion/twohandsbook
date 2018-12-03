@@ -1,5 +1,8 @@
 package com.weixin.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * 
     * @ClassName: Time  
@@ -8,6 +11,7 @@ package com.weixin.entity;
     * @date 2018年12月3日 
     *
  */
+
 public class Time {
 	private int id;
 	private String upgo;
