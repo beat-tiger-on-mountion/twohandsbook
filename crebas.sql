@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2018/12/3 10:44:26                           */
+/* Created on:     2018/12/3 14:57:34                           */
 /*==============================================================*/
 
 
@@ -65,7 +65,7 @@ create table tbl_check
    cTime                varchar(50),
    absence              text,
    delay                text,
-   classId              char(10),
+   classId              int,
    primary key (id)
 );
 
@@ -88,11 +88,11 @@ create table tbl_comments
 (
    id                   int not null auto_increment,
    cBody                text,
-   goods                int,
+   thumbs               int,
    comments             text,
    userId               int,
    classId              int,
-   is                   bool,
+   anonymity            bool,
    primary key (id)
 );
 
@@ -155,8 +155,8 @@ create table tbl_onduty
 create table tbl_schools
 (
    schoolId             int not null auto_increment,
-   school               varchar(50),
-   pro                  varchar(50),
+   schoolName           varchar(50),
+   province             varchar(50),
    city                 varchar(50),
    county               varchar(50),
    primary key (schoolId)
@@ -169,7 +169,7 @@ create table tbl_schooltime
 (
    id                   int not null auto_increment,
    classId              int,
-   userid               int,
+   userId               int,
    go                   varchar(50),
    back                 varchar(50),
    remark               text,
@@ -209,7 +209,7 @@ create table tbl_user
 (
    id                   int not null auto_increment,
    name                 varchar(10),
-   phonenum             char(11),
+   phoneNum             char(11),
    images               varchar(50),
    classId              int,
    status               int,
