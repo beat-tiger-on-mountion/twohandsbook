@@ -3,6 +3,7 @@ package com.weixin.entity;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -70,7 +71,7 @@ public class Schools {
 		this.county = county;
 	}
 
-	@OneToMany(mappedBy="school",targetEntity=Classes.class)
+	@OneToMany(mappedBy="school",targetEntity=Classes.class,cascade= {CascadeType.PERSIST})
 	public Set<Classes> getClassses() {
 		return classses;
 	}
@@ -79,7 +80,7 @@ public class Schools {
 		this.classses = classses;
 	}
 
-	@OneToMany(mappedBy="school",targetEntity=User.class)
+	@OneToMany(mappedBy="school",targetEntity=User.class,cascade= {CascadeType.PERSIST})
 	public Set<User> getUsers() {
 		return users;
 	}

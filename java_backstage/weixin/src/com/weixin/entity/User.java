@@ -3,6 +3,7 @@ package com.weixin.entity;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -117,7 +118,7 @@ public class User {
 		this.school = school;
 	}
 
-	@OneToMany(mappedBy="user",targetEntity=Schooltime.class)
+	@OneToMany(mappedBy="user",targetEntity=Schooltime.class,cascade= {CascadeType.PERSIST})
 	public Set<Schooltime> getSchooltimes() {
 		return schooltimes;
 	}
@@ -126,7 +127,7 @@ public class User {
 		this.schooltimes = schooltimes;
 	}
 
-	@OneToMany(mappedBy="user", targetEntity=Notice.class)
+	@OneToMany(mappedBy="user", targetEntity=Notice.class,cascade= {CascadeType.PERSIST})
 	public Set<Notice> getNotices() {
 		return notices;
 	}
@@ -135,7 +136,7 @@ public class User {
 		this.notices = notices;
 	}
 	
-	@OneToMany(mappedBy="user",targetEntity=Comments.class)
+	@OneToMany(mappedBy="user",targetEntity=Comments.class,cascade= {CascadeType.PERSIST})
 	public Set<Comments> getComments() {
 		return comments;
 	}
@@ -144,7 +145,7 @@ public class User {
 		this.comments = comments;
 	}
 
-	@OneToMany(mappedBy="user",targetEntity=Backtous.class)
+	@OneToMany(mappedBy="user",targetEntity=Backtous.class,cascade= {CascadeType.PERSIST})
 	public Set<Backtous> getBacktous() {
 		return backtous;
 	}
