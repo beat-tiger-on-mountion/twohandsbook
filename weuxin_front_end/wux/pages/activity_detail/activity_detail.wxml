@@ -1,0 +1,18 @@
+ <!-- pages/activity_detail/activity_detail.wxml -->
+ <!-- 标头部分 -->
+ <view class='activity_detail'>
+ <view class='title'>孩子，你值得拥有一切美好</view>
+ <view class='author'>lalala</view>
+ <view class='time'>2018-11-28</view>
+ <!-- 正文部分 -->
+ <view class='content'>
+ <view class='title_content'>孩子，你值得拥有一切美好</view>
+ <view><image class='image' src='/images/news2.jpg'></image></view>
+ <view class='text'>感恩节活动开始啦，孩子们的表现都非常好，这次，我们围绕“感恩国家，感恩父母，感恩老师，感恩同学”的主题开展了一系列的教育活动。
+ </view>
+  <view class='text'>本次活动由小明主持，我们共分了四个小组，每个小组都展示了自己组的节目感恩节活动开始啦，孩子们的表现都非常好，这次，我们围绕“感恩国家，感恩父母，感恩老师，感恩同学”的主题开展了一系列的教育活动。
+  </view>
+   <view class='text'>本次活动由小明主持，我们共分了四个小组，每个小组都展示了自己组的节目。 拥有一颗奉献的心
+    </view>
+ </view>
+ </view>

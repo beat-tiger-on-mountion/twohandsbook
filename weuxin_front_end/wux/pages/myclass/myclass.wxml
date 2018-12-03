@@ -1,0 +1,52 @@
+<!-- 头像用户名 -->
+<view>
+  <image src='{{head}}' class='headImg'></image>
+</view>
+<view class="nickName">韩泽豪爸爸</view>
+
+<view >
+
+   <view class='tubiao'>     <image class="tubiaoimg"src="/images/circle.png"></image>       </view>
+
+   <view class="myclasstext">我的班级</view>
+   <view class='exactclass'>三年级二班</view>
+   
+
+</view>
+
+
+<view >
+
+   <view class='tubiao1'>     <image class="tubiaoimg"src="/images/circle.png"></image>       </view>
+
+   <view class="mystudenttext">班级学生</view>
+   
+
+</view>
+
+
+
+<!-- 值日表格 -->
+<view class="table">
+
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+     
+      <view class="td">{{item.type1}}</view>
+      <view class="td">{{item.type2}}</view>
+      <view class="td">{{item.type3}}</view>
+      <view class="td">{{item.type4}}</view>
+      
+    </view>
+    <view class="tr bg-w" wx:else>
+      
+      <view class="td">{{item.type1}}</view>
+      <view class="td">{{item.type2}}</view>
+      <view class="td">{{item.type3}}</view>
+      <view class="td">{{item.type4}}</view>
+     
+    </view>
+  </block>
+</view>
+
+

@@ -1,0 +1,22 @@
+/* pages/News_detail_page/News_detail_page.wxss */
+@import '../../dist/styles/index.wxss';
+.title{
+ text-align: center;
+ font-size: 50rpx;
+margin-top: 25rpx;
+}
+.p{
+  text-indent: 70rpx;
+  text-align: left;
+  font-size: 35rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  margin-top: 20rpx;
+}
+.img{
+
+  width: 250px;
+  height: 140px;
+  margin-left: 80rpx;
+  margin-top: 20rpx;
+}

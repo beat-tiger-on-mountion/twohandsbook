@@ -1,0 +1,55 @@
+ <!-- pages/school_teacher/school_teacher.wxml -->
+ <view class='school_teacher'>
+ <image class='image' src='/images/122.png'></image>
+ <view class='text'>上学时间</view>
+ <view class='img'><image class='image2' src='/images/122.png'></image></view>
+ <view class='text2'>下学时间</view>
+<form>
+<!-- 上学时间设定 -->
+<view>
+<input class='time' value="{{title1}}"></input>
+</view>
+<view>
+<input class='time' value="{{title1}}"></input>
+</view>
+<view>
+<input class='time' value="{{title1}}"></input>
+</view>
+<!-- 下学时间设定 -->
+<view>
+<input class='time2' value="{{title2}}"></input>
+</view>
+<view>
+<input class='time3' value="{{title2}}"></input>
+</view>
+<view>
+<input class='time4' value="{{title2}}"></input>
+</view>
+<!-- 提交时间按钮 -->
+<view class='button'>
+<wux-button block type="positive">提交</wux-button>
+</view>
+</form>
+<!-- 名单展示 -->
+<image class='image3' src='/images/112.png'></image>
+<view class='text3'>名单展示</view>
+
+<!-- 表格 -->
+ <view class='history-table-wrap'>
+    <view class="table">
+      <view class="tr">
+          <view class="th th1">序号</view>
+          <view class="th th2">学生姓名</view>
+          <view class="th th3">上下学时间</view>
+          <view class="th th4">备注</view>
+      </view>
+      <view class="tr" wx:for="{{6}}">
+          <view class="td td1"></view>
+          <view class="td td2"></view>
+          <view class="td td3"></view>
+          <view class="td td4"></view>
+      </view>
+    </view>
+ </view>
+ 
+ </view>

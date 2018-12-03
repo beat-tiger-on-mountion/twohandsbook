@@ -1,0 +1,33 @@
+/* pages/activity_list_teacher/activity_list_teacher.wxss */
+/* 活动图片样式 */
+.image{
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 100rpx;
+  margin-top: 60rpx;
+}
+/* 添加活动 */
+.image1{
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 600rpx;
+  margin-top: -400rpx; 
+}
+/* 活动标题样式 */
+.text1{
+  height: 40rpx;
+  width: 350rpx;
+  font-size: 30rpx;
+  margin-left: 230rpx;
+  margin-top: -120rpx;
+  border: 1rpx solid #ddd;
+}
+/* 活动时间样式 */
+.text2{
+  height: 40rpx;
+  width: 260rpx;
+  font-size: 30rpx;
+  margin-left: 230rpx;
+  margin-top: 20rpx;
+  border: 1rpx solid #ddd;
+}

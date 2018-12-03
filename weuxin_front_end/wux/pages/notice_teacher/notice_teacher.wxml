@@ -1,0 +1,39 @@
+<!--pages/notice_teacher/notice_teacher.wxml-->
+<view bindtap='toadd'>
+  <image src='/images/seltab3.png' class='add'></image>
+  <view class="addtext">增加新通知 </view>
+  <view class='lineone'></view>
+</view>
+
+ <view class="one">
+  <view>
+    <image src='/images/seltab4.png' class='headImg'></image>
+  </view>
+  <view class="title">
+    六一活动通知
+  </view>
+  <view class="time">
+   作者  时间
+  </view>
+  <view class="text">
+    <form>和平路小学将于2018年六月一日举办“美好童年”的六一庆祝活动，届时请各位同学家长到场</form>
+  </view>
+  <view class='line'></view>
+</view>
+
+<view class="two">
+  <view>
+    <image src='/images/seltab4.png' class='headImg'></image>
+  </view>
+  <view class="title">
+    六一活动通知
+  </view>
+  <view class="time">
+   作者  时间
+  </view>
+  <view class="text">
+    <form>和平路小学将于2018年六月一日举办“美好童年”的六一庆祝活动，届时请各位同学家长到场</form>
+  </view>
+  <view class='lines'></view>
+</view>
+

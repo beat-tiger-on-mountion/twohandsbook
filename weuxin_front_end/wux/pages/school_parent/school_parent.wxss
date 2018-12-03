@@ -1,0 +1,78 @@
+/* pages/school_parent/school_parent.wxss */
+/* 上学图标 */
+.image{
+  width: 55rpx;
+  height: 55rpx;
+  margin-left: 250rpx;
+  margin-top: 50rpx;
+}
+/* 上学 */
+.text{
+  margin-left: 320rpx;
+  margin-top: -60rpx;
+}
+/* 上学框 */
+.time{
+  width: 260rpx;
+  height: 50rpx;
+  margin-left: 250rpx;
+  margin-top: 30rpx;
+  border: 2rpx solid rgb(134, 234, 241);
+}
+
+/* 表格 */
+
+.history-table-wrap{
+  width: 700rpx;
+  height: 260rpx;
+  left: 50%;
+  margin-left: 50rpx;
+  margin-top: 100rpx;
+  top: 70rpx;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* 表格代码   */
+.table{
+  border:1px solid #96f3f3;
+  border-right:0;
+  border-bottom: 0;
+  font-size: 30rpx;
+  width: 90%;
+  height: 30rpx;
+  margin-left: 10rpx;
+  }
+.tr{
+  width:100%;
+  
+  display: flex;
+  justify-content: space-between;
+}
+.th,.td{
+  padding: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  text-align: center;
+  width: 100%;
+}
+.th1,.th2,.td1,.td2{
+  width: 100%;
+}
+.th{
+  font-weight: 800;
+  background-color: #ccc7c5;
+  font-size: 28rpx;
+  color: #330e0e;
+}
+.td{
+  font-size: 20rpx;
+  color: #141212;
+}
+
+/* 按钮 */
+.button{
+  width: 260rpx;
+  height: 50rpx;
+  margin-left: 250rpx;
+  margin-top: 10rpx;
+}

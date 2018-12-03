@@ -1,0 +1,42 @@
+/* pages/notice/notice.wxss */
+.headImg{
+  width: 150rpx;
+	height: 150rpx;
+  margin-top: 40rpx;
+  margin-left: 50rpx;
+	border-radius: 75rpx;
+}
+
+.title{
+  margin-top: -140rpx;
+  margin-left: 270rpx;
+}
+ 
+.time{
+  margin-top: 10rpx;
+  margin-left: 270rpx;
+  font-size: 13px;
+}
+
+.text{
+  margin-top: 28rpx;
+  margin-left: 80rpx;
+  margin-right: 80rpx;
+  font-size: 14px;
+}
+.line{
+margin-top: 50rpx;
+width: 650rpx;
+height: 2rpx;
+margin-left: 40rpx;
+margin-right: 20rpx;
+background-color: rgb(164, 167, 167);
+}
+.lines{
+margin-top: 71rpx;
+width: 650rpx;
+height: 2rpx;
+margin-left: 40rpx;
+margin-right: 20rpx;
+background-color: rgb(164, 167, 167);
+}
