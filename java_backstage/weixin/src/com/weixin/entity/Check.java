@@ -5,7 +5,7 @@ package com.weixin.entity;
     * @ClassName: Check  
     * @Description: TODO  
     * @author xueyunqing 
-    * @date 2018Äê12ÔÂ3ÈÕ  
+    * @date 2018å¹´12æœˆ3æ—¥  
     *
  */
 public class Check {
