@@ -1,38 +1,39 @@
 package com.weixin.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
  * 
  * 
-    * @ClassName: Backtous  
-    * @Description: TODO  
-    * @author xueyunqing 
-    * @date 2018年12月3日  
-    *
+ * @ClassName: Backtous
+ * @Description: TODO
+ * @author xueyunqing
+ * @date 2018年12月3日
+ *
  */
 
+@Entity
+@Table(name = "tbl_backtous")
 public class Backtous {
 	private int id;
-	private int userId;
+	private User user;
 	private String bBody;
 	private String bTime;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int getId() {
 		return id;
 	}
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public int getUserId() {
-		return userId;
-	}
-
-	public void setUserId(int userId) {
-		this.userId = userId;
 	}
 
 	public String getbBody() {
@@ -49,6 +50,16 @@ public class Backtous {
 
 	public void setbTime(String bTime) {
 		this.bTime = bTime;
+	}
+
+	@ManyToOne
+	@JoinColumn(name="userId")
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 }

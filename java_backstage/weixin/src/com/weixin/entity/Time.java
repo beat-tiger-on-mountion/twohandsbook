@@ -1,6 +1,11 @@
 package com.weixin.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -12,14 +17,18 @@ import javax.persistence.Table;
     *
  */
 
+@Entity
+@Table(name="tbl_time")
 public class Time {
 	private int id;
 	private String upgo;
 	private String downgo;
 	private String upback;
 	private String downback;
-	private int classsId;
+	private Classes classs;
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public int getId() {
 		return id;
 	}
@@ -59,13 +68,16 @@ public class Time {
 	public void setDownback(String downback) {
 		this.downback = downback;
 	}
-
-	public int getClasssId() {
-		return classsId;
+	
+	@ManyToOne
+	@JoinColumn(name="classId")
+	public Classes getClasss() {
+		return classs;
 	}
 
-	public void setClasssId(int classsId) {
-		this.classsId = classsId;
+	public void setClasss(Classes classs) {
+		this.classs = classs;
 	}
+
 
 }

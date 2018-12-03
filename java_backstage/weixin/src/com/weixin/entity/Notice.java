@@ -1,6 +1,11 @@
 package com.weixin.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -11,14 +16,17 @@ import javax.persistence.Table;
     * @date 2018年12月3日   
     *
  */
-
+@Entity
+@Table(name="tbl_notice")
 public class Notice {
 	private int id;
 	private String nTime;
 	private String nBody;
-	private int userId;
-	private int classId;
+	private User user;
+	private Classes classs;
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public int getId() {
 		return id;
 	}
@@ -43,20 +51,24 @@ public class Notice {
 		this.nBody = nBody;
 	}
 
-	public int getUserId() {
-		return userId;
+	@ManyToOne
+	@JoinColumn(name="userId")
+	public User getUser() {
+		return user;
 	}
 
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setUser(User user) {
+		this.user = user;
+	}
+	@ManyToOne
+	@JoinColumn(name="classId")
+	public Classes getClasss() {
+		return classs;
 	}
 
-	public int getClassId() {
-		return classId;
+	public void setClasss(Classes classs) {
+		this.classs = classs;
 	}
 
-	public void setClassId(int classId) {
-		this.classId = classId;
-	}
 
 }

@@ -1,6 +1,11 @@
 package com.weixin.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -11,16 +16,19 @@ import javax.persistence.Table;
     * @date 2018年12月3日 
     *
  */
-
+@Entity
+@Table(name="tbl_schooltime")
 public class Schooltime {
 	private int id;
-	private int classId;
-	private int userId;
+	private Classes classs;
+	private User user;
 	private String go;
 	private String back;
 	private String remark;
 	private String sTime;
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public int getId() {
 		return id;
 	}
@@ -29,21 +37,7 @@ public class Schooltime {
 		this.id = id;
 	}
 
-	public int getClassId() {
-		return classId;
-	}
 
-	public void setClassId(int classId) {
-		this.classId = classId;
-	}
-
-	public int getUserId() {
-		return userId;
-	}
-
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
 
 	public String getGo() {
 		return go;
@@ -76,5 +70,26 @@ public class Schooltime {
 	public void setsTime(String sTime) {
 		this.sTime = sTime;
 	}
+
+	@ManyToOne
+	@JoinColumn(name="classId")
+	public Classes getClasss() {
+		return classs;
+	}
+
+	public void setClasss(Classes classs) {
+		this.classs = classs;
+	}
+
+	@ManyToOne
+	@JoinColumn(name="userId")
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+	
 
 }

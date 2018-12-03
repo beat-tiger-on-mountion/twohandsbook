@@ -27,7 +27,7 @@ public class Schools {
 	private String city;
 	private String county;
 	private Set<Classes> classses = new HashSet<>(0);
-
+	private Set<User> users = new HashSet<>();
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public int getSchoolId() {
@@ -78,6 +78,17 @@ public class Schools {
 	public void setClassses(Set<Classes> classses) {
 		this.classses = classses;
 	}
+
+	@OneToMany(mappedBy="school",targetEntity=User.class)
+	public Set<User> getUsers() {
+		return users;
+	}
+
+	public void setUsers(Set<User> users) {
+		this.users = users;
+	}
+	
+	
 	
 
 }
