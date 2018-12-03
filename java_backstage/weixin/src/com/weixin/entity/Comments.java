@@ -1,4 +1,8 @@
 package com.weixin.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * 
     * @ClassName: Comments  
@@ -7,6 +11,8 @@ package com.weixin.entity;
     * @date 2018年12月3日 
     *
  */
+@Entity
+@Table(name="tbl_comments")
 public class Comments {
 	private int id;
 	private String cBody;

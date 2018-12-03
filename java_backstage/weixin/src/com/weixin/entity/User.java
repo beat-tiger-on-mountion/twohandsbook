@@ -1,5 +1,8 @@
 package com.weixin.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * 
     * @ClassName: User  
@@ -8,6 +11,8 @@ package com.weixin.entity;
     * @date 2018年12月3日   
     *
  */
+@Entity
+@Table(name="tbl_user")
 public class User {
 	private int id;
 	private String name;
@@ -18,7 +23,6 @@ public class User {
 	private int studentId;
 	private int schoolId;
 	private String wxName;
-
 	public int getId() {
 		return id;
 	}

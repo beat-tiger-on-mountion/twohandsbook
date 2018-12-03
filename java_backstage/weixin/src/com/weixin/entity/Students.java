@@ -1,5 +1,8 @@
 package com.weixin.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * 
     * @ClassName: Students  
@@ -8,6 +11,8 @@ package com.weixin.entity;
     * @date 2018年12月3日  
     *
  */
+@Entity
+@Table(name="tbl_students")
 public class Students {
 	private int id;
 	private String name;

@@ -1,5 +1,8 @@
 package com.weixin.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * 
  * 
@@ -9,6 +12,8 @@ package com.weixin.entity;
     * @date 2018年12月3日  
     *
  */
+@Entity
+@Table(name="tbl_backtous")
 public class Backtous {
 	private int id;
 	private int userId;
