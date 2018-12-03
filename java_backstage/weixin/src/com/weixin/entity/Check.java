@@ -1,4 +1,13 @@
 package com.weixin.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
 /**
  * 
  * 
@@ -8,13 +17,17 @@ package com.weixin.entity;
     * @date 2018年12月3日  
     *
  */
+@Entity
+@Table(name="tbl_check")
 public class Check {
 	private int id;
 	private String cTime;
 	private String absence;
 	private String delay;
-	private int classId;
+	private Classes classs;
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public int getId() {
 		return id;
 	}
@@ -47,11 +60,15 @@ public class Check {
 		this.delay = delay;
 	}
 
-	public int getClassId() {
-		return classId;
+	@ManyToOne
+	@JoinColumn(name="classId")
+	public Classes getClasss() {
+		return classs;
 	}
 
-	public void setClassId(int classId) {
-		this.classId = classId;
+	public void setClasss(Classes classs) {
+		this.classs = classs;
 	}
+	
+	
 }
