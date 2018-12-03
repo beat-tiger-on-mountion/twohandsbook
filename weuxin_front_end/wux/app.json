@@ -1,36 +1,20 @@
 {
   "pages": [
-<<<<<<< HEAD
-
+    "pages/login/login",
     "pages/comments/comments",
     "pages/homework_parent/homework_parent",
-    "pages/login/login",
     "pages/main/main",
-
-
     "pages/onduty_parent/onduty_parent",
     "pages/course_teacher/course_teacher",
-    
-    
- 
-    
-=======
     "pages/myclass/myclass",
-    "pages/login/login",
     "pages/activity_newbuilt/activity_newbuilt",
     "pages/onduty_teacher/onduty_teacher",
-    "pages/onduty_parent/onduty_parent",
-    "pages/course_teacher/course_teacher",
     "pages/course_parent/course_parent",
-    "pages/main/main",
-    "pages/homework_parent/homework_parent",
->>>>>>> f0a7ff6381f196368a90dcd6ff216de5d9824119
     "pages/common/common",
-
     "pages/persional/persional",
     "pages/student_teacher/student_teacher",
-    "pages/student_parent/student_parent"
-   
+    "pages/student_parent/student_parent",
+    "pages/notice_teacher/notice_teacher"
   ],
   "window": {
     "navigationBarBackgroundColor": "#00baad",
