@@ -12,8 +12,7 @@ import javax.persistence.Table;
     * @date 2018年12月3日  
     *
  */
-@Entity
-@Table(name="tbl_check")
+
 public class Check {
 	private int id;
 	private String cTime;

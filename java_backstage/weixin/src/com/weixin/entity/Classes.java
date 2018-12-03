@@ -11,8 +11,7 @@ import javax.persistence.Table;
     * @date 2018年12月3日 
     *
  */
-@Entity
-@Table(name="tbl_classes")
+
 public class Classes {
 	private int classId;
 	private int grade;
