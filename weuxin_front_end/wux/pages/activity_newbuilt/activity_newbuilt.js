@@ -62,11 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  activitylist:function(){
-    wx.redirectTo({
-      url: '../',
-      // 这的跳转路径还没有写
-    })
-  },
+  }
 })

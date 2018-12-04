@@ -62,5 +62,19 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  ondutyparent:function(){
+    wx.navigateTo({
+      url: '../onduty_parent/onduty_parent',
+    })
+  },
+
+
+
+   courseparent: function () {
+    wx.navigateTo({
+      url: '../course_parent/course_parent',
+    })
   }
 })

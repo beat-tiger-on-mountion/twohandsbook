@@ -3,19 +3,24 @@
     <view class='ico'>
       <image class='ico-img' src='/images/stu1.png'></image>
     </view>
-    <view class='item-msg'>通知</view>
+    <view class='item-msg'>考勤</view>
   </view>
-  <view class='list-item'>
+
+
+  <view class='list-item' bindtap='ondutyparent' >
     <view class='ico'>
       <image class='ico-img' src='/images/stu2.png'></image>
     </view>
-    <view class='item-msg'>作业</view>
+    <view class='item-msg'>值日表</view>
   </view>
-  <view class='list-item'>
+
+
+
+  <view class='list-item' bindtap='courseparent'>
     <view class='ico'>
       <image class='ico-img' src='/images/stu3.png'></image>
     </view>
-    <view class='item-msg'>成绩</view>
+    <view class='item-msg'>课程表</view>
   </view>
   <view></view>
 </view>
