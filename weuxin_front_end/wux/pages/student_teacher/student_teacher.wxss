@@ -1,1 +1,54 @@
-/* pages/student_teacher/student_teacher.wxss */
+.list-item {
+  float: left;
+  margin-top: 50rpx;
+  margin-left: 110rpx;
+  margin-bottom: 30rpx;
+}
+
+.item-msg {
+  text-align: center;
+}
+
+.ico {
+  background-color: #00baad;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10px;
+}
+
+.ico-img {
+  margin-top: 15rpx;
+  margin-left: 15rpx;
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.body {
+  clear: both;
+}
+
+.attend {
+  margin-left: 50rpx;
+  border-left: 10rpx #00baad solid;
+  margin-bottom: 30rpx;
+}
+
+.title {
+  margin-left: 80rpx;
+}
+
+.late {
+  margin-left: 150rpx;
+  margin-bottom: 30rpx;
+}
+
+.late-head {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 40%;
+}
+
+.late-msg {
+  float: right;
+  margin-right: 250rpx;
+}
