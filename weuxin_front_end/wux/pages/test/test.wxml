@@ -1,0 +1,4 @@
+<view>
+  <view bindtap='test'>asd</view>
+  <view wx:for="{{fin}}" wx:for-item="i" wx:for-index="index" > {{index}} : {{i.name}}</view>
+</view>
