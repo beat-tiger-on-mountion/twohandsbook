@@ -1,21 +1,22 @@
 {
   "pages": [
+    "pages/login/login",
+    "pages/activity_detail/activity_detail",
     "pages/News_detail_page/News_detail_page",
     "pages/persional/persional",
-    "pages/login/login",
+    "pages/comments/comments",
+    "pages/student_teacher/student_teacher",
     "pages/main/main",
     "pages/notice_teacher/notice_teacher",
-    "pages/student_parent/student_parent",
-    "pages/common/common",
-    "pages/course_parent/course_parent",
-    "pages/onduty_teacher/onduty_teacher",
-    "pages/activity_newbuilt/activity_newbuilt",
-    "pages/myclass/myclass",
-    "pages/course_teacher/course_teacher",
     "pages/onduty_parent/onduty_parent",
+    "pages/course_teacher/course_teacher",
+    "pages/myclass/myclass",
+    "pages/activity_newbuilt/activity_newbuilt",
+    "pages/onduty_teacher/onduty_teacher",
+    "pages/course_parent/course_parent",
     "pages/homework_parent/homework_parent",
-    "pages/comments/comments",
-    "pages/student_teacher/student_teacher"
+    "pages/common/common",
+    "pages/student_parent/student_parent"
   ],
   "window": {
     "navigationBarBackgroundColor": "#00baad",
