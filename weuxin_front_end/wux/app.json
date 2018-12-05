@@ -1,18 +1,16 @@
 {
-  "pages":[
-
+  "pages": [
+    "pages/feedback/feedback",
+    "pages/login/login",
+    "pages/index/index",
+    "pages/main/main",
     "pages/student_teacher/student_teacher",
     "pages/student_parent/student_parent",
     "pages/course_parent/course_parent",
     "pages/persional/persional",
-
-    
     "pages/activity_list/activity_list",
-
-    "pages/main/main",
     "pages/school_parent/school_parent",
     "pages/activity_detail/activity_detail",
-    "pages/login/login",
     "pages/comments/comments",
     "pages/News_detail_page/News_detail_page",
     "pages/onduty_parent/onduty_parent",
@@ -20,9 +18,7 @@
     "pages/myclass/myclass",
     "pages/activity_newbuilt/activity_newbuilt",
     "pages/onduty_teacher/onduty_teacher",
-
     "pages/homework_parent/homework_parent",
-
     "pages/common/common",
     "pages/notice_teacher/notice_teacher"
   ],

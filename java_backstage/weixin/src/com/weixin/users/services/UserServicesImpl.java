@@ -36,14 +36,15 @@ public class UserServicesImpl {
 		User user = new User();
 		try {
 			User u = this.userDaoImpl.findOne(hql, ob);
-			user.setName(u.getName());
-			user.setPhoneNum(u.getPhoneNum());
-			JSONObject jb = JSONObject.fromObject(user);
-			return jb.toString();
+			if(u != null)
+				return "true";
+			else
+				return "false";
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return null;
+			return "false";
 		}
 		
 	}

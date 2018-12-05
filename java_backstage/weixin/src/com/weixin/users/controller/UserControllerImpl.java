@@ -30,8 +30,8 @@ public class UserControllerImpl {
 	    * @throws
 	 */
 	@RequestMapping("/login")
-	public void checkUser(HttpServletRequest request, HttpServletResponse response, String name, String password) {
-		String s = this.userServicesImpl.findOne(name, password);
+	public void checkUser(HttpServletRequest request, HttpServletResponse response, String userName, String passWord) {
+		String s = this.userServicesImpl.findOne(userName, userName);
 		try {
 			PrintWriter writer = response.getWriter();
 			writer.write(s);

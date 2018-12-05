@@ -1,4 +1,8 @@
-import { $wuxSelect } from '../../dist/index'
+const app = getApp()
+
+import {
+  $wuxSelect
+} from '../../dist/index'
 
 Page({
 
@@ -6,70 +10,66 @@ Page({
    * 页面的初始数据
    */
   data: {
-    head:"/images/1.png",
-    value1: '',
-    title1: '',
-    value2: '',
-    title2: '',
-    value3: '',
-    title3: '',
-  
+    head: "/images/1.png",
+    userName: "",
+    passWord: "",
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    
+  onLoad: function(options) {
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-    
+  onReady: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-    
+  onShow: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-    
+  onHide: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-    
+  onUnload: function() {
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-    
+  onPullDownRefresh: function() {
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-    
+  onReachBottom: function() {
+
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-    
+  onShareAppMessage: function() {
+
   },
   /**
    * 学校选择事件
@@ -83,7 +83,7 @@ Page({
         'C小学',
         'D小学',
         'E小学',
-        'F小学',""
+        'F小学', ""
       ],
       onConfirm: (value, index, options) => {
         console.log('onConfirm', value, index, options)
@@ -131,13 +131,49 @@ Page({
       showCancel: !1,
     })
   },
+  getUserName: function(e) {
+    this.setData({
+      userName: e.detail.value
+    })
+  },
+
+  getPassWord: function(e) {
+    this.setData({
+      passWord: e.detail.value
+    })
+  },
+
   /**
    * 登录验证信息后跳到主页
    */
-  login:function(){
-    wx.switchTab({
-       url: '../main/main',
+  login: function() {
+    var that = this;
+    console.log(this.data.userName),
+      console.log(this.data.passWord),
+      wx.request({
+        url: "http://localhost:8080/weixin/login",
+        data: {
+          userName: that.data.userName,
+          passWord: that.data.passWord,
+        },
+        header: {
+          'content-type': 'application/x-www-form-urlencodedn' // 默认值
+        },
+        success(res) {
+          console.log(res.data)
+          if (res.data == true) {
+            wx.switchTab({
+              url: '../main/main',
+            })
+          }
+        }
+      })
+  },
+  getUserInfo: function() {
+    wx.getUserInfo({
+      success: function(res) {
+        console.log(res.userInfo.nickName)
+      }
     })
   },
 })
-
