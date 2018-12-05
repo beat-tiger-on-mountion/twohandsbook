@@ -1,38 +1,29 @@
 {
-  "pages": [
-<<<<<<< HEAD
+  "pages":[
 
-
+    "pages/student_teacher/student_teacher",
     "pages/student_parent/student_parent",
     "pages/course_parent/course_parent",
-    "pages/activity_newbuilt/activity_newbuilt",
-    "pages/student_teacher/student_teacher",
     "pages/persional/persional",
-=======
+
     
     "pages/activity_list/activity_list",
->>>>>>> 89d1fd8d42faff7e8c1baf531cd775651aa49817
+
     "pages/main/main",
     "pages/school_parent/school_parent",
     "pages/activity_detail/activity_detail",
-    "pages/student_teacher/student_teacher",
     "pages/login/login",
     "pages/comments/comments",
-    "pages/homework_parent/homework_parent",
     "pages/News_detail_page/News_detail_page",
     "pages/onduty_parent/onduty_parent",
     "pages/course_teacher/course_teacher",
     "pages/myclass/myclass",
     "pages/activity_newbuilt/activity_newbuilt",
     "pages/onduty_teacher/onduty_teacher",
-<<<<<<< HEAD
+
     "pages/homework_parent/homework_parent",
-=======
-    "pages/course_parent/course_parent",
->>>>>>> 89d1fd8d42faff7e8c1baf531cd775651aa49817
+
     "pages/common/common",
-    "pages/persional/persional",
-    "pages/student_parent/student_parent",
     "pages/notice_teacher/notice_teacher"
   ],
   "window": {
