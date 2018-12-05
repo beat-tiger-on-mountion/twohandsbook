@@ -24,7 +24,7 @@ import javax.persistence.Table;
 public class Schools {
 	private int schoolId;
 	private String schoolName;
-	private String privince;
+	private String province;
 	private String city;
 	private String county;
 	private Set<Classes> classses = new HashSet<>(0);
@@ -45,14 +45,14 @@ public class Schools {
 
 	public void setSchoolName(String schoolName) {
 		this.schoolName = schoolName;
+	}   
+
+	public String getProvince() {
+		return province;
 	}
 
-	public String getPrivince() {
-		return privince;
-	}
-
-	public void setPrivince(String privince) {
-		this.privince = privince;
+	public void setProvince(String province) {
+		this.province = province;
 	}
 
 	public String getCity() {
@@ -70,7 +70,7 @@ public class Schools {
 	public void setCounty(String county) {
 		this.county = county;
 	}
-
+	
 	@OneToMany(mappedBy="school",targetEntity=Classes.class,cascade= {CascadeType.PERSIST})
 	public Set<Classes> getClassses() {
 		return classses;

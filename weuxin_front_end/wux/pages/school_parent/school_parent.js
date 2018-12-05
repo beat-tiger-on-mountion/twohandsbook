@@ -1,4 +1,5 @@
 // pages/achool_parent/school_parent.js
+
 Page({
 
   /**

@@ -20,7 +20,7 @@ import org.hibernate.criterion.CriteriaSpecification;
  * @param <T> 实体类
  * @param <PK> 实体类的OID，对应表的主键字段
  */
-public abstract class BaseDao<T, PK extends Serializable> {
+public abstract class BaseDao<T>{
 
 	private Class<T> entityClass;
 

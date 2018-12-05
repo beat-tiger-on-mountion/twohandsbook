@@ -1,10 +1,15 @@
 {
   "pages": [
+    
+    "pages/activity_list/activity_list",
+    "pages/main/main",
+    "pages/school_parent/school_parent",
+    "pages/activity_detail/activity_detail",
     "pages/student_teacher/student_teacher",
     "pages/login/login",
     "pages/comments/comments",
     "pages/homework_parent/homework_parent",
-    "pages/main/main",
+    "pages/News_detail_page/News_detail_page",
     "pages/onduty_parent/onduty_parent",
     "pages/course_teacher/course_teacher",
     "pages/myclass/myclass",
