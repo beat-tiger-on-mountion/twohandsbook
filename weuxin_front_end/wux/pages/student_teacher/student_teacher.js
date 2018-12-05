@@ -75,5 +75,7 @@ Page({
     wx.navigateTo({
       url: '../course_teacher/course_teacher',
     })
-  }
+  },
+
+
 })
