@@ -22,6 +22,10 @@
 <view class='body'>
   <view class='attend'>今日考勤</view>
   <view class='title'>迟到</view>
+
+
+
+  
   <view class='late'>
     <image class='late-head' src='/images/late.png'></image>
     <view class='late-msg'>一年級一班張三</view>
