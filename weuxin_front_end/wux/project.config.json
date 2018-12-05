@@ -13,12 +13,11 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.0",
+  
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
-	"appid": "wx2f30b468844af36c",
-	"projectname": "%E4%B8%8A%E5%AD%A6%E5%AE%9D%E5%AE%B6%E6%A0%A1%E4%BA%92%E9%80%9A",
 	"condition": {
 		"search": {
 			"current": -1,

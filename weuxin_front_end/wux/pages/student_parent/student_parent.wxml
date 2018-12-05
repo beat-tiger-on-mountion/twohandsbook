@@ -5,8 +5,9 @@
     <view class='ico'>
       <image class='ico-img' src='/images/stu1.png'></image>
     </view>
-    <view class='item-msg'>考勤</view>
+    <view class='item-msg'>通知</view>
   </view>
+<<<<<<< HEAD
 
 
 
@@ -31,6 +32,49 @@
       <view class='late-msg'>{{i.cTime}}{{i.absence}}</view>
 
     </view>
+=======
+  <view class='list-item'>
+    <view class='ico'>
+      <image class='ico-img' src='/images/stu2.png'></image>
+    </view>
+    <view class='item-msg'>作业</view>
+  </view>
+  <view class='list-item'>
+    <view class='ico'>
+      <image class='ico-img' src='/images/stu3.png'></image>
+    </view>
+    <view class='item-msg'>成绩</view>
+  </view>
+  <view></view>
+</view>
+<view class='body'>
+  <view class='attend'>今日考勤</view>
+  <view class='title'>迟到</view>
+  <view class='late'>
+    <image class='late-head' src='/images/late.png'></image>
+    <view class='late-msg'>一年級一班張三</view>
+  </view>
+   <view class='late'>
+    <image class='late-head' src='/images/late.png'></image>
+    <view class='late-msg'>一年級一班張三</view>
+  </view>
+   <view class='late'>
+    <image class='late-head' src='/images/late.png'></image>
+    <view class='late-msg'>一年級一班張三</view>
+  </view>
+   <view class='title'>请假</view>
+  <view class='late'>
+    <image class='late-head' src='/images/late.png'></image>
+    <view class='late-msg'>一年級一班張三</view>
+  </view>
+   <view class='late'>
+    <image class='late-head' src='/images/late.png'></image>
+    <view class='late-msg'>一年級一班張三</view>
+  </view>
+   <view class='late'>
+    <image class='late-head' src='/images/late.png'></image>
+    <view class='late-msg'>一年級一班張三</view>
+>>>>>>> 89d1fd8d42faff7e8c1baf531cd775651aa49817
   </view>
 
 

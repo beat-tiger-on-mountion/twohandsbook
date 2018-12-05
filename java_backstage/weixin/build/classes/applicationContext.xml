@@ -37,6 +37,14 @@
 				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
 				<prop key="hibernate.useUnicode">${hibernate.useUnicode}</prop>
 				<prop key="hibernate.characterEncoding">${hibernate.characterEncoding}</prop>
+				<prop key="bonecp.idleMaxAge">${idleMaxAge}</prop>
+				<prop key="bonecp.idleConnectionTestPeriod">${idleConnectionTestPeriod}</prop>
+				<prop key="bonecp.partitionCount">${partitionCount}</prop>
+				<prop key="bonecp.acquireIncrement">${acquireIncrement}</prop>
+				<prop key="bonecp.maxConnectionsPerPartition">${maxConnectionsPerPartition}</prop>
+				<prop key="bonecp.minConnectionsPerPartition">${minConnectionsPerPartition}</prop>
+				<prop key="bonecp.statementsCacheSize">${statementsCacheSize}</prop>
+				<prop key="bonecp.releaseHelperThreads">${releaseHelperThreads}</prop>
 			</props>
 		</property>
 	</bean>

@@ -63,16 +63,28 @@ Page({
   onShareAppMessage: function() {
 
   },
-
+  // 活动跳转页面
+  actvity:function(){
+    wx.navigateTo({
+      url: '../activity_list/activity_list',
+    })
+  },
+  // 新闻跳转
   onclick: function() {
     wx.navigateTo({
         url: '../News_detail_page/News_detail_page',
       })
   },
-
+  // 通知跳转
   notice: function() {
     wx.navigateTo({
       url: '../notice_teacher/notice_teacher',
     })
   },
+  // 上下学签到跳转
+  schooltime:function(){
+    wx:wx.navigateTo({
+      url: '../school_parent/school_parent',
+    })
+  }
 })

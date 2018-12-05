@@ -45,10 +45,14 @@ public class Schools {
 
 	public void setSchoolName(String schoolName) {
 		this.schoolName = schoolName;
-	}
+	}   
 
+
+<<<<<<< HEAD
     
 
+=======
+>>>>>>> 89d1fd8d42faff7e8c1baf531cd775651aa49817
 	public String getProvince() {
 		return province;
 	}
@@ -72,7 +76,7 @@ public class Schools {
 	public void setCounty(String county) {
 		this.county = county;
 	}
-
+	
 	@OneToMany(mappedBy="school",targetEntity=Classes.class,cascade= {CascadeType.PERSIST})
 	public Set<Classes> getClassses() {
 		return classses;

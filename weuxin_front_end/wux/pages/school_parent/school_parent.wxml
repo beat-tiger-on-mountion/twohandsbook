@@ -4,13 +4,13 @@
  <image class='image' src='/images/122.png'></image>
  <view class='text'>上学时间</view>
  <view>
-<input class='time' value="{{title1}}"></input>
+<input class='time' value="{{title1}}" bindblur='upschool'></input>
 </view>
 
  <view class='img'><image class='image' src='/images/122.png'></image></view>
  <view class='text'>下学时间</view>
  <view>
-<input class='time' value="{{title1}}"></input>
+<input class='time' value="{{title1}}" bindblur='downschool'></input>
 </view>
 
  <view class='img'><image class='image' src='/images/132.png'></image></view>

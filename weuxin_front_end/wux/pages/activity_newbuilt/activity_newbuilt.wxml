@@ -3,6 +3,6 @@
      <view class="titleview"><input value="这是一个标题"> </input></view>
     <view class="viewline"></view>
     <textarea class="testview"  value='这是正文……………………'></textarea>
-   <button class=" releasebutton" >发布</button>
+   <button class=" releasebutton" bindtap='activitylist'>发布</button>
      
   
