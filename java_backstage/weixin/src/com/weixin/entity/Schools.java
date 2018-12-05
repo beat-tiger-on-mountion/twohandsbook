@@ -47,6 +47,7 @@ public class Schools {
 		this.schoolName = schoolName;
 	}   
 
+
 	public String getProvince() {
 		return province;
 	}
