@@ -24,7 +24,7 @@ import javax.persistence.Table;
 public class Schools {
 	private int schoolId;
 	private String schoolName;
-	private String privince;
+	private String province;
 	private String city;
 	private String county;
 	private Set<Classes> classses = new HashSet<>(0);
@@ -47,12 +47,14 @@ public class Schools {
 		this.schoolName = schoolName;
 	}
 
-	public String getPrivince() {
-		return privince;
+    
+
+	public String getProvince() {
+		return province;
 	}
 
-	public void setPrivince(String privince) {
-		this.privince = privince;
+	public void setProvince(String province) {
+		this.province = province;
 	}
 
 	public String getCity() {
