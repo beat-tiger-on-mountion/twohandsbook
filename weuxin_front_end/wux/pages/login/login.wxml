@@ -18,19 +18,16 @@
 <view class="page__bd">
   <wux-cell-group>
     <wux-cell hover-class="none">
-      <wux-input label="账号" placeholder="输入账号" />
+      <wux-input label="账号" placeholder="输入账号" name="userName" bindblur='userName'/>
     </wux-cell>
     <wux-cell hover-class="none">
-      <wux-input label="密码" placeholder="输入密码" password type="number" />
+      <wux-input label="密码" placeholder="输入密码" password type="number" name="pwd" bindblur='password' />
     </wux-cell>
   </wux-cell-group>
 </view>
 
  <button class='but1' bindtap='login' > 登录 </button>
- <view class="sbuts">
-  <button size='mini'>注册</button>
-  <button size='mini'>忘记密码</button>
- </view>
+ 
 
 </form>
 </view>
