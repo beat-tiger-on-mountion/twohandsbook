@@ -85,6 +85,7 @@ Page({
 
   },
   onclick:function(){
+  
     wx.navigateTo({
       url: '../common/common',
       success: function(res) {},
