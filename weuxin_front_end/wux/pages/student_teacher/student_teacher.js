@@ -62,5 +62,24 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+
+  },
+  ondutyteacher: function () {
+    wx.navigateTo({
+      url: '../onduty_teacher/onduty_teacher',
+    })
+  },
+  
+
+
+  courseteacher: function () {
+    wx.navigateTo({
+      url: '../course_teacher/course_teacher',
+    })
+  },
+
+
+
+  
+
 })
