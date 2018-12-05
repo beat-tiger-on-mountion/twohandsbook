@@ -13,11 +13,12 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.0",
-  
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
+	"appid": "wx2f30b468844af36c",
+	"projectname": "java",
 	"condition": {
 		"search": {
 			"current": -1,

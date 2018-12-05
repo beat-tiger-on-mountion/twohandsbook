@@ -1,8 +1,8 @@
 {
   "pages": [
-    
-    "pages/activity_list/activity_list",
     "pages/main/main",
+    "pages/activity_list/activity_list",
+    "pages/addnotice/addnotice",
     "pages/school_parent/school_parent",
     "pages/activity_detail/activity_detail",
     "pages/student_teacher/student_teacher",
