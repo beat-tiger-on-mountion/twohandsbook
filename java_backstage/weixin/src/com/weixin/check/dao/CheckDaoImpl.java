@@ -13,7 +13,14 @@ import org.springframework.stereotype.Repository;
 
 import com.weixin.entity.Check;
 import com.weixin.util.BaseDao;
-
+/**
+ * 
+    * @ClassName: CheckDaoImpl  
+    * @Description: 根据迟到或请假条件查询请假学生  
+    * @author xueyunqing  
+    * @date 2018年12月6日  
+    *
+ */
 @Repository
 public class CheckDaoImpl extends BaseDao<Check> {
 	@Resource

@@ -10,13 +10,21 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.weixin.check.dao.CheckDaoImpl;
 import com.weixin.entity.Check;
-
+/**
+ * 
+    * @ClassName: CheckServiceImpl  
+    * @Description: 查询请假和迟到学生  
+    * @author xueyunqing  
+    * @date 2018年12月6日  
+    *
+ */
 @Service
 @Transactional(readOnly=true)
 public class CheckServiceImpl {
 	@Resource
     private CheckDaoImpl checkDaoImpl;
 	
+	//查询请假学生
 	public List<Check>  findAbsence(){
 		List<Check> list1=new ArrayList<Check>();
 		List<Check> list;
@@ -41,6 +49,7 @@ public class CheckServiceImpl {
 	  return list1;
 	}
 	
+	//查询迟到学生
 	public List<Check> findDelay(){
 		List<Check> list1=new ArrayList<Check>();
 		List<Check> list;

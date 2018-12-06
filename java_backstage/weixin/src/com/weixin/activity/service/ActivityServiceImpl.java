@@ -17,6 +17,12 @@ public class ActivityServiceImpl {
     private ActivityDaoImpl activityDaoImpl;
     
     public List<Activity> list(){
-    	return this.activityDaoImpl.findAll();
+    	try {
+			return this.activityDaoImpl.findAll();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
     }
 }

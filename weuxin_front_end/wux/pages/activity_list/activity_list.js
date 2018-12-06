@@ -12,25 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
-    // var that = this
-    //  wx.request({
-    //    url: 'http://localhost:8080/weixin/activity',
-    //    method:"GET",
-    //    data:{
-    //      a:'1'
-    //    },
-    //    header:{
-    //     //  'content-type':'application/json'
-    //      'content-type': 'application/x-www-form-urlencoded'
-    //    },
-    //    success: function (res) {
-    //      var a = res.data
-    //      that.setData({
-    //        s:a,
-    //      })
-    //      console.log(res.data)
-    //    }
-    //  })
+    
   },
 
   /**

@@ -24,7 +24,17 @@ public class ActivityServletImpl {
 	
     @Resource
     private ActivityServiceImpl activityServiceImpl;
-    
+    /**
+     * 
+        * @Title: find  
+        * @Description:将后台从数据库得到的数据传到微信前台  
+        * @Param@param request
+        * @Param@param response
+        * @Param@param a
+        * @Param@return
+        * @Return String
+        * @throws
+     */
     @RequestMapping("/activity")
     public String find(HttpServletRequest request,HttpServletResponse response,String a){
     	response.setCharacterEncoding("utf-8");

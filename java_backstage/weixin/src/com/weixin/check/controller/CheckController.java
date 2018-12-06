@@ -14,12 +14,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.weixin.check.service.CheckServiceImpl;
 import com.weixin.entity.Check;
 import net.sf.json.JSONArray;
-
+/**
+ * 
+    * @ClassName: CheckController  
+    * @Description: 查询请假和迟到学生  
+    * @author xueyunqing 
+    * @date 2018年12月6日  
+    *
+ */
 @Controller
 public class CheckController {
 	@Resource
    private CheckServiceImpl checkServiceImpl;
-	
+	//查询请假学生
 	@RequestMapping(value = "/absence")
 	public void printAbsence(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("jinlai");
@@ -39,7 +46,7 @@ public class CheckController {
 		
 	}
 	
-	
+	//查询迟到学生
 	@RequestMapping(value = "/delay")
 	public void printDelay(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("lalala");
