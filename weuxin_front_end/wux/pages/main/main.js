@@ -75,4 +75,5 @@ Page({
       url: '../notice_teacher/notice_teacher',
     })
   },
+ 
 })
