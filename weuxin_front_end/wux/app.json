@@ -1,15 +1,16 @@
 {
   "pages":[
-
     "pages/student_teacher/student_teacher",
     "pages/student_parent/student_parent",
-    "pages/course_parent/course_parent",
-    "pages/persional/persional",
-
-    
-    "pages/activity_list/activity_list",
-
     "pages/main/main",
+
+    "pages/course_parent/course_parent",
+
+
+    "pages/persional/persional",
+    "pages/activity_list/activity_list",
+    
+
     "pages/school_parent/school_parent",
     "pages/activity_detail/activity_detail",
     "pages/login/login",
