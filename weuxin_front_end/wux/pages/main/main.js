@@ -81,14 +81,14 @@ Page({
       url: '../notice_teacher/notice_teacher',
     })
   },
-<<<<<<< HEAD
+
  
-=======
+
   // 上下学签到跳转
   schooltime:function(){
     wx:wx.navigateTo({
       url: '../school_parent/school_parent',
     })
   }
->>>>>>> 941fdcac37a3006bc7248eb37ce4e68a74053fce
+
 })
