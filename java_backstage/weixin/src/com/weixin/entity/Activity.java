@@ -50,16 +50,18 @@ public class Activity {
 	public void setaBody(String aBody) {
 		this.aBody = aBody;
 	}
-
+    
+	
 	@ManyToOne
 	@JoinColumn(name="classId")
 	public Classes getClasss() {
 		return classs;
 	}
-
+	
 	public void setClasss(Classes classs) {
 		this.classs = classs;
 	}
+
 	
 
 }

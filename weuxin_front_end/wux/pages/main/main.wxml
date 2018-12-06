@@ -1,6 +1,6 @@
 <view>
   <view class=''>
-    <swiper class='action' indicator-color='true' autoplay='true' interval='3000'>
+    <swiper class='action' indicator-color='true' autoplay='true' interval='3000' bindtap='actvity'>
       <swiper-item>
         <image class='action-img' src='/images/loop1.jpg'></image>
       </swiper-item>
@@ -31,7 +31,7 @@
       </view>
       <view class='item-msg'>成绩</view>
     </view>
-    <view class='list-item'>
+    <view class='list-item' bindtap='schooltime'>
       <view class='ico'>
         <image class='ico-img' src='/images/ico4.png'></image>
       </view>

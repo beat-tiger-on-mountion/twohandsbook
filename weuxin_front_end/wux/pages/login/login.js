@@ -1,4 +1,6 @@
-import { $wuxSelect } from '../../dist/index'
+import {
+  $wuxSelect
+} from '../../dist/index'
 
 Page({
 
@@ -6,70 +8,72 @@ Page({
    * 页面的初始数据
    */
   data: {
-    head:"/images/1.png",
+    head: "../../images/1.png",
     value1: '',
     title1: '',
     value2: '',
     title2: '',
     value3: '',
     title3: '',
-  
+    userName: '',
+    pwd: '',
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    
+  onLoad: function(options) {
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-    
+  onReady: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-    
+  onShow: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-    
+  onHide: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-    
+  onUnload: function() {
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-    
+  onPullDownRefresh: function() {
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-    
+  onReachBottom: function() {
+
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-    
+  onShareAppMessage: function() {
+
   },
   /**
    * 学校选择事件
@@ -83,7 +87,7 @@ Page({
         'C小学',
         'D小学',
         'E小学',
-        'F小学',""
+        'F小学', ""
       ],
       onConfirm: (value, index, options) => {
         console.log('onConfirm', value, index, options)
@@ -134,10 +138,52 @@ Page({
   /**
    * 登录验证信息后跳到主页
    */
-  login:function(){
-    wx.switchTab({
-       url: '../main/main',
+  login: function() {
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/weixin/login',
+      data: {
+        name: that.data.userName,
+        password: that.data.pwd,
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'post',
+      success(res) {
+        var name = that.data.userName;
+        var password = that.data.pwd;
+        console.log(res.data);
+        var getName = res.data.name;
+        var getPassWrod = res.data.phoneNum;
+        console.log(name);
+        console.log(password);
+        console.log(getName);
+        console.log(getPassWrod);
+        if (name == getName && password == getPassWrod) {
+          wx.switchTab({
+            url: '../main/main',
+          })
+        }
+
+
+
+      },
+
     })
   },
-})
 
+  userName: function(e) {
+    var that = this;
+    that.setData({
+      userName: e.detail.value,
+    });
+  },
+  password: function(e) {
+    var that = this;
+    that.setData({
+      pwd: e.detail.value,
+    });
+  },
+
+})
