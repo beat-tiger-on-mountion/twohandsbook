@@ -1,29 +1,29 @@
 
 {
   "pages": [
-<<<<<<< HEAD
+
 
     "pages/main/main",
-=======
+
     "pages/school_teacher/school_teacher",
     "pages/school_parent/school_parent",
-    "pages/student_teacher/student_teacher",
-    "pages/student_parent/student_parent",
-    "pages/course_parent/course_parent",
+   
+   
+   
     "pages/persional/persional",
     "pages/activity_list/activity_list",
-    "pages/main/main",    
+  
     "pages/activity_detail/activity_detail",
-    "pages/login/login",
-    "pages/comments/comments",
+   
+   
     "pages/News_detail_page/News_detail_page",
->>>>>>> 941fdcac37a3006bc7248eb37ce4e68a74053fce
+
     "pages/onduty_parent/onduty_parent",
     "pages/course_teacher/course_teacher",
     "pages/myclass/myclass",
     "pages/activity_newbuilt/activity_newbuilt",
     "pages/login/login",
-    "pages/persional/persional",
+   
     "pages/comments/comments",
     "pages/student_teacher/student_teacher",
    
@@ -31,17 +31,17 @@
     
 
     "pages/onduty_teacher/onduty_teacher",
-<<<<<<< HEAD
+
     "pages/course_parent/course_parent",
     "pages/addnotice/addnotice",
-    "pages/homework_parent/homework_parent",
+   
 
-    "pages/common/common",
+   
     "pages/student_parent/student_parent",
-=======
+
     "pages/homework_parent/homework_parent",
     "pages/common/common",
->>>>>>> 941fdcac37a3006bc7248eb37ce4e68a74053fce
+
     "pages/notice_teacher/notice_teacher"
   ],
   "window": {
