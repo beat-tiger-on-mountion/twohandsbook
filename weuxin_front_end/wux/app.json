@@ -1,43 +1,26 @@
 {
-<<<<<<< HEAD
   "pages": [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-  "pages":[
->>>>>>> 4931b257cd383cc4a6d7d6ea2d7359f172e21901
-
+    "pages/main/main",
+    "pages/homework_add/homework_add",
+    "pages/homework_teacher/homework_teacher",
+    "pages/homework_parent/homework_parent",
+    "pages/course_teacher/course_teacher",
+   
+    "pages/login/login",
     "pages/student_teacher/student_teacher",
     "pages/student_parent/student_parent",
     "pages/course_parent/course_parent",
     "pages/persional/persional",
-
-    
-    "pages/activity_list/activity_list",
-<<<<<<< HEAD
->>>>>>> 89d1fd8d42faff7e8c1baf531cd775651aa49817
->>>>>>> b0446bfcb3037ba42daaaaa2f1b60fde1dba12e2
-=======
-
->>>>>>> 4931b257cd383cc4a6d7d6ea2d7359f172e21901
-    "pages/main/main",
     "pages/activity_list/activity_list",
     "pages/addnotice/addnotice",
     "pages/school_parent/school_parent",
     "pages/activity_detail/activity_detail",
-    "pages/login/login",
     "pages/comments/comments",
     "pages/News_detail_page/News_detail_page",
     "pages/onduty_parent/onduty_parent",
-    "pages/course_teacher/course_teacher",
     "pages/myclass/myclass",
     "pages/activity_newbuilt/activity_newbuilt",
     "pages/onduty_teacher/onduty_teacher",
-
-    "pages/homework_parent/homework_parent",
-
     "pages/common/common",
     "pages/notice_teacher/notice_teacher"
   ],

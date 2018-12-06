@@ -1,50 +1,19 @@
-.list-item {
-  float: left;
-  margin-top: 50rpx;
-  margin-left: 110rpx;
-  margin-bottom: 30rpx;
-}
 
-.item-msg {
-  text-align: center;
+.time{
+  margin-left: 30rpx;
 }
-
-.ico {
-  background-color: #00baad;
-  width: 100rpx;
-  height: 100rpx;
-  border-radius: 10px;
+.time2{
+   margin-left: 30rpx;
+   margin-top: 30rpx;
 }
-
-.ico-img {
-  margin-top: 15rpx;
-  margin-left: 15rpx;
-  width: 70rpx;
-  height: 70rpx;
+.homework{
+   margin-left: 30rpx;
 }
-
-.table {
-  border: 1px solid #dadada;
-  border-right: 0;
-  border-bottom: 0;
-  width: 98%;
-}
-
-.tr {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.th, .td {
-  padding: 10px;
-  border-bottom: 1px solid #dadada;
-  border-right: 1px solid #dadada;
-  text-align: center;
-  width: 100%;
-}
-
-.th {
-  font-weight: 400;
-  background-color: #dadada;
+.line{
+margin-top: 30rpx;
+width: 650rpx;
+height: 2rpx;
+margin-left: 40rpx;
+margin-right: 20rpx;
+background-color: rgb(164, 167, 167);
 }

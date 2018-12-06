@@ -21,11 +21,8 @@
     <view class='ico'>
       <image class='ico-img' src='/images/stu3.png'></image>
     </view>
-<<<<<<< HEAD
-    <view class='item-msg'>值日表</view>
-=======
     <view class='item-msg'>课程表</view>
->>>>>>> 4931b257cd383cc4a6d7d6ea2d7359f172e21901
+
   </view>
   <view></view>
 </view>

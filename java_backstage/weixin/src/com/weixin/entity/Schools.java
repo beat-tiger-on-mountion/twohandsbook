@@ -48,11 +48,6 @@ public class Schools {
 	}   
 
 
-<<<<<<< HEAD
-    
-
-=======
->>>>>>> 89d1fd8d42faff7e8c1baf531cd775651aa49817
 	public String getProvince() {
 		return province;
 	}

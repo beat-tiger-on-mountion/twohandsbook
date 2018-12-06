@@ -83,8 +83,7 @@ Page({
         'C小学',
         'D小学',
         'E小学',
-        'F小学',""
-      ],
+        'F小学',       ],
       onConfirm: (value, index, options) => {
         console.log('onConfirm', value, index, options)
         if (index !== -1) {
