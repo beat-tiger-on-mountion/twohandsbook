@@ -7,9 +7,8 @@
 
   <view class='area'>
     <input name='suggest' placeholder="请输入意见" auto-focus bindblur='suggestInput' />
-
   </view>
   <button class='but1' bindtap='sub'>提交意见</button>
 
-  
+
 </view>

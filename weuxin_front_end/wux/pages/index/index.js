@@ -1,3 +1,4 @@
+var app = getApp()
 var types = ['default', 'primary', 'warn']
 var pageObject = {
   data: {
@@ -7,28 +8,27 @@ var pageObject = {
     disabled: false,
     plain: false,
     loading: false,
-    errMsg:"",
-    userInfo:"",
-    rawData:""
+    errMsg: "",
+    userInfo: "",
+    rawData: ""
   },
 
-  onGotUserInfo: function (e) {
-    wx.getUserInfo({
-     success:function(res){
-       console.log(res.userInfo.nickName),
-       console.log(res.userInfo.avatarUrl)
-     }
-    })
+  onGotUserInfo: function(e) {
     var that = this;
-    console.log(e.detail.errMsg)
-    console.log(e.detail.userInfo)
-    console.log(e.detail.rawData)
-    that.setData({
-      errMsg: e.detail.errMsg,
-      userInfo: e.detail.userInfo,
-      rawData: e.detail.rawData
-    }),
-    console.log(this.data.userInfo)
+    wx.getUserInfo({
+      success: function(res) {
+        that.setData({
+          errMsg: e.detail.errMsg,
+          userInfo: e.detail.userInfo,
+          rawData: e.detail.rawData
+        })
+      }
+    })
+  },
+  login: function() {
+    wx.navigateTo({
+      url: '../login/login',
+    })
   },
 }
 

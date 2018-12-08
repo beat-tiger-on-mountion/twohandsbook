@@ -1,9 +1,12 @@
+
 {
   "pages": [
-    "pages/feedback/feedback",
     "pages/login/login",
     "pages/index/index",
     "pages/main/main",
+    "pages/persional_teacher/persional_teacher",
+    "pages/feedback/feedback",
+    "pages/school_teacher/school_teacher",
     "pages/student_teacher/student_teacher",
     "pages/student_parent/student_parent",
     "pages/course_parent/course_parent",

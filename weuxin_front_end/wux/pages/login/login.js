@@ -1,5 +1,4 @@
 const app = getApp()
-
 import {
   $wuxSelect
 } from '../../dist/index'
@@ -10,17 +9,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-    head: "/images/1.png",
+    value: "",
+    value1: "",
     userName: "",
     passWord: "",
-
+    nickName: "",
+    avatarUrl: "",
+    head: "../../images/1.png",
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    wx.getSetting({
+      success(res) {
+        if (!res.authSetting['scope.record']) {
+          wx.authorize({
+            scope: 'scope.record',
+            success() {
+              // 用户已经同意小程序使用录音功能，后续调用 wx.startRecord 接口不会弹窗询问
+              wx.startRecord()
+            }
+          })
+        }
+      }
+    })
   },
 
   /**
@@ -83,7 +97,7 @@ Page({
         'C小学',
         'D小学',
         'E小学',
-        'F小学', ""
+        'F小学',
       ],
       onConfirm: (value, index, options) => {
         console.log('onConfirm', value, index, options)
@@ -151,13 +165,13 @@ Page({
     console.log(this.data.userName),
       console.log(this.data.passWord),
       wx.request({
-        url: "http://localhost:8080/weixin/login",
+        url: "http://10.7.84.69:8080/weixin/login",
         data: {
           userName: that.data.userName,
           passWord: that.data.passWord,
         },
         header: {
-          'content-type': 'application/x-www-form-urlencodedn' // 默认值
+          'content-type': 'application/json' // 默认值
         },
         success(res) {
           console.log(res.data)
@@ -176,4 +190,17 @@ Page({
       }
     })
   },
+  userName: function(e) {
+    var that = this;
+    that.setData({
+      userName: e.detail.value,
+    });
+  },
+  password: function(e) {
+    var that = this;
+    that.setData({
+      pwd: e.detail.value,
+    });
+  },
+
 })

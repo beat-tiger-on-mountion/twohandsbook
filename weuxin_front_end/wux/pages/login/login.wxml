@@ -1,7 +1,7 @@
 <view class='container'>
 
   <view>
-    <image src='{{head}}' class='headImg'></image>
+    <image src='{{avatarUrl}}' class='headImg'></image>
   </view>
 
   <!-- 登录表单-->

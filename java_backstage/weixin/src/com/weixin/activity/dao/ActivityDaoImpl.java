@@ -14,13 +14,23 @@ import com.weixin.util.BaseDao;
 
 @Repository
 public class ActivityDaoImpl extends BaseDao<Activity>{
+	
+	 
+	 private String entityClass= Activity.class.getSimpleName();  
      @Resource
      private SessionFactory sessionFactory;
+     /*
+      * 
+         *   
+         * 重写BaseDao的查询功能
+         * @return
+         * @throws Exception  
+         * @see com.weixin.util.BaseDao#findAll()
+      */
+     @Override
+	 public List<Activity> findAll() throws Exception {
+			Query query = this.sessionFactory.getCurrentSession().createQuery("from " + entityClass);
+			return query.list();
+		}
      
-     public List<Activity> findAll(){
-       Session session=this.sessionFactory.getCurrentSession();
-       Query q=session.createQuery("from Activity");
-       System.out.println(q);
-       return q.list();
-     }
 }

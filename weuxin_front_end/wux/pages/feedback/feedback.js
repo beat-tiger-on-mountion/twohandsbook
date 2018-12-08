@@ -15,7 +15,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-   
+    var that = this;
+    /**
+     * 获取用户信息
+     */
+    wx.getUserInfo({
+      success: function(res) {
+        that.setData({
+          userName: res.userInfo.nickName,
+          avatarUrl: res.userInfo.avatarUrl,
+        })
+      }
+    })
   },
 
   /**
@@ -28,13 +39,8 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
-    var that = this;
-    console.log(app.globalData.userInfo.nickName),
-      that.setData({
-        userName: app.globalData.userInfo.nickName,
-        avatarUrl: app.globalData.userInfo.avatarUrl,
-      })
+  onShow: function(e) {
+   
   },
 
   /**
