@@ -5,7 +5,7 @@
 </view>
 
 <!-- 登录表单-->
-<form>
+<form> 
 
 <!-- 学校选择 -->
 <wux-select id="wux-select1" />

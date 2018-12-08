@@ -1,6 +1,8 @@
-
 {
   "pages": [
+    "pages/myclass/myclass",
+    "pages/class_join/class_join",
+    "pages/class_creat/class_creat",
     "pages/school_teacher/school_teacher",
     "pages/school_parent/school_parent",
     "pages/student_teacher/student_teacher",
@@ -8,19 +10,20 @@
     "pages/course_parent/course_parent",
     "pages/persional/persional",
     "pages/activity_list/activity_list",
-    "pages/main/main",    
-    "pages/activity_detail/activity_detail",
+    "pages/main/main",
+    "pages/activity_detail/zactivity_detail",
     "pages/login/login",
     "pages/comments/comments",
     "pages/News_detail_page/News_detail_page",
     "pages/onduty_parent/onduty_parent",
     "pages/course_teacher/course_teacher",
-    "pages/myclass/myclass",
+    
     "pages/activity_newbuilt/activity_newbuilt",
     "pages/onduty_teacher/onduty_teacher",
     "pages/homework_parent/homework_parent",
     "pages/common/common",
     "pages/notice_teacher/notice_teacher"
+    
   ],
   "window": {
     "navigationBarBackgroundColor": "#00baad",

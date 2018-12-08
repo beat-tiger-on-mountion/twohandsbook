@@ -7,22 +7,23 @@ Page({
    */
   data: {
     value1: '',
-    title1: '一年级',
+    title1: '1',
     value2: '',
-    title2: '1班',
+    title2: '1',
     value3: '',
     title3: '语文老师',
+    s:'',
   },
   onClick1() {
     $wuxSelect('#wux-select1').open({
       value: this.data.value1,
       options: [
-        '一年级',
-        '二年级',
-        '三年级',
-        '四年级',
-        '五年级',
-        '六年级',
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
       ],
       onConfirm: (value, index, options) => {
         console.log('onConfirm', value, index, options)
@@ -39,15 +40,15 @@ Page({
     $wuxSelect('#wux-select2').open({
       value: this.data.value2,
       options: [
-        '1班',
-        '2班',
-        '3班',
-        '4班',
-        '5班',
-        '6班',
-        '7班',
-        '8班',
-        '9班',
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9',
       ],
       onConfirm: (value, index, options) => {
         console.log('onConfirm', value, index, options)
@@ -78,6 +79,30 @@ Page({
         }
       },
     })
+  },
+  // 创建班级的点击事件
+  qwe:function(e){
+    var that=this
+    wx.request({
+      url: 'http://localhost:8080/weixin/myclass',
+      method:"GET",
+      data:{
+        grade: this.data.title1,
+        classint:this.data.title2
+      },
+      header: {
+        //  'content-type':'application/json'
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        var a = res.data
+        that.setData({
+          s: a,
+        })
+        console.log(res.data)
+      }
+    })
+    
   },
   /**
    * 生命周期函数--监听页面加载

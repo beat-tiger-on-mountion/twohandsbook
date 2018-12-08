@@ -100,12 +100,17 @@
 /* 底部加入班级 */
 .jionclass{
   margin-left: 230rpx;
-  margin-top: 200rpx;
+  margin-top: 150rpx;
 }
 /* 底部图标样式 */
 .classimage2{
   width: 100rpx;
   height: 100rpx;
+	left: 300rpx;
+  margin-top: 60rpx;
+  background-color: rgba(32, 209, 200, 0.774);
+	top: 216rpx;
+	border-radius: 96rpx;
 }
 /* 底部文本样式 */
 .text-footer{

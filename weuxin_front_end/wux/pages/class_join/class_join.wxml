@@ -20,7 +20,7 @@
 
 <!-- 底部加入班级板块 -->
 <view class='jionclass'>
-<image class='classimage2' src='/images/seltab1.png'></image>
+<image class='classimage2' src='/images/seltab1.png' bindtap='qwe'></image>
 <view class='a'><text class="text-footer">加入年级</text></view>
 </view>
 
