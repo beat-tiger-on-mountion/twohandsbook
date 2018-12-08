@@ -13,7 +13,3 @@ page{
   background-color: #00baad;
   
 }
-.sbuts{
-  margin-top: 20rpx;
-  float: right;
-}

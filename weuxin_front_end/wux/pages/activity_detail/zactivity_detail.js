@@ -1,16 +1,11 @@
-// pages/homework_parent/homework_parent.js
+// pages/activity_detail/zactivity_detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    time:"11月14日",
-    math: "数学：做完练习题",
-    chinese:" 语文：背诵全文",
-    english:" 英语：做阅读理解,完形填空,背写单词",
-    physical:"物理：做完练习题",
-    biological:"生物：做完试卷"
+
   },
 
   /**
