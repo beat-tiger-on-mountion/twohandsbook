@@ -28,11 +28,11 @@ public class UserServicesImpl {
 	    * @return String
 	    * @throws
 	 */
-	public String findOne(String userName, String passWord) {
-		String hql = "from User where name=? and phoneNum=?";
-		Object[] ob = new Object[2];
+	public String findOne(String userName) {
+		String hql = "from User where name=?";
+		Object[] ob = new Object[1];
 		ob[0] = userName;
-		ob[1] = passWord;
+		
 		User user = new User();
 		try {
 			User u = this.userDaoImpl.findOne(hql, ob);

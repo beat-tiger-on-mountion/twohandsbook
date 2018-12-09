@@ -1,5 +1,4 @@
 package com.weixin.util;
-
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -358,4 +357,5 @@ public abstract class BaseDao<T> {
 	}
 
 }
+
 

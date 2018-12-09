@@ -31,18 +31,14 @@ public class UserControllerImpl {
 	    * @throws
 	 */
 	@RequestMapping("/login")
-	public void checkUser(HttpServletRequest request, HttpServletResponse response,  String userName, String passWord) {
-		System.out.println(userName + passWord);
-		String s = this.userServicesImpl.findOne(userName, userName);
+	public void checkUser(HttpServletRequest request, HttpServletResponse response,  String userName) {
+		String s = this.userServicesImpl.findOne(userName);
 		try {
 			PrintWriter writer = response.getWriter();
 			writer.write(s);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
-		
-			
+		}	
 	}
 }

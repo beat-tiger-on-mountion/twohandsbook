@@ -11,14 +11,4 @@ page{
   margin-top: 80rpx;
   align-items: center;
   background-color: #00baad;
-  
-}
-.sbuts{
-  margin-top: 20rpx;
-  float: right;
-}
-.userInf{
-  width: 15%;
-  margin-top: 200rpx;
-  float: right;
 }

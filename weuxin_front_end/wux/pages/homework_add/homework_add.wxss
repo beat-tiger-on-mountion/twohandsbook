@@ -1,0 +1,27 @@
+/* pages/homework_add/homework_add.wxss */
+
+.time{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+.line{
+  margin-top: 30rpx;
+  width: 650rpx;
+  height: 2rpx;
+  margin-left: 40rpx;
+  margin-right: 20rpx;
+  background-color: rgb(164, 167, 167);
+}
+.textarea{
+  border:5rpx ridge #DDDDDD;
+  width: 620rpx;
+  margin-top: 30rpx;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.btn{
+  margin-top: 20px;
+  margin-left: 250px;
+  background-color: #00baad
+}

@@ -11,8 +11,6 @@ Page({
   data: {
     value: "",
     value1: "",
-    userName: "",
-    passWord: "",
     nickName: "",
     avatarUrl: "",
     head: "../../images/1.png",
@@ -22,19 +20,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    wx.getSetting({
-      success(res) {
-        if (!res.authSetting['scope.record']) {
-          wx.authorize({
-            scope: 'scope.record',
-            success() {
-              // 用户已经同意小程序使用录音功能，后续调用 wx.startRecord 接口不会弹窗询问
-              wx.startRecord()
-            }
-          })
-        }
-      }
-    })
+    // console.log(app.globalData.nickName)
+    // console.log("url")
+    // console.log(app.globalData.avatarUrl)
+
   },
 
   /**
@@ -145,12 +134,17 @@ Page({
       showCancel: !1,
     })
   },
+  /**
+   * 获得用户输入框内容 实验结束放弃
+   */
   getUserName: function(e) {
     this.setData({
       userName: e.detail.value
     })
   },
-
+  /**
+   * 获得用户输入框内容 实验结束放弃
+   */
   getPassWord: function(e) {
     this.setData({
       passWord: e.detail.value
@@ -162,45 +156,25 @@ Page({
    */
   login: function() {
     var that = this;
-    console.log(this.data.userName),
-      console.log(this.data.passWord),
-      wx.request({
-        url: "http://10.7.84.69:8080/weixin/login",
-        data: {
-          userName: that.data.userName,
-          passWord: that.data.passWord,
-        },
-        header: {
-          'content-type': 'application/json' // 默认值
-        },
-        success(res) {
-          console.log(res.data)
-          if (res.data == true) {
-            wx.switchTab({
-              url: '../main/main',
-            })
-          }
+    wx.request({
+      url: "http://localhost:8080/weixin/login",
+      data: {
+        userName: app.globalData.nickName,
+        passWord: app.globalData.nickName
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      method: "post",
+      success(res) {
+        console.log(res.data)
+        if (res.data == true) {
+          wx.switchTab({
+            url: '../main/main',
+          })
         }
-      })
-  },
-  getUserInfo: function() {
-    wx.getUserInfo({
-      success: function(res) {
-        console.log(res.userInfo.nickName)
       }
     })
-  },
-  userName: function(e) {
-    var that = this;
-    that.setData({
-      userName: e.detail.value,
-    });
-  },
-  password: function(e) {
-    var that = this;
-    that.setData({
-      pwd: e.detail.value,
-    });
   },
 
 })

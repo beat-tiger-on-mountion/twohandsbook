@@ -1,16 +1,12 @@
-// pages/homework_parent/homework_parent.js
+// pages/homework_add/homework_add.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    time:"11月14日",
-    math: "数学：做完练习题",
-    chinese:" 语文：背诵全文",
-    english:" 英语：做阅读理解,完形填空,背写单词",
-    physical:"物理：做完练习题",
-    biological:"生物：做完试卷"
+    time:"11月14日"
+
   },
 
   /**
@@ -67,5 +63,12 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  //老师添加作业完成
+  endadd: function () {
+    wx.navigateTo({
+      url: '../homework_teacher/homework_teacher',
+    })
   }
+ 
 })

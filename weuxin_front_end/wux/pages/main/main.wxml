@@ -19,7 +19,7 @@
       </view>
       <view class='item-msg'>通知</view>
     </view>
-    <view class='list-item'>
+    <view class='list-item' bindtap='homework'>
       <view class='ico'>
         <image class='ico-img' src='/images/ico2.png'></image>
       </view>

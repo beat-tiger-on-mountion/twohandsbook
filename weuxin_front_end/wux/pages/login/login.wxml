@@ -1,9 +1,8 @@
 <view class='container'>
 
   <view>
-    <image src='{{avatarUrl}}' class='headImg'></image>
+    <image src='{{head}}' class='headImg'></image>
   </view>
-
   <!-- 登录表单-->
   <form>
 

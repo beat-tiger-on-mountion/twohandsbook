@@ -1,13 +1,28 @@
-/** wxss **/
-
-/** 修改button默认的点击态样式类**/
-
-.button-hover {
-  background-color: red;
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #00baad;
 }
 
-/** 添加自定义button点击态样式类**/
+.image {
+  display: flex;
+  justify-content: center;
+}
 
-.other-button-hover {
-  background-color: blue;
+.img {
+  margin-top: 100rpx;
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.start {
+  margin-top: 70rpx;
+  background: #7accc7;
+  width: 50%;
+}
+
+.open {
+  margin-top: 70%;
+  width: 50%;
+  background: #7accc7;
 }

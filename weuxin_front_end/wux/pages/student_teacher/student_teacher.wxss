@@ -35,11 +35,13 @@
 
 .title {
   margin-left: 80rpx;
+  height: 48rpx;
 }
 
 .late {
   margin-left: 150rpx;
   margin-bottom: 30rpx;
+  
 }
 
 .late-head {
@@ -52,3 +54,79 @@
   float: right;
   margin-right: 250rpx;
 }
+
+.dateinput{
+  border: 2rpx #00baad solid;
+}
+
+.nameinput{
+  margin-top: 5rpx;
+  border: 2rpx #00baad solid;
+}
+
+
+
+
+ .late-head0 {
+   width: 60rpx;
+  height: 60rpx;
+  border-radius: 40%;
+  margin-left: 600rpx;
+ 
+
+}
+
+
+.jiaview0{
+  width: 60rpx;
+  height: 60rpx;
+
+
+
+  
+}  
+
+
+
+
+
+
+
+
+
+.late-head1 {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 40%;
+  margin-left:600rpx;
+}
+
+
+.jiaview1{
+  width: 60rpx;
+  height: 60rpx;
+  
+
+  
+}
+
+
+
+.title1 {
+  margin-left: 80rpx;
+   margin-top: 40rpx;
+}
+
+
+
+.xunhuanview{
+  margin-top: 40rpx;
+}
+
+
+
+
+
+
+
+
