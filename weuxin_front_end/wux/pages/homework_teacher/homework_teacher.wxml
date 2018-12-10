@@ -1,0 +1,29 @@
+
+<view>
+  <image src='{{img}}' class='addImg' bindtap='addhomework'></image>
+</view>
+<view class="time">{{time}}作业</view>
+<view class='line'></view>
+ <view class="homework">{{manth}}</view>  
+ <view class="homework">{{chinese}}</view>
+ <view class="homework">{{english}}</view>
+ <view class="homework">{{physical}}</view>
+ <view class="homework">{{biological}}</view>
+
+ <view class="time2">{{time}}作业</view>
+<view class='line'></view>
+ <view class="homework">{{manth}}</view>  
+ <view class="homework">{{chinese}}</view>
+ <view class="homework">{{english}}</view>
+ <view class="homework">{{physical}}</view>
+ <view class="homework">{{biological}}</view>
+
+ <view class="time2">{{time}}作业</view>
+<view class='line'></view>
+ <view class="homework">{{manth}}</view>  
+ <view class="homework">{{chinese}}</view>
+ <view class="homework">{{english}}</view>
+ <view class="homework">{{physical}}</view>
+ <view class="homework">{{biological}}</view>
+
+   

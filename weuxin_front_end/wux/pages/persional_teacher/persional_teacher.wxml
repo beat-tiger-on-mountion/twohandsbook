@@ -4,9 +4,9 @@
 <view class="persional">
 <!-- 用户信息 -->
 <view>
-  <image src='{{head}}' class='headImg'></image>
+  <image src='{{avatarUrl}}' class='headImg'></image>
 </view>
-<view class='name'>用户名</view>
+<view class='name'>{{userName}}</view>
 <!-- 功能展示 -->
 <view class='function'>
 <wux-button block outline type="dark" class='a'><image  src='/images/seltab4.png' class='image1'></image>我的账户</wux-button>

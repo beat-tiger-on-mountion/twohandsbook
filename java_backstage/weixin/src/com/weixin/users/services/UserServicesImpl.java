@@ -28,22 +28,23 @@ public class UserServicesImpl {
 	    * @return String
 	    * @throws
 	 */
-	public String findOne(String userName, String passWord) {
-		String hql = "from User where name=? and phoneNum=?";
-		Object[] ob = new Object[2];
+	public String findOne(String userName) {
+		String hql = "from User where name=?";
+		Object[] ob = new Object[1];
 		ob[0] = userName;
-		ob[1] = passWord;
+		
 		User user = new User();
 		try {
 			User u = this.userDaoImpl.findOne(hql, ob);
-			user.setName(u.getName());
-			user.setPhoneNum(u.getPhoneNum());
-			JSONObject jb = JSONObject.fromObject(user);
-			return jb.toString();
+			if(u != null)
+				return "true";
+			else
+				return "false";
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return null;
+			return "false";
 		}
 		
 	}

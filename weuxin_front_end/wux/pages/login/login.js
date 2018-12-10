@@ -1,3 +1,4 @@
+const app = getApp()
 import {
   $wuxSelect
 } from '../../dist/index'
@@ -8,22 +9,20 @@ Page({
    * 页面的初始数据
    */
   data: {
+    value: "",
+    value1: "",
+    nickName: "",
+    avatarUrl: "",
     head: "../../images/1.png",
-    value1: '',
-    title1: '',
-    value2: '',
-    title2: '',
-    value3: '',
-    title3: '',
-    userName: '',
-    pwd: '',
-
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    // console.log(app.globalData.nickName)
+    // console.log("url")
+    // console.log(app.globalData.avatarUrl)
 
   },
 
@@ -87,7 +86,7 @@ Page({
         'C小学',
         'D小学',
         'E小学',
-        'F小学', ""
+        'F小学',
       ],
       onConfirm: (value, index, options) => {
         console.log('onConfirm', value, index, options)
@@ -136,54 +135,46 @@ Page({
     })
   },
   /**
+   * 获得用户输入框内容 实验结束放弃
+   */
+  getUserName: function(e) {
+    this.setData({
+      userName: e.detail.value
+    })
+  },
+  /**
+   * 获得用户输入框内容 实验结束放弃
+   */
+  getPassWord: function(e) {
+    this.setData({
+      passWord: e.detail.value
+    })
+  },
+
+  /**
    * 登录验证信息后跳到主页
    */
   login: function() {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/weixin/login',
+      url: "http://localhost:8080/weixin/login",
       data: {
-        name: that.data.userName,
-        password: that.data.pwd,
+        userName: app.globalData.nickName,
+        passWord: app.globalData.nickName
       },
       header: {
-        'content-type': 'application/x-www-form-urlencoded'
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
-      method: 'post',
+      method: "post",
       success(res) {
-        var name = that.data.userName;
-        var password = that.data.pwd;
-        console.log(res.data);
-        var getName = res.data.name;
-        var getPassWrod = res.data.phoneNum;
-        console.log(name);
-        console.log(password);
-        console.log(getName);
-        console.log(getPassWrod);
-        if (name == getName && password == getPassWrod) {
+        console.log(res.data)
+        if (res.data == true) {
           wx.switchTab({
             url: '../main/main',
           })
         }
-
-
-
-      },
-
+      }
     })
-  },
-
-  userName: function(e) {
-    var that = this;
-    that.setData({
-      userName: e.detail.value,
-    });
-  },
-  password: function(e) {
-    var that = this;
-    that.setData({
-      pwd: e.detail.value,
-    });
   },
 
 })

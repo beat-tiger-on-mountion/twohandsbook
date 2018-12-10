@@ -6,26 +6,24 @@ Page({
    */
   data: {
     head: "/images/1.png",
-
     listData: [
-      { "code": "   1", "text": "数", "type1": "语", "type2": "英", "type3": "数", "type4": "语"},
+      { "code": "1", "text": "数", "type1": "语", "type2": "英", "type3": "数", "type4": "语" },
 
       { "code": "2", "text": "数", "type1": "语", "type2": "英", "type3": "数", "type4": "语" },
 
-      { "code": "3", "text": "数", "type1": "语", "type2": "英", "type3": "数", "type4": "语"},
+      { "code": "3", "text": "数", "type1": "语", "type2": "英", "type3": "数", "type4": "语" },
 
-      { "code": "4", "text": "数", "type1": "语", "type2": "英", "type3": "数", "type4": "语"},
+      { "code": "4", "text": "数", "type1": "语", "type2": "英", "type3": "数", "type4": "语" },
 
-      { "code": "5", "text": "数", "type1": "语", "type2": "英", "type3": "数", "type4": "语"},
+      { "code": "5", "text": "数", "type1": "语", "type2": "英", "type3": "数", "type4": "语" },
 
       { "code": "6", "text": "数", "type1": "语", "type2": "英", "type3": "数", "type4": "语" },
 
       { "code": "7", "text": "数", "type1": "语", "type2": "英", "type3": "数", "type4": "语" },
-      { "code": "8", "text": "数", "type1": "语", "type2": "英", "type3": "数", "type4": "语"}
+
+      { "code": "8", "text": "数", "type1": "语", "type2": "英", "type3": "数", "type4": "语" }
 
     ]
-
-   
   },
 
   /**

@@ -154,6 +154,14 @@ public class User {
 		this.backtous = backtous;
 	}
 
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", phoneNum=" + phoneNum + ", images=" + images + ", classs="
+				+ classs + ", status=" + status + ", studentId=" + studentId + ", school=" + school + ", wxName="
+				+ wxName + ", schooltimes=" + schooltimes + ", notices=" + notices + ", comments=" + comments
+				+ ", backtous=" + backtous + "]";
+	}
+
 
 	
 	

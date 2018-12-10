@@ -2,18 +2,13 @@ page{
   background-color: #eaeaea;
 }
 .headImg{
-  height: 90px;
-  width: 90px;
-  border-radius: 25px;
+  height: 180rpx;
+  width: 180rpx;
+  border-radius: 50%;
 }
 .but1{
   width: 80%;
   margin-top: 80rpx;
   align-items: center;
   background-color: #00baad;
-  
-}
-.sbuts{
-  margin-top: 20rpx;
-  float: right;
 }
