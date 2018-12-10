@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    riqi:"",
+    studentDate: "",
+    studentName:" ",
   },
 
   /**
@@ -123,6 +124,45 @@ Page({
 
 
 
-  
+add: function() {
+    var that = this;
+    wx.request({
+      // url: 'http://localhost:8080/weixin/login',
+      data: {
+        studentName: that.data.studentName,
+        studentDate:that.data.studentDate,
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'post',
+      success(res) {
+        var studentName=that.data.studentName;
+        var studentDate=that.data.studentDate;
+
+        console.log(res.data);
+      },
+
+    })
+  },
+
+
+
+
+
+  studentName: function (e) {
+    var that = this;
+    that.setData({
+      studentName: e.detail.value,
+    });
+  },
+  studentDate: function (e) {
+    var that = this;
+    that.setData({
+      studentDate: e.detail.value,
+    });
+  },
+
+
 
 })

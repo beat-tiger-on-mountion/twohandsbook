@@ -28,16 +28,16 @@
   <view class='late'>
 
     <view class='late-msg'>
-      <input class="dateinput" placeholder='日期' value='{{}}' />
+      <input class="dateinput" placeholder='日期' name="studentDate" bindblur='studentdate' />
     </view>
 
     <view class='late-msg'>
-      <input class="nameinput" placeholder='学生姓名' />
+      <input class="nameinput" placeholder='学生姓名'  name="studentName" bindblur='studentname'  />
     </view>
      
 
   </view>
- <view  class='jiaview0'><image class='late-head0' src='/images/add.png'></image></view>
+ <view  class='jiaview0'><image class='late-head0' src='/images/add.png' bindtap='add'  ></image></view>
 
 
 
@@ -48,11 +48,7 @@
     </view>
   </view>
 
-  <!-- 
-  <view class='late'>
-    <image class='late-head' src='/images/add.png'></image>
-    <view class='late-msg'>添加迟到学生</view>
-  </view> -->
+
 
 
 
@@ -88,10 +84,6 @@
   </view>
 
 
-  <!-- <view class='late'>
-    <image class='late-head' src='/images/add.png'></image>
-    <view class='late-msg'>添加迟到学生</view>
-  </view> -->
 
 
 </view>

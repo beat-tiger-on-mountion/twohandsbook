@@ -29,7 +29,6 @@ public class CheckController {
 	//查询请假学生
 	@RequestMapping(value = "/absence")
 	public void printAbsence(HttpServletRequest request, HttpServletResponse response) {
-		System.out.println("jinlai");
 		response.setCharacterEncoding("UTF-8");
 		List<Check> list=this.checkServiceImpl.findAbsence();
 		JSONArray j1 = JSONArray.fromObject(list);
@@ -49,7 +48,6 @@ public class CheckController {
 	//查询迟到学生
 	@RequestMapping(value = "/delay")
 	public void printDelay(HttpServletRequest request, HttpServletResponse response) {
-		System.out.println("lalala");
 		response.setCharacterEncoding("UTF-8");
 		List<Check> list=this.checkServiceImpl.findDelay();
 		JSONArray j1 = JSONArray.fromObject(list);
