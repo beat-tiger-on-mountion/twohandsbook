@@ -62,5 +62,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  feedback:function(){
+    wx.navigateTo({
+      url: '../feedback/feedback',
+    })
   }
 })

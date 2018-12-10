@@ -24,10 +24,10 @@ Page({
       { "type1": "张三三", "type2": "李四四", "type3": "王五五", "type4": "赵六六" },
       { "type1": "李四四", "type2": "张三三", "type3": "赵六六", "type4": "王五五" },
    
-
- 
-
-    ]
+    ],
+    grade: '3', 
+    classInt:'2',
+    s:'',
   },
 
   /**
@@ -48,7 +48,28 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+     var that=this
+     wx.request({
+       url: 'http://localhost:8080/weixin/students',
+       method:'GET',
+       data:{
+        //  grade:'3',
+        //  classInt:'2'
+         grade:this.data.grade,
+         classInt:this.data.classInt,
+       },
+       header:{
+         //  'content-type':'application/json'
+         'content-type': 'application/x-www-form-urlencoded'
+       },
+       success: function (res) {
+         var a = res.data
+         that.setData({
+           s: a
+         })
+         console.log(res.data)
+       }
+     })
   },
 
   /**

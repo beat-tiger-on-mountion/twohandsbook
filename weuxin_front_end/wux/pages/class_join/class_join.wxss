@@ -85,6 +85,11 @@
 .classimage2{
   width: 100rpx;
   height: 100rpx;
+	left: 300rpx;
+  margin-top: 60rpx;
+  background-color: rgba(32, 209, 200, 0.774);
+	top: 216rpx;
+	border-radius: 96rpx;
 }
 /* 底部文本样式 */
 .text-footer{

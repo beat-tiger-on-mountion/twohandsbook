@@ -5,12 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name1:"asd",
-    name2:"asas",
-    name3: "asd",
-    name4: "asas",
-    name5: "asd",
-    
+    time:"11月14日",
+    math: "数学：做完练习题",
+    chinese:" 语文：背诵全文",
+    english:" 英语：做阅读理解,完形填空,背写单词",
+    physical:"物理：做完练习题",
+    biological:"生物：做完试卷"
   },
 
   /**

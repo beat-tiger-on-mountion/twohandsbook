@@ -1,0 +1,14 @@
+<!--pages/homework_add/homework_add.wxml-->
+<view class="time">{{time}}作业</view>
+<view class='line'></view>
+ <view class="homework">{{manth}}</view>  
+ <view class="homework">{{chinese}}</view>
+ <view class="homework">{{english}}</view>
+ <view class="homework">{{physical}}</view>
+ <view class="homework">{{biological}}</view>
+
+ <view class='textarea'>
+    <textarea placeholder="添加作业"  focus="false" ></textarea>
+ </view>
+<button class="btn" size='mini'  form-type="submit"  bindtap='endadd'> 提交 </button>
+       

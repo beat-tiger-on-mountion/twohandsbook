@@ -5,7 +5,7 @@
     </view>
     <view class='item-msg'>考勤</view>
   </view>
-  <view class='list-item'  bindtap='ondutyteacher'>
+  <view class='list-item' bindtap='ondutyteacher'>
     <view class='ico'>
       <image class='ico-img' src='/images/stu2.png'></image>
     </view>
@@ -22,37 +22,76 @@
   <view></view>
 </view>
 <view class='body'>
-  <view class='attend'>今日考勤</view>
+  <view class='attend'>考勤</view>
   <view class='title'>迟到</view>
 
+  <view class='late'>
+
+    <view class='late-msg'>
+      <input class="dateinput" placeholder='日期' value='{{}}' />
+    </view>
+
+    <view class='late-msg'>
+      <input class="nameinput" placeholder='学生姓名' />
+    </view>
+     
+
+  </view>
+ <view  class='jiaview0'><image class='late-head0' src='/images/add.png'></image></view>
 
 
-  
-  <view class='late'>
-    <image class='late-head' src='/images/late.png'></image>
-    <view class='late-msg'>一年級一班張三</view>
+
+  <view wx:for="{{fin1}}" wx:for-item="i" wx:for-index="index">
+    <view class='late'>
+      <image class='late-head' src='/images/112.png'></image>
+      <view class='late-msg'>{{i.cTime}}{{i.delay}}</view>
+    </view>
   </view>
-  <view class='late'>
-    <image class='late-head' src='/images/late.png'></image>
-    <view class='late-msg'>一年級一班張三</view>
-  </view>
+
+  <!-- 
   <view class='late'>
     <image class='late-head' src='/images/add.png'></image>
     <view class='late-msg'>添加迟到学生</view>
-  </view>
-  <view class='title'>请假</view>
+  </view> -->
+
+
+
+
+
+
+
+
+
+  <view class='title1'>请假</view>
+
   <view class='late'>
-    <image class='late-head' src='/images/late.png'></image>
-    <view class='late-msg'>一年級一班張三</view>
+
+    <view class='late-msg'>
+      <input class="dateinput" placeholder='日期' value='{{}}' />
+    </view>
+
+    <view class='late-msg'>
+      <input class="nameinput" placeholder='学生姓名' />
+    </view>
+
+
+
   </view>
-  <view class='late'>
-    <image class='late-head' src='/images/late.png'></image>
-    <view class='late-msg'>一年級一班張三</view>
+ <view  class='jiaview1'><image class='late-head1' src='/images/add.png'></image></view>
+
+
+  <view class="xunhuanview" wx:for="{{fin}}" wx:for-item="i" wx:for-index="index">
+    <view class='late'>
+      <image class='late-head' src='/images/112.png'></image>
+      <view class='late-msg'>{{i.cTime}}{{i.absence}}</view>
+    </view>
   </view>
-  <view class='late'>
+
+
+  <!-- <view class='late'>
     <image class='late-head' src='/images/add.png'></image>
     <view class='late-msg'>添加迟到学生</view>
-  </view>
+  </view> -->
 
 
 </view>

@@ -19,7 +19,7 @@
       </view>
       <view class='item-msg'>通知</view>
     </view>
-    <view class='list-item' >
+    <view class='list-item' bindtap='homework'>
       <view class='ico'>
         <image class='ico-img' src='/images/ico2.png'></image>
       </view>
@@ -38,34 +38,34 @@
       <view class='item-msg'>签到</view>
     </view>
   </view>
-  
+
   <view class='news'>
     <view class='news-title'>每日新闻</view>
 
     <view class='news-body' bindtap='onclick'>
       <image class='news-img' src='/images/news5.jpg'></image>
       <view class='body-title'>小学生走进车厢</view>
-      <view class='body-body'>    光路小学的同学们来到市北巴士第一分公司场站，从最早的公交车型开始学习了解。</view>
+      <view class='body-body'> 光路小学的同学们来到市北巴士第一分公司场站，从最早的公交车型开始学习了解。</view>
     </view>
     <view class='news-body'>
       <image class='news-img' src='/images/news5.jpg'></image>
       <view class='body-title'>小学生走进车厢</view>
-      <view class='body-body'>    光路小学的同学们来到市北巴士第一分公司场站，从最早的公交车型开始学习了解。</view>
+      <view class='body-body'> 光路小学的同学们来到市北巴士第一分公司场站，从最早的公交车型开始学习了解。</view>
     </view>
     <view class='news-body'>
       <image class='news-img' src='/images/news5.jpg'></image>
       <view class='body-title'>小学生走进车厢</view>
-      <view class='body-body'>    光路小学的同学们来到市北巴士第一分公司场站，从最早的公交车型开始学习了解。</view>
+      <view class='body-body'> 光路小学的同学们来到市北巴士第一分公司场站，从最早的公交车型开始学习了解。</view>
     </view>
     <view class='news-body'>
       <image class='news-img' src='/images/news5.jpg'></image>
       <view class='body-title'>小学生走进车厢</view>
-      <view class='body-body'>    光路小学的同学们来到市北巴士第一分公司场站，从最早的公交车型开始学习了解。</view>
+      <view class='body-body'> 光路小学的同学们来到市北巴士第一分公司场站，从最早的公交车型开始学习了解。</view>
     </view>
     <view class='news-body'>
       <image class='news-img' src='/images/news5.jpg'></image>
       <view class='body-title'>小学生走进车厢</view>
-      <view class='body-body'>    光路小学的同学们来到市北巴士第一分公司场站，从最早的公交车型开始学习了解。</view>
+      <view class='body-body'> 光路小学的同学们来到市北巴士第一分公司场站，从最早的公交车型开始学习了解。</view>
     </view>
   </view>
 </view>

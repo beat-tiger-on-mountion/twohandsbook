@@ -89,6 +89,12 @@ Page({
     wx:wx.navigateTo({
       url: '../school_parent/school_parent',
     })
+  },
+  // 作业跳转
+  homework: function () {
+    wx.navigateTo({
+      url: '../homework_teacher/homework_teacher',
+    })
   }
 
 })

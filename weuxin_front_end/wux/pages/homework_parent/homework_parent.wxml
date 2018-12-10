@@ -1,16 +1,25 @@
-<view class="table">
-        <view class="tr">
-            <view class="th">星期一</view>
-            <view class="th">星期二</view>
-            <view class="th">星期三</view>
-            <view class="th">星期四</view>
-            <view class="th">星期五</view>
-        </view>
-        <view class="tr" wx:for="{{5}}">
-            <view class="td">{{name1}}</view>
-            <view class="td">{{name2}}</view>
-            <view class="td">{{name3}}</view>
-            <view class="td">{{name4}}</view>
-            <view class="td">{{name5}}</view>
-        </view>
-    </view>
+<view class="time">{{time}}作业</view>
+<view class='line'></view>
+ <view class="homework">{{manth}}</view>  
+ <view class="homework">{{chinese}}</view>
+ <view class="homework">{{english}}</view>
+ <view class="homework">{{physical}}</view>
+ <view class="homework">{{biological}}</view>
+
+ <view class="time2">{{time}}作业</view>
+<view class='line'></view>
+ <view class="homework">{{manth}}</view>  
+ <view class="homework">{{chinese}}</view>
+ <view class="homework">{{english}}</view>
+ <view class="homework">{{physical}}</view>
+ <view class="homework">{{biological}}</view>
+
+ <view class="time2">{{time}}作业</view>
+<view class='line'></view>
+ <view class="homework">{{manth}}</view>  
+ <view class="homework">{{chinese}}</view>
+ <view class="homework">{{english}}</view>
+ <view class="homework">{{physical}}</view>
+ <view class="homework">{{biological}}</view>
+
+   

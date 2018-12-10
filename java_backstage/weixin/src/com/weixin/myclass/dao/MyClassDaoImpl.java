@@ -1,5 +1,42 @@
 package com.weixin.myclass.dao;
 
-public class MyClassDaoImpl {
+import javax.servlet.http.HttpServletResponse;
 
+import org.hibernate.SQLQuery;
+import org.springframework.stereotype.Repository;
+
+import com.weixin.entity.Classes;
+import com.weixin.util.BaseDao;
+
+@Repository
+public class MyClassDaoImpl extends BaseDao<Classes>{
+     /*
+      * 
+         *   
+         *  创建班级保存到数据库
+         * @param entity
+         * @throws Exception  
+         * @see com.weixin.util.BaseDao#save(java.lang.Object)
+      */
+	@Override
+	public void save(Classes entity) throws Exception {		
+		super.save(entity);
+	}
+	
+	 /*
+     * 
+        *   
+        * 查询班级对象   
+        * @param hql
+        * @param params
+        * @return
+        * @throws Exception  
+        * @see com.weixin.util.BaseDao#findOne(java.lang.String, java.lang.Object[])
+     */
+    @Override
+    public Classes findOne(String hql, Object[] params) throws Exception {
+		
+		return super.findOne(hql, params);
+	}
+    
 }
