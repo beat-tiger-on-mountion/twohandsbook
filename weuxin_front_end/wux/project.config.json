@@ -18,10 +18,10 @@
 	},
 	"isGameTourist": false,
 	"appid": "wx2f30b468844af36c",
-<<<<<<< HEAD
-=======
+
+
 	"projectname": "%E5%AE%B6%E6%A0%A1%E4%BA%92%E9%80%9A%E4%B8%8A%E5%AD%A6%E5%AE%9D",
->>>>>>> 941fdcac37a3006bc7248eb37ce4e68a74053fce
+
 	"condition": {
 		"search": {
 			"current": -1,
