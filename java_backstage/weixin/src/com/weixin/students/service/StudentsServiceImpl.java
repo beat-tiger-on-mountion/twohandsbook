@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.weixin.entity.Students;
+import com.weixin.entity.User;
 import com.weixin.students.dao.StudentsDaoImpl;
 
 @Service
@@ -39,5 +40,41 @@ public class StudentsServiceImpl{
     	
     	 
      }
+     
+     
+     
+     /**
+      * 
+         * @Title: findOne  
+         * @Description: 根据学生姓名查学生  
+         * @param @param studentName  学生姓名
+         * @param @return
+         * @return Students
+         * @throws
+      */
+ 	public Students findOne(String studentName) {
+		String hql = "from Students where name=?";
+		Object[] ob = new Object[1];
+		ob[0] = studentName;
+		try {
+			return this.studentsDaoImpl.findOne(hql, ob);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+		
+
+		
+	}
+     
+     
+     
+     
+     
+     
+     
+     
+     
    
 }

@@ -26,25 +26,25 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    var that=this;
+    var that = this;
     wx.request({
-      url: 'http://localhost:8080/weixin/delay', //仅为示例，并非真实的接口地址
+        url: 'http://localhost:8080/weixin/delay', //仅为示例，并非真实的接口地址
 
-      header: {
-        'content-type': 'application/x-www-form-urlencoded' // 默认值
-      },
-      method: 'post',
-      success(res) {
-        var fii1 = res.data;
-        console.log(fii1);
-        that.setData({
-          fin1: res.data
-        });
-      },
-      fail: function (res) {
-        console.log(res);
-      }
-    }),
+        header: {
+          'content-type': 'application/x-www-form-urlencoded' // 默认值
+        },
+        method: 'post',
+        success(res) {
+          var fii1 = res.data;
+          console.log(fii1);
+          that.setData({
+            fin1: res.data
+          });
+        },
+        fail: function(res) {
+          console.log(res);
+        }
+      }),
 
 
       wx.request({
@@ -61,11 +61,11 @@ Page({
             fin: res.data
           });
         },
-        fail: function (res) {
+        fail: function(res) {
           console.log(res);
         }
       })
-    
+
 
 
 
@@ -125,6 +125,6 @@ Page({
   },
 
 
-  
+
 
 })
