@@ -23,7 +23,8 @@
 }
 /* 功能按钮版块 */
 .function{
-  width: 100%;
+  margin-left: 40rpx;
+  width: 90%;
   margin-top: 100rpx;  
   font-weight:bold;
 }
@@ -34,4 +35,31 @@
   float: left;
   margin-top:10rpx; 
   border-radius: 50rpx;
+}
+
+.btn_par{
+  margin-top: 20px;
+  margin-left: 280px;
+  background-color: #00baad
+}
+
+.btn_tea{
+  width: 170rpx;
+  margin-top: -45px;
+  margin-left: 180px;
+  margin-right: 50epx;
+  background-color: #00baad
+}
+.hidden{
+  display: none
+}
+
+.left{
+  width: 312rpx;
+}
+
+.right{
+  margin-top: -529rpx;
+  width: 312rpx;
+  margin-left: 364rpx;
 }
