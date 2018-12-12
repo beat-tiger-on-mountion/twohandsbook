@@ -11,8 +11,13 @@ public class UserDaoImpl extends BaseDao <User>{
 	
 	@Override
 	public User findOne(String hql, Object[] params) throws Exception {
-		
 		return super.findOne(hql, params);
 	}
+
+	@Override
+	public void save(User entity) throws Exception {
+		super.save(entity);
+	}
+
 	
 }

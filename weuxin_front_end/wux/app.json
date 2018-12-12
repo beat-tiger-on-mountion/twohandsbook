@@ -1,26 +1,27 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/login/login",
-    "pages/main/main",
+    "pages/share/share",
+    "pages/course_teacher/course_teacher",
     "pages/persional_teacher/persional_teacher",
+    "pages/main/main",
+    "pages/school_teacher/school_teacher",
     "pages/feedback/feedback",
+    "pages/persional/persional",
+    "pages/student_teacher/student_teacher",
+    "pages/student_parent/student_parent",
+    "pages/maintest/maintest",
     "pages/myclass/myclass",
     "pages/class_join/class_join",
     "pages/class_creat/class_creat",
     "pages/homework_add/homework_add",
+    "pages/comments/comments",
     "pages/homework_teacher/homework_teacher",
     "pages/homework_parent/homework_parent",
-    "pages/course_teacher/course_teacher",
-    "pages/school_teacher/school_teacher",
-    "pages/student_teacher/student_teacher",
-    "pages/student_parent/student_parent",
     "pages/course_parent/course_parent",
-    "pages/persional/persional",
     "pages/activity_list/activity_list",
     "pages/school_parent/school_parent",
     "pages/activity_detail/zactivity_detail",
-    "pages/comments/comments",
     "pages/News_detail_page/News_detail_page",
     "pages/onduty_parent/onduty_parent",
     "pages/addnotice/addnotice",
@@ -28,7 +29,7 @@
     "pages/activity_newbuilt/activity_newbuilt",
     "pages/onduty_teacher/onduty_teacher",
     "pages/common/common",
-    "pages/notice_teacher/notice_teacher"  
+    "pages/notice_teacher/notice_teacher"
   ],
   "window": {
     "navigationBarBackgroundColor": "#00baad",
@@ -49,7 +50,7 @@
         "selectedIconPath": "images/seltab1.png"
       },
       {
-        "pagePath": "pages/student_parent/student_parent",
+        "pagePath": "pages/student_teacher/student_teacher",
         "text": "学生信息",
         "iconPath": "images/tab2.png",
         "selectedIconPath": "images/seltab2.png"

@@ -1,5 +1,4 @@
 {
-  
   "usingComponents": {
     "wux-icon": "../../dist/icon/index",
     "wux-button": "../../dist/button/index"

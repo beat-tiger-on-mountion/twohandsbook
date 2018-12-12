@@ -10,27 +10,48 @@ Page({
     userInfo: "",
     rawData: "",
     img: "../../images/1.png",
-    userName: null,
-    passWord: null,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {},
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
+  onLoad: function(options) {
 
   },
 
   /**
-   * 生命周期函数--监听页面显示
+   * 生命周期函数--监听页面初次渲染完成
    */
-  onShow: function() {
+  onReady: function() {},
 
+  /**
+   * 生命周期函数--监听页面显示 全局变量 添加学校班级 修改状态码表示身份
+   */
+  onShow: function(options) {
+    var that = this;
+    if (app.globalData.status == 1089) {
+      setTimeout(function() {
+        var status = app.globalData.status
+        wx.request({
+          url: 'http://localhost:8080/weixin/getUser',
+          data: {
+            wxName: app.globalData.openId,
+          },
+          header: {
+            'content-type': 'application/x-www-form-urlencoded' // 默认值
+          },
+          method: "post",
+          success: function(res) {
+            app.globalData.schoolId = res.data.school.schoolId,
+              app.globalData.classId = res.data.classs.classId,
+              app.globalData.status = res.data.status
+              wx.switchTab({
+                url: '../persional/persional',
+              })
+          }
+        })
+      },500)
+    }
   },
 
   /**
@@ -65,28 +86,42 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
+    var that = this;
+    var schoolId = app.globalData.schoolId
+    var classId = app.globalData.classId
+    var msg = [schoolId, classId]
+    var smsg = msg.join(",")
+    return {
+      title: '弹出分享时显示的分享标题',
+      desc: '分享页面的内容',
+      path: '/pages/share/share?msg=' + smsg, // 路径，传递参数到指定页面。
+      success: function(res) {
+        console.log("yes", res)
 
+      }
+    }
   },
 
   /**
-   * 验证用户登录
+   * 教师第一次登陆，保存用户名场景值
    */
   login: function() {
     var that = this;
     wx.request({
-      url: "http://10.222.185.60:8080/weixin/login",
+      url: "http://localhost:8080/weixin/teacherlogin",
       data: {
-        userName: app.globalData.nickName
+        wxName: app.globalData.openId,
+        status: app.globalData.status
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
       method: "post",
       success(res) {
-        console.log(res.data)
-        if (res.data == true) {
+        console.log(res.data.status)
+        if (res.data != null) {
           wx.switchTab({
-            url: '../main/main',
+            url: '../persional_teacher/persional_teacher',
           })
         }
       }
@@ -100,8 +135,28 @@ Page({
     wx.getUserInfo({
       success: function(res) {
         app.globalData.nickName = res.userInfo.nickName
+        app.globalData.avatarUrl = res.userInfo.avatarUrl
         that.login()
       }
     })
   },
+
 })
+/**
+ * 也不知道是什么
+ */
+function getUserId(data) {
+  wx.getStorage({
+    key: getUserKey(), //'userInfo',
+    fail: function(res) {
+      data.back(false);
+      //    return false;
+    },
+    success: function(res) {
+      var userData = res.data;
+      console.log(userData);
+      data.back(userData.usrid);
+      // return userData.usrid;
+    }
+  });
+}
