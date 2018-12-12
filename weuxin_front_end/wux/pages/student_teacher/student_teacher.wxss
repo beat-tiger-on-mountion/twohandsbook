@@ -31,11 +31,14 @@
   margin-left: 50rpx;
   border-left: 10rpx #00baad solid;
   margin-bottom: 30rpx;
+  margin-top: 130rpx;
+  font-size: 54rpx;
 }
 
 .title {
   margin-left: 80rpx;
   height: 48rpx;
+  margin-top: 80rpx;
 }
 
 .late {
@@ -53,26 +56,25 @@
 .late-msg {
   float: right;
   margin-right: 250rpx;
+  
 }
 
 .dateinput{
   border: 2rpx #00baad solid;
+  height: 80rpx;
 }
 
 .nameinput{
   margin-top: 5rpx;
   border: 2rpx #00baad solid;
+  height: 80rpx;
 }
-
-
-
 
  .late-head0 {
    width: 60rpx;
   height: 60rpx;
   border-radius: 40%;
   margin-left: 600rpx;
- 
 
 }
 
@@ -80,17 +82,9 @@
 .jiaview0{
   width: 60rpx;
   height: 60rpx;
-
-
-
+  margin-top: 60rpx;
   
 }  
-
-
-
-
-
-
 
 
 
@@ -105,19 +99,13 @@
 .jiaview1{
   width: 60rpx;
   height: 60rpx;
-  
-
-  
+  margin-top: 60rpx; 
 }
-
-
 
 .title1 {
   margin-left: 80rpx;
-   margin-top: 40rpx;
+   margin-top: 100rpx;
 }
-
-
 
 .xunhuanview{
   margin-top: 40rpx;

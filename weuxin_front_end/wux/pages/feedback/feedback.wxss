@@ -1,1 +1,26 @@
-/* pages/feedback/feedback.wxss */
+page{
+  background-color: #eaeaea;
+}
+.headImg{
+  margin-top: -200rpx;
+  margin-bottom: 50rpx;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+}
+.userName{
+  margin-left: -150rpx;
+  margin-bottom: 20rpx;
+}
+.area{
+  height: 600rpx;
+  width: 90%;
+  border: 1px #000  solid;
+}
+.but1{
+  width: 80%;
+  margin-top: 80rpx;
+  align-items: center;
+  background-color: #00baad;
+  
+}

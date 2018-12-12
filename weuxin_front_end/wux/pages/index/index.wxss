@@ -1,0 +1,28 @@
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #00baad;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  margin-top: 100rpx;
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.start {
+  margin-top: 70rpx;
+  background: #7accc7;
+  width: 50%;
+}
+
+.open {
+  margin-top: 70%;
+  width: 50%;
+  background: #7accc7;
+}

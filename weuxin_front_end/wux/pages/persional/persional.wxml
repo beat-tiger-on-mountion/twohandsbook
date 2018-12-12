@@ -1,16 +1,53 @@
 <!--pages/persional/persional.wxml-->
 <!-- 整体 -->
 <view class="persional">
-<!-- 用户信息 -->
-<view>
-  <image src='{{head}}' class='headImg'></image>
-</view>
-<view class='name'>用户名</view>
-<!-- 功能展示 -->
-<view class='function'>
-<wux-button block outline type="dark" class='a'><image  src='/images/seltab4.png' class='image1'></image>我的账户</wux-button>
-<wux-button block outline type="dark"><image  src='/images/seltab4.png' class='image1'></image>用户姓名</wux-button>
-<wux-button block outline type="dark"><image  src='/images/seltab3.png' class='image1'></image>修改资料</wux-button>
-<wux-button block outline type="dark"><image  src='/images/seltab1.png' class='image1'></image>意见反馈</wux-button>
-</view>
+  <button bindtap='change' data-d="parent" class="btn_par">家长</button>
+  <button bindtap='change' data-d="teacher" class="btn_tea">老师</button>
+
+  <!-- 用户信息 -->
+  <view>
+    <image src='{{head}}' class='headImg'></image>
+  </view>
+  <view class='name'>{{userName}}</view>
+  <!-- 功能展示 -->
+  <view class="function">
+    <view class="show">
+      <wux-button block outline type="dark">
+        <image src='/images/seltab4.png' class="image1"></image>我的账户</wux-button>
+      <wux-button block outline type="dark">
+        <image src='/images/seltab4.png' class="image1"></image>用户姓名</wux-button>
+      <wux-button block outline type="dark" >
+        <image src='/images/seltab3.png' class="image1"></image>修改资料</wux-button>
+      <wux-button block outline type="dark" bindtap='feedback'>
+        <image src='/images/seltab1.png' class="image1"></image>意见反馈</wux-button>
+    </view>
+
+    <view class="{{teacher == s?'show':'hidden'}}">
+      <view class="left">
+        <wux-button block outline type="dark"  bindtap='creClass'>
+          <image src='/images/seltab1.png' class="image1"></image>创建班级</wux-button>
+        <wux-button block outline type="dark"  bindtap='addClass'>
+          <image src='/images/seltab1.png' class="image1"></image>加入班级</wux-button>
+        <wux-button block outline type="dark"  bindtap='myClass'>
+          <image src='/images/seltab1.png' class="image1"></image>我的班级</wux-button>
+        <wux-button block outline type="dark" bindtap='addNotice'>
+          <image src='/images/seltab1.png'  class="image1"></image>增加通知</wux-button>
+        <wux-button block outline type="dark" bindtap='addWork'>
+          <image src='/images/seltab1.png'  class="image1"></image>增加作业</wux-button>
+      </view>
+
+      <view class="right">
+        <wux-button block outline type="dark" bindtap='modAtt'>
+          <image src='/images/seltab1.png'  class="image1"></image>修改考勤</wux-button>
+        <wux-button block outline type="dark" bindtap='modTime'>
+          <image src='/images/seltab1.png'  class="image1"></image>修改值日</wux-button>
+        <wux-button block outline type="dark" bindtap='modCurr'>
+          <image src='/images/seltab1.png' class="image1" ></image>修改课程表</wux-button>
+        <wux-button block outline type="dark" bindtap='addComm'>
+          <image src='/images/seltab1.png'  class="image1"></image>增加评论</wux-button>
+        <wux-button block outline type="dark"  bindtap='modSchool'>
+          <image src='/images/seltab1.png' class="image1"></image>设置上下学时间</wux-button>
+      </view>
+    </view>
+  </view>
 </view>

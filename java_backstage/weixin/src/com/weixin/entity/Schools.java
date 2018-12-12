@@ -13,14 +13,14 @@ import javax.persistence.Table;
 
 /**
  * 
-    * @ClassName: Schools  
-    * @Description: TODO  
-    * @author xueyunqing  
-    * @date 2018年12月3日   
-    *
+ * @ClassName: Schools
+ * @Description: TODO
+ * @author xueyunqing
+ * @date 2018年12月3日
+ *
  */
 @Entity
-@Table(name="tbl_schools")
+@Table(name = "tbl_schools")
 public class Schools {
 	private int schoolId;
 	private String schoolName;
@@ -29,8 +29,9 @@ public class Schools {
 	private String county;
 	private Set<Classes> classses = new HashSet<>(0);
 	private Set<User> users = new HashSet<>();
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int getSchoolId() {
 		return schoolId;
 	}
@@ -45,7 +46,7 @@ public class Schools {
 
 	public void setSchoolName(String schoolName) {
 		this.schoolName = schoolName;
-	}   
+	}
 
 	public String getProvince() {
 		return province;
@@ -70,8 +71,8 @@ public class Schools {
 	public void setCounty(String county) {
 		this.county = county;
 	}
-	
-	@OneToMany(mappedBy="school",targetEntity=Classes.class,cascade= {CascadeType.PERSIST})
+
+	@OneToMany(mappedBy = "school", targetEntity = Classes.class, cascade = { CascadeType.PERSIST })
 	public Set<Classes> getClassses() {
 		return classses;
 	}
@@ -80,7 +81,7 @@ public class Schools {
 		this.classses = classses;
 	}
 
-	@OneToMany(mappedBy="school",targetEntity=User.class,cascade= {CascadeType.PERSIST})
+	@OneToMany(mappedBy = "school", targetEntity = User.class, cascade = { CascadeType.PERSIST })
 	public Set<User> getUsers() {
 		return users;
 	}
@@ -88,9 +89,5 @@ public class Schools {
 	public void setUsers(Set<User> users) {
 		this.users = users;
 	}
-	
-	
-	
 
 }
-
