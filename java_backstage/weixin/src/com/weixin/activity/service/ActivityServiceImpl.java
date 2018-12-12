@@ -1,5 +1,6 @@
 package com.weixin.activity.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -18,11 +19,29 @@ public class ActivityServiceImpl {
     
     public List<Activity> list(){
     	try {
-			return this.activityDaoImpl.findAll();
+    		List<Activity> list=this.activityDaoImpl.findAll();  
+        	List<Activity> list2=new ArrayList<>();
+        	for(Activity a1:list) {
+        		Activity w=new Activity();
+        		w.setId(a1.getId());
+        		w.setaTime(a1.getaTime());
+        		w.setaBody(a1.getaBody());
+        		list2.add(w);
+        	}
+			return list2;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			return null;
 		}
-		return null;
+		
+    }
+    public void addactivity(Activity entity) {
+       try {
+		this.activityDaoImpl.save(entity);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
     }
 }

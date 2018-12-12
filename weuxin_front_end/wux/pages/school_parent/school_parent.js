@@ -1,5 +1,5 @@
 // pages/achool_parent/school_parent.js
-
+import { $wuxSelect } from '../../dist/index'
 Page({
 
   /**
@@ -7,6 +7,12 @@ Page({
    */
   data: {
      s:'',
+     value1:'',
+     upschool:'8:00',
+     value2: '',
+     value3: '',
+     title1:'上学时间',
+     title2:'下学时间',
   },
 
   /**
@@ -29,7 +35,7 @@ Page({
   onShow: function () {
      var that=this
      wx.request({
-       url: 'http://localhost:8080/weixin/activity',
+       url: 'http://localhost:8080/weixin/timecheck',
        method:'GET',
        data : {
           a:'1'
@@ -48,6 +54,72 @@ Page({
      })
   },
 
+  onClick1() {
+    var that=this
+    
+    $wuxSelect('#wux-select1').open({
+      
+      value: this.data.value1,
+      options: [
+        that.data.s[0].go,
+        that.data.s[1].go,
+        that.data.s[2].go,
+      ],
+      onConfirm: (value, index, options) => {
+        console.log('onConfirm', value, index, options)
+        if (index !== -1) {
+          this.setData({
+            value1: value,
+            title1: options[index],
+          })
+        }
+      },
+    })
+  },
+  onClick2() {
+    var that = this
+
+    $wuxSelect('#wux-select2').open({
+
+      value: this.data.value2,
+      options: [
+        that.data.s[0].back,
+        that.data.s[1].back,
+        that.data.s[2].back,
+      ],
+      onConfirm: (value, index, options) => {
+        console.log('onConfirm', value, index, options)
+        if (index !== -1) {
+          this.setData({
+            value2: value,
+            title2: options[index],
+          })
+        }
+      },
+    })
+  },
+  button: function (e) {
+    var that = this
+    wx.request({
+      url: 'http://localhost:8080/weixin/schooltime',
+      method: 'GET',
+      data: {
+        upschool: this.data.title1,
+        downschool: this.data.title2,
+      },
+      header: {
+        //  'content-type':'application/json'
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        var a = res.data
+        that.setData({
+          s: a,
+        })
+        console.log(res.data)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

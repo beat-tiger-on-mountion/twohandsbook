@@ -1,8 +1,9 @@
 
     <button class="addimg">添加图片</button> 
-     <view class="titleview"><input value="这是一个标题"> </input></view>
-    <view class="viewline"></view>
-    <textarea class="testview"  value='这是正文……………………'></textarea>
+     <view class="titleview"><input placeholder="这是一个标题。。" value="{{title}}" bindtap='titlename'></input></view>
+    <view class="viewline">
+    <textarea class="testview" placeholder="这是正文。。"  value='{{tx}}' bindtap='text'></textarea>
+    </view>
    <button class=" releasebutton" bindtap='activitylist'>发布</button>
      
   

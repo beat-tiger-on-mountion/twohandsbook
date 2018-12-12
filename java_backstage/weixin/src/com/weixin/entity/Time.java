@@ -21,10 +21,8 @@ import javax.persistence.Table;
 @Table(name="tbl_time")
 public class Time {
 	private int id;
-	private String upgo;
-	private String downgo;
-	private String upback;
-	private String downback;
+	private String go;
+	private String back;
 	private Classes classs;
 
 	@Id
@@ -37,38 +35,23 @@ public class Time {
 		this.id = id;
 	}
 
-	public String getUpgo() {
-		return upgo;
+
+	public String getGo() {
+		return go;
 	}
 
-	public void setUpgo(String upgo) {
-		this.upgo = upgo;
+	public void setGo(String go) {
+		this.go = go;
 	}
 
-	public String getDowngo() {
-		return downgo;
+	public String getBack() {
+		return back;
 	}
 
-	public void setDowngo(String downgo) {
-		this.downgo = downgo;
+	public void setBack(String back) {
+		this.back = back;
 	}
 
-	public String getUpback() {
-		return upback;
-	}
-
-	public void setUpback(String upback) {
-		this.upback = upback;
-	}
-
-	public String getDownback() {
-		return downback;
-	}
-
-	public void setDownback(String downback) {
-		this.downback = downback;
-	}
-	
 	@ManyToOne
 	@JoinColumn(name="classId")
 	public Classes getClasss() {
