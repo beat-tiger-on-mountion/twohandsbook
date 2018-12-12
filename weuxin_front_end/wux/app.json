@@ -1,36 +1,22 @@
 {
   "pages": [
-<<<<<<< HEAD
     "pages/main/main",
+    "pages/class_creat/class_creat",
+    "pages/administrator/administrator",
+    "pages/modify_data/modify_data",
+    "pages/index/index",
     "pages/student_teacher/student_teacher",
-     "pages/school_teacher/school_teacher",
+    "pages/school_teacher/school_teacher",
     "pages/onduty_teacher/onduty_teacher",
     "pages/persional/persional",
-    "pages/persional_teacher/persional_teacher",       
-    "pages/index/index",
     "pages/login/login",
-=======
-    "pages/student_teacher/student_teacher",
-    "pages/student_parent/student_parent",
-    "pages/login/login",
-    "pages/index/index",
-    "pages/main/main",
-    "pages/persional_teacher/persional_teacher",
->>>>>>> 24fbbf65a6258b614e9f00c9ca302caef6e25391
     "pages/feedback/feedback",
     "pages/myclass/myclass",
-    "pages/class_join/class_join",
-    "pages/class_creat/class_creat",
     "pages/homework_add/homework_add",
     "pages/homework_teacher/homework_teacher",
     "pages/homework_parent/homework_parent",
-<<<<<<< HEAD
-    "pages/course_teacher/course_teacher",  
     "pages/student_parent/student_parent",
-=======
     "pages/course_teacher/course_teacher",
-    "pages/school_teacher/school_teacher",
->>>>>>> 24fbbf65a6258b614e9f00c9ca302caef6e25391
     "pages/course_parent/course_parent",
     "pages/activity_list/activity_list",
     "pages/school_parent/school_parent",
@@ -39,8 +25,7 @@
     "pages/News_detail_page/News_detail_page",
     "pages/onduty_parent/onduty_parent",
     "pages/addnotice/addnotice",
-    "pages/activity_detail/activity_detail",
-    "pages/activity_newbuilt/activity_newbuilt",  
+    "pages/activity_newbuilt/activity_newbuilt",
     "pages/common/common",
     "pages/notice_teacher/notice_teacher"
   ],

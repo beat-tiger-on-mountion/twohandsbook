@@ -42,12 +42,9 @@
 	height: 59rpx;
 	left: 108rpx;
 	color: rgba(0, 0, 0, 1);
-	
 	line-height: 150%;
-  margin-left: 80rpx;
-  
+  margin-left: 80rpx;  
 }
-
 
 /* 添加年级选择框 */
 .gradeselect{
@@ -64,7 +61,6 @@
 	left: 108rpx;
 	top: 124rpx;
 	color: rgba(0, 0, 0, 1);
-	
 	line-height: 150%;
   margin-top: 60rpx;
   margin-left: 80rpx;
@@ -84,7 +80,6 @@
 	left: 150rpx;
 	top: 124rpx;
 	color: rgba(0, 0, 0, 1);
-	
 	line-height: 150%;
   margin-top: 60rpx;
   margin-left: 80rpx;

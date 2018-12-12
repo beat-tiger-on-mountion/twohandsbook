@@ -76,63 +76,95 @@ Page({
   onShareAppMessage: function () {
 
   },
-  feedback:function(){
-    wx.navigateTo({
-      url: '../feedback/feedback',
-    })
-  },
-  
+
+  /**
+   * 实现家长和老师的转换
+   */
   change: function (e) {
     var that = this;
     that.setData({
       s: e.target.dataset.d
     })
   },
+  /**
+   * 意见反馈跳转
+   */
+  feedback:function(){
+    wx.navigateTo({
+      url: '../feedback/feedback',
+    })
+  },
+  
+  /**
+   * 修改资料
+   */
+  modData:function(){
+    wx.navigateTo({
+      url: '../modify_data/modify_data',
+    })
+  },
+
+  /**
+   * 管理员
+   */
+  administrator:function(){
+    wx.navigateTo({
+      url: '../administrator/administrator',
+    })
+  },
+
+  /**
+   * 创建班级
+   */
   creClass: function () {
     wx.navigateTo({
       url: '../class_creat/class_creat',
     })
   },
-  addClass: function () {
-    wx.navigateTo({
-      url: '../class_join/class_join',
-    })
-  }, 
+  
+  //我的班级
   myClass: function () {
     wx.navigateTo({
       url: '../myclass/myclass',
     })
   },
+  //增加通知
   addNotice: function () {
     wx.navigateTo({
       url: '../addnotice/addnotice',
     })
   },
+  //增加作业
   addWork: function () {
     wx.navigateTo({
       url: '../homework_add/homework_add',
     })
   },
+  //修改考勤
   modAtt: function () {
     wx.navigateTo({
       url: '../student_teacher/student_teacher',
     })
   },
+  //修改值日
   modTime: function () {
     wx.navigateTo({
       url: '../onduty_teacher/onduty_teacher',
     })
   },
+  //修改课程表
   modCurr: function () {
     wx.navigateTo({
       url: '../course_teacher/course_teacher',
     })
   },
+  //增加评论
   addComm: function () {
     wx.navigateTo({
       url: '../common/common',
     })
   },
+  //上下学时间
   modSchool: function () {
     wx.navigateTo({
       url: '../school_teacher/school_teacher',

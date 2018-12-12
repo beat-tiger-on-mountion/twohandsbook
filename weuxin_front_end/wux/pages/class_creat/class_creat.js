@@ -65,9 +65,7 @@ Page({
     $wuxSelect('#wux-select3').open({
       value: this.data.value3,
       options: [
-        '语文老师',
-        '数学老师',
-        '英语老师',
+        '北京市','天津市','上海市','重庆市','河北省','山西省','辽宁省','吉林省','黑龙江省'
       ],
       onConfirm: (value, index, options) => {
         console.log('onConfirm', value, index, options)
