@@ -8,13 +8,23 @@
 <wux-select id="wux-select3" />
 <!-- 年级班级板块 -->
 <view class='wrapper'>
-<!--选择学校所在省-->
+
+<!--学校所在省-->
 <view class="province">
   <image class="classimage" src="/images/seltab4.png"></image>
-  <text class="text-content">选择所在省</text></view>
-<view class="text1">
-  <wux-cell title="" extra="{{title3}}" bind:click="onClick3"></wux-cell>
-</view>
+  <text class="text-content">学校所在省</text></view>
+  <textarea class='textarea1'></textarea>
+<!--学校所在县-->
+<view class="county">
+  <image class="classimage" src="/images/seltab4.png"></image>
+  <text class="text-content">学校所在县</text></view>
+  <textarea class='textarea2'></textarea>
+<!--学校名称-->
+<view class="name1">
+  <image class="classimage" src="/images/seltab4.png"></image>
+  <text class="text-content">学校名称</text></view>
+  <textarea class='textarea3'></textarea>
+  
 
 <!--添加年级-->
 <view class="grade">

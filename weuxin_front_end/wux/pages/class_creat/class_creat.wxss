@@ -36,8 +36,44 @@
 .text-content{
   margin-left: 10rpx;
 }
+/*学校所在省*/
+.province{
+  margin-left: 80rpx;
+}
+.textarea1{
+  margin-top: -50rpx;
+  margin-left: 370rpx; 
+  border: 3rpx ridge #DDDDDD;
+  width: 300rpx;
+  height: 75rpx;
+}
+/*学校所在省*/
+.county{
+  margin-left: 80rpx;
+  margin-top: 25rpx;
+}
+.textarea2{
+  margin-top: -50rpx;
+  margin-left: 370rpx; 
+  border: 3rpx ridge #DDDDDD;
+  width: 300rpx;
+  height: 75rpx;
+}
+/*学校名称*/
+.name1{
+  margin-left: 80rpx;
+  margin-top: 25rpx;
+}
+.textarea3{
+  margin-top: -50rpx;
+  margin-left: 370rpx; 
+  border: 3rpx ridge #DDDDDD;
+  width: 300rpx;
+  height: 75rpx;
+}
 /* 添加年级样式 */
 .grade{
+  margin-top: 25rpx;
   width: 270rpx;
 	height: 59rpx;
 	left: 108rpx;

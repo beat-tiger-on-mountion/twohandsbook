@@ -63,6 +63,7 @@ Page({
   onShareAppMessage: function () {
 
   },
+  //跳转增加通知页面
    toadd:function () {
     wx.navigateTo({
       url: '../addnotice/addnotice',

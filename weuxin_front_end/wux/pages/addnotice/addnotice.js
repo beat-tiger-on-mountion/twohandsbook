@@ -63,6 +63,7 @@ Page({
   onShareAppMessage: function () {
 
   },
+  //跳转
   onclick:function(){
     wx.navigateBack({
       url: '../notice_teacher/notice_teacher',
