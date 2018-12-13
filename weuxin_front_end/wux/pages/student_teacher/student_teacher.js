@@ -9,7 +9,6 @@ Page({
     studentDate1: "",
     studentName1: " ",
     inputValue: null,
-
   },
 
   /**
@@ -88,9 +87,7 @@ Page({
   add: function() {
     var that = this;
     this.setData({
-
       inputValue: ""
-
     })
     wx.request({
       url: 'http://localhost:8080/weixin/delayteacher',
@@ -105,24 +102,18 @@ Page({
       success(res) {
         var studentName = that.data.studentName;
         var studentDate = that.data.studentDate;
-
-
         console.log(res.data);
       },
 
     })
   },
 
-
-
-
   add1: function() {
     var that = this;
     this.setData({
-
       inputValue: ""
-
     })
+
     wx.request({
       url: 'http://localhost:8080/weixin/absenceteacher',
       data: {
@@ -136,16 +127,11 @@ Page({
       success(res) {
         var studentName1 = that.data.studentName1;
         var studentDate1 = that.data.studentDate1;
-
-
         console.log(res.data);
       },
 
     })
   },
-
-
-
 
   studentName: function(e) {
     var that = this;
@@ -162,7 +148,6 @@ Page({
   },
 
 
-
   studentName1: function(e) {
     var that = this;
     that.setData({
@@ -175,7 +160,4 @@ Page({
       studentDate1: e.detail.value,
     });
   },
-
-
-
 })

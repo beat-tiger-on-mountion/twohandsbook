@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/main/main",
     "pages/class_creat/class_creat",
     "pages/administrator/administrator",
     "pages/modify_data/modify_data",
+    "pages/main/main",
     "pages/index/index",
     "pages/student_teacher/student_teacher",
     "pages/school_teacher/school_teacher",
@@ -20,7 +20,7 @@
     "pages/course_parent/course_parent",
     "pages/activity_list/activity_list",
     "pages/school_parent/school_parent",
-    "pages/activity_detail/zactivity_detail",
+    "pages/activity_detail/activity_detail",
     "pages/comments/comments",
     "pages/News_detail_page/News_detail_page",
     "pages/onduty_parent/onduty_parent",
