@@ -5,14 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-    head: "/images/news5.jpg"
+    head: "",
+    userName:"",
+    parent: "parent",
+    teacher: "teacher",
+    s: "teacher",
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    wx.getUserInfo({
+      success: function (res) {
+        that.setData({
+          userName: res.userInfo.nickName,
+          head: res.userInfo.avatarUrl,
+        })
+      }
+    })
   },
 
   /**
@@ -26,6 +38,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+ 
 
   },
 
@@ -67,5 +80,63 @@ Page({
     wx.navigateTo({
       url: '../feedback/feedback',
     })
-  }
+  },
+  
+  change: function (e) {
+    var that = this;
+    that.setData({
+      s: e.target.dataset.d
+    })
+  },
+  creClass: function () {
+    wx.navigateTo({
+      url: '../class_creat/class_creat',
+    })
+  },
+  addClass: function () {
+    wx.navigateTo({
+      url: '../class_join/class_join',
+    })
+  }, 
+  myClass: function () {
+    wx.navigateTo({
+      url: '../myclass/myclass',
+    })
+  },
+  addNotice: function () {
+    wx.navigateTo({
+      url: '../addnotice/addnotice',
+    })
+  },
+  addWork: function () {
+    wx.navigateTo({
+      url: '../homework_add/homework_add',
+    })
+  },
+  modAtt: function () {
+    wx.navigateTo({
+      url: '../student_teacher/student_teacher',
+    })
+  },
+  modTime: function () {
+    wx.navigateTo({
+      url: '../onduty_teacher/onduty_teacher',
+    })
+  },
+  modCurr: function () {
+    wx.navigateTo({
+      url: '../course_teacher/course_teacher',
+    })
+  },
+  addComm: function () {
+    wx.navigateTo({
+      url: '../common/common',
+    })
+  },
+  modSchool: function () {
+    wx.navigateTo({
+      url: '../school_teacher/school_teacher',
+    })
+  },
+
 })

@@ -1,14 +1,15 @@
 {
   "pages": [
+    "pages/main/main",
+    "pages/student_teacher/student_teacher",
+    "pages/school_teacher/school_teacher",
+    "pages/onduty_teacher/onduty_teacher",
+    "pages/persional/persional",
+    "pages/persional_teacher/persional_teacher",
     "pages/index/index",
     "pages/share/share",
     "pages/course_teacher/course_teacher",
-    "pages/persional_teacher/persional_teacher",
-    "pages/main/main",
-    "pages/school_teacher/school_teacher",
     "pages/feedback/feedback",
-    "pages/persional/persional",
-    "pages/student_teacher/student_teacher",
     "pages/student_parent/student_parent",
     "pages/maintest/maintest",
     "pages/myclass/myclass",
@@ -27,9 +28,7 @@
     "pages/addnotice/addnotice",
     "pages/activity_detail/activity_detail",
     "pages/activity_newbuilt/activity_newbuilt",
-    "pages/onduty_teacher/onduty_teacher",
-    "pages/common/common",
-    "pages/notice_teacher/notice_teacher"
+    "pages/common/common"
   ],
   "window": {
     "navigationBarBackgroundColor": "#00baad",
@@ -50,7 +49,7 @@
         "selectedIconPath": "images/seltab1.png"
       },
       {
-        "pagePath": "pages/student_teacher/student_teacher",
+        "pagePath": "pages/student_parent/student_parent",
         "text": "学生信息",
         "iconPath": "images/tab2.png",
         "selectedIconPath": "images/seltab2.png"

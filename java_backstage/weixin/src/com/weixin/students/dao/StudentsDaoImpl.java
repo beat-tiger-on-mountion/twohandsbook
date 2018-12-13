@@ -26,5 +26,13 @@ public class StudentsDaoImpl extends BaseDao<Students> {
 	    @Override
 	    public List<Students> find(String hql, Object[] params) throws Exception {
 	          return super.find(hql, params);
-	    }	   
+	    }
+		@Override
+		public Students findOne(String hql, Object[] params) throws Exception {
+			// TODO Auto-generated method stub
+			return super.findOne(hql, params);
+		}
+	    
+	    
+	    
 }

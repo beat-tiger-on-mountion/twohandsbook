@@ -25,4 +25,3 @@
       <image src='/images/seltab1.png' class='image1'></image>我的班级</wux-button>
   </view>
 </view>
-<wux-toast id="wux-toast" />
