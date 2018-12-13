@@ -6,8 +6,8 @@ App({
     status: null,
     schoolId: null,
     classId: null,
-    openId: 'hh',
-
+    openId: '',
+    userName:'',
   },
   onLaunch: function() {
     var that = this;

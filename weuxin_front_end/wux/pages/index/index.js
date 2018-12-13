@@ -28,30 +28,7 @@ Page({
    * 生命周期函数--监听页面显示 全局变量 添加学校班级 修改状态码表示身份
    */
   onShow: function(options) {
-    var that = this;
-    if (app.globalData.status == 1089) {
-      setTimeout(function() {
-        var status = app.globalData.status
-        wx.request({
-          url: 'http://localhost:8080/weixin/getUser',
-          data: {
-            wxName: app.globalData.openId,
-          },
-          header: {
-            'content-type': 'application/x-www-form-urlencoded' // 默认值
-          },
-          method: "post",
-          success: function(res) {
-            app.globalData.schoolId = res.data.school.schoolId,
-              app.globalData.classId = res.data.classs.classId,
-              app.globalData.status = res.data.status
-              wx.switchTab({
-                url: '../persional/persional',
-              })
-          }
-        })
-      },500)
-    }
+
   },
 
   /**
@@ -120,12 +97,52 @@ Page({
       success(res) {
         console.log(res.data.status)
         if (res.data != null) {
+          if (res.data.name != null) {
+            app.globalData.nickName = res.data.name
+          } else {
+            app.globalData.nickName = app.globalData.userName
+          }
           wx.switchTab({
-            url: '../persional_teacher/persional_teacher',
+            url: '../persional/persional',
           })
         }
       }
     })
+  },
+  /**
+   * 
+   */
+  getUser: function() {
+    var that = this;
+    if (app.globalData.status == 1089) {
+      var status = app.globalData.status
+      wx.request({
+        url: 'http://localhost:8080/weixin/getUser',
+        data: {
+          wxName: app.globalData.openId,
+        },
+        header: {
+          'content-type': 'application/x-www-form-urlencoded' // 默认值
+        },
+        method: "post",
+        success: function(res) {
+          app.globalData.nickName = res.data.name
+          app.globalData.schoolId = res.data.school.schoolId,
+            app.globalData.classId = res.data.classs.classId,
+            app.globalData.status = res.data.status
+            console.log(app.globalData)
+          wx.switchTab({
+            url: '../main/main',
+          })
+        },
+        false: function() {
+          that.login()
+        }
+      })
+
+    }else{
+      that.login()
+    }
   },
   /**
    * 用户授权事件
@@ -134,8 +151,7 @@ Page({
     var that = this;
     wx.getUserInfo({
       success: function(res) {
-        app.globalData.nickName = res.userInfo.nickName
-        app.globalData.avatarUrl = res.userInfo.avatarUrl
+        app.globalData.userName = res.userInfo.nickName
         that.login()
       }
     })

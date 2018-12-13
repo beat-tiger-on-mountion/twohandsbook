@@ -1,3 +1,4 @@
+
 <view class='body'>
   <view class='image'>
     <image src='{{img}}' class='img'></image>

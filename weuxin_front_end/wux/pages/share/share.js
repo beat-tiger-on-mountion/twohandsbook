@@ -33,28 +33,9 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function (options) {
-    var that = this;
-    if (app.globalData.status == 1089) {
-      var status = app.globalData.status
-      wx.request({
-        url: 'http://localhost:8080/weixin/getUser',
-        data: {
-          wxName: app.globalData.openId,
-        },
-        header: {
-          'content-type': 'application/x-www-form-urlencoded' // 默认值
-        },
-        method: "post",
-        success: function (res) {
-          console.log(res.data)
-          app.globalData.schoolId = res.data.school.schoolId,
-            app.globalData.classId = res.data.classs.classId,
-            app.globalData.status = res.data.status
-            console.log(app.globalData.status)
-        }
-      })
-    }
+  onShow: function(options) {
+
+
   },
 
   /**
@@ -109,13 +90,19 @@ Page({
         'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
       method: "post",
-      success:function(res) {
+      success: function(res) {
         console.log(res.data)
-        if(res.data != null){
-          app.globalData.classId = res.data.classId
-        wx.switchTab({
-          url: '../persional_teacher/persional_teacher',
-        })
+        if (res.data != null) {
+          if ( res.data.name != null) {
+            app.globalData.nickName = res.data.name
+          }else{
+            app.globalData.nickName = app.globalData.userName
+          }
+          app.globalData.schoolId = res.data.school.schoolId
+          app.globalData.classId = res.data.classs.classId
+          wx.switchTab({
+            url: '../persional/persional',
+          })
         }
 
       }
@@ -129,7 +116,8 @@ Page({
     console.log(app.globalData.openId)
     wx.getUserInfo({
       success: function(res) {
-        app.globalData.nickName = res.userInfo.nickName
+        app.globalData.userName=res.userInfo.nickName
+        console.log(app.globalData.userName)
         that.login()
       }
     })

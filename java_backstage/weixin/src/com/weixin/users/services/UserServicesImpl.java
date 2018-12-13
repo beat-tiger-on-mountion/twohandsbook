@@ -36,12 +36,14 @@ public class UserServicesImpl {
 		try {
 			User u = this.userDaoImpl.findOne(hql, obj);
 			if (u == null) {
+				user.setName("无名氏");
 				user.setWxName(wxName);
 				user.setStatus(Integer.parseInt(status));
 				this.userDaoImpl.save(user);
 				JSONObject jb1 = JSONObject.fromObject(user);
 				return jb1.toString();
-			}else {
+			} else {
+				user.setName(u.getName());
 				user.setId(u.getId());
 				user.setWxName(u.getWxName());
 				user.setStatus(u.getStatus());
@@ -76,6 +78,7 @@ public class UserServicesImpl {
 		try {
 			User u = this.userDaoImpl.findOne(hql, obj);
 			if (u == null) {
+				user.setName("无名氏");
 				user.setWxName(wxName);
 				user.setStatus(Integer.parseInt(status));
 				s.setSchoolId(schoolId);
@@ -86,6 +89,7 @@ public class UserServicesImpl {
 				JSONObject jb1 = JSONObject.fromObject(user);
 				return jb1.toString();
 			} else {
+				user.setName(u.getName());
 				user.setId(u.getId());
 				user.setWxName(u.getWxName());
 				user.setStatus(u.getStatus());
@@ -111,7 +115,7 @@ public class UserServicesImpl {
 	    * @param @return
 	    * @return String
 	    * @throws
-
+	
 	 */
 	public String getUser(String wxName) {
 		String hql = "from User where wxName=?";
