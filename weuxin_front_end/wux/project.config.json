@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": 0,
@@ -54,7 +54,7 @@
 					"scene": "1005"
 				},
 				{
-					"id": 3,
+					"id": 2,
 					"name": "下拉进入",
 					"pathName": "pages/index/index",
 					"query": "",
