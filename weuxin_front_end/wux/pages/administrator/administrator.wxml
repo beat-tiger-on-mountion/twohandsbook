@@ -1,0 +1,16 @@
+<!--pages/administrator/administrator.wxml-->
+<wux-select id="wux-select1" />
+<view>
+  <text class="title">管理员页面</text>
+</view>
+<!--选择老师-->
+<view class="teacher">
+   <text class="text-content">选择老师</text>
+</view>
+<view class='teacherselect'>
+   <wux-cell title="" placeohld="" extra="{{title1}}" bind:click="onclick" ></wux-cell>
+</view>
+<button class="btn" size='mini' form-type="submit"  bindtap='onclick1'> 提交 </button>
+
+
+

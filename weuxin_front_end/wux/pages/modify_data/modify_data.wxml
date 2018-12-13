@@ -1,0 +1,11 @@
+<!--pages/modify_data/modify_data.wxml-->
+<view>
+  <text class="title">编辑资料</text>
+</view>
+<view class="mod">
+  <text>请输入新的用户名</text>
+  <textarea class="name"></textarea>
+</view>
+<button class="btn" size='mini' form-type="submit"  bindtap='onclick'> 提交 </button>
+
+

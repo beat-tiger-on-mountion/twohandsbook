@@ -13,10 +13,8 @@
   <view class="function">
     <view class="show">
       <wux-button block outline type="dark">
-        <image src='/images/seltab4.png' class="image1"></image>我的账户</wux-button>
-      <wux-button block outline type="dark">
         <image src='/images/seltab4.png' class="image1"></image>用户姓名</wux-button>
-      <wux-button block outline type="dark" >
+      <wux-button block outline type="dark" bindtap='modData'>
         <image src='/images/seltab3.png' class="image1"></image>修改资料</wux-button>
       <wux-button block outline type="dark" bindtap='feedback'>
         <image src='/images/seltab1.png' class="image1"></image>意见反馈</wux-button>
@@ -24,16 +22,16 @@
 
     <view class="{{teacher == s?'show':'hidden'}}">
       <view class="left">
+       <wux-button block outline type="dark" bindtap='administrator'>
+          <image src='/images/seltab1.png' class="image1"></image>管理员</wux-button>
         <wux-button block outline type="dark"  bindtap='creClass'>
           <image src='/images/seltab1.png' class="image1"></image>创建班级</wux-button>
         <wux-button block outline type="dark"  bindtap='addClass'>
-          <image src='/images/seltab1.png' class="image1"></image>加入班级</wux-button>
-        <wux-button block outline type="dark"  bindtap='myClass'>
           <image src='/images/seltab1.png' class="image1"></image>我的班级</wux-button>
         <wux-button block outline type="dark" bindtap='addNotice'>
-          <image src='/images/seltab1.png'  class="image1"></image>增加通知</wux-button>
+          <image src='/images/seltab1.png' class="image1"></image>增加通知</wux-button>
         <wux-button block outline type="dark" bindtap='addWork'>
-          <image src='/images/seltab1.png'  class="image1"></image>增加作业</wux-button>
+          <image src='/images/seltab1.png' class="image1"></image>增加作业</wux-button>
       </view>
 
       <view class="right">
@@ -46,7 +44,7 @@
         <wux-button block outline type="dark" bindtap='addComm'>
           <image src='/images/seltab1.png'  class="image1"></image>增加评论</wux-button>
         <wux-button block outline type="dark"  bindtap='modSchool'>
-          <image src='/images/seltab1.png' class="image1"></image>设置上下学时间</wux-button>
+          <image src='/images/seltab1.png' class="image1"></image>上下学时间</wux-button>
       </view>
     </view>
   </view>
