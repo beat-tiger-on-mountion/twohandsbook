@@ -27,7 +27,7 @@ public class Schools {
 	private String province;
 	private String city;
 	private String county;
-	private Set<Classes> classses = new HashSet<>(0);
+	private Set<Classes> classses = new HashSet<>();
 	private Set<User> users = new HashSet<>();
 
 	@Id
@@ -72,7 +72,7 @@ public class Schools {
 		this.county = county;
 	}
 
-	@OneToMany(mappedBy = "school", targetEntity = Classes.class, cascade = { CascadeType.PERSIST })
+	@OneToMany(mappedBy = "school", targetEntity = Classes.class)
 	public Set<Classes> getClassses() {
 		return classses;
 	}
@@ -81,7 +81,7 @@ public class Schools {
 		this.classses = classses;
 	}
 
-	@OneToMany(mappedBy = "school", targetEntity = User.class, cascade = { CascadeType.PERSIST })
+	@OneToMany(mappedBy = "school", targetEntity = User.class )
 	public Set<User> getUsers() {
 		return users;
 	}

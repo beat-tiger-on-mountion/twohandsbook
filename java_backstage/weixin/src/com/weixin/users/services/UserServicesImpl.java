@@ -4,19 +4,24 @@ package com.weixin.users.services;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.weixin.entity.Classes;
 import com.weixin.entity.Schools;
 import com.weixin.entity.User;
+import com.weixin.myclass.service.MyClassServiceImpl;
 import com.weixin.users.dao.UserDaoImpl;
 
 import net.sf.json.JSONObject;
 
 @Service
+@Transactional(readOnly=false)
 public class UserServicesImpl {
 
 	@Resource
 	private UserDaoImpl userDaoImpl;
+	@Resource
+	private MyClassServiceImpl myClassServiceImpl;
 
 	/**
 	 * 
@@ -127,6 +132,7 @@ public class UserServicesImpl {
 		User u;
 		try {
 			u = this.userDaoImpl.findOne(hql, obj);
+			user.setName(u.getName());
 			user.setId(u.getId());
 			user.setWxName(u.getWxName());
 			user.setStatus(u.getStatus());
@@ -141,6 +147,28 @@ public class UserServicesImpl {
 			return null;
 		}
 
+	}
+
+	public User findOne(String wxName) {
+		String hql = "from User where wxName=?";
+		Object[] obj = new Object[1];
+		obj[0] = wxName;
+		User user = new User();
+		User u;
+		Schools s = new Schools();
+		Classes c = new Classes();
+		try {
+			u = this.userDaoImpl.findOne(hql, obj);
+			System.out.println("u.id"+u.getId());
+			user.setId(u.getId());
+			u.setSchool(s);
+			u.setClasss(c);
+			
+			return u;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 }

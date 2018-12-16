@@ -8,6 +8,7 @@ App({
     classId: null,
     openId: '',
     userName:'',
+    nowStatus:null,
   },
   onLaunch: function() {
     var that = this;
@@ -70,6 +71,7 @@ App({
   onShow: function(options) {
     var that = this;
     this.globalData.status = options.scene
+    this.globalData.nowStatus = options.scene
     console.log(this.globalData.status)
   },
   onShareAppMessage: function() {

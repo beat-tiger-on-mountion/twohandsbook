@@ -21,18 +21,14 @@ Page({
    */
   onLoad: function(options) {
     var that = this;
+    that.setData({
+      userName:app.globalData.userName
+    })
     wx.getUserInfo({
       success: function(res) {
         that.setData({
-          userName: app.globalData.nickName,
           head: res.userInfo.avatarUrl,
-
         })
-        console.log(app.globalData.nickName)
-        console.log("persion", app.globalData.nickName)
-        if (app.globalData.userName != null) {
-          that.setData({})
-        }
       }
     })
 
@@ -41,8 +37,21 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
-    if (app.globalData.status == 1005) {
+  onReady: function (options) {
+    var that = this
+   console.log("nowStatus",app.globalData.nowStatus)
+
+   if(app.globalData.status == 1005){
+     that.setData({
+       s:"teacher"
+     })
+   }
+   if(app.globalData.status == 1008){
+     that.setData({
+       s:"parent"
+     })
+   }
+    if (app.globalData.nowStatus == 1005) {
       $wuxToast().show({
         type: 'text',
         duration: 1500,
@@ -51,7 +60,7 @@ Page({
         success: () => console.log('请创建班级和修改资料')
       })
     }
-    if (app.globalData.status == 1008) {
+    if (app.globalData.nowStatus == 1008) {
       $wuxToast().show({
         type: 'text',
         duration: 1500,

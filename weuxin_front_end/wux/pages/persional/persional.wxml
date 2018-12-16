@@ -2,8 +2,7 @@
 <!-- 整体 -->
 <wux-toast id="wux-toast" />
 <view class="persional">
-  <button bindtap='change' data-d="parent" class="btn_par">家长</button>
-  <button bindtap='change' data-d="teacher" class="btn_tea">老师</button>
+
 
   <!-- 用户信息 -->
   <view>

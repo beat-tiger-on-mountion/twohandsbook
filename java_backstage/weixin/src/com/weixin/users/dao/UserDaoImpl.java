@@ -19,5 +19,15 @@ public class UserDaoImpl extends BaseDao <User>{
 		super.save(entity);
 	}
 
+	@Override
+	public void update(User entity) throws Exception {
+		super.update(entity);
+	}
+
+	@Override
+	public void delete(Object entity) throws Exception {
+		super.delete(entity);
+	}
+
 	
 }

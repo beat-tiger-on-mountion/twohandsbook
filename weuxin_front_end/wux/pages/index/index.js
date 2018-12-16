@@ -10,6 +10,7 @@ Page({
     userInfo: "",
     rawData: "",
     img: "../../images/1.png",
+    status:null,
   },
 
   /**
@@ -96,9 +97,10 @@ Page({
       method: "post",
       success(res) {
         console.log(res.data.status)
+        app.globalData.status = res.data.status
         if (res.data != null) {
           if (res.data.name != null) {
-            app.globalData.nickName = res.data.name
+            app.globalData.userName = res.data.name
           } else {
             app.globalData.nickName = app.globalData.userName
           }
@@ -126,11 +128,11 @@ Page({
         },
         method: "post",
         success: function(res) {
-          app.globalData.nickName = res.data.name
+          app.globalData.userName = res.data.name
           app.globalData.schoolId = res.data.school.schoolId,
             app.globalData.classId = res.data.classs.classId,
             app.globalData.status = res.data.status
-            console.log(app.globalData)
+          console.log("index",app.globalData)
           wx.switchTab({
             url: '../main/main',
           })
@@ -140,7 +142,7 @@ Page({
         }
       })
 
-    }else{
+    } else {
       that.login()
     }
   },
@@ -152,7 +154,7 @@ Page({
     wx.getUserInfo({
       success: function(res) {
         app.globalData.userName = res.userInfo.nickName
-        that.login()
+        that.getUser()
       }
     })
   },

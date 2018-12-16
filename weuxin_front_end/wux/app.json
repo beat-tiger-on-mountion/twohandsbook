@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/class_creat/class_creat",
     "pages/persional/persional",
     "pages/modify_data/modify_data",
-    "pages/class_creat/class_creat",
     "pages/administrator/administrator",
     "pages/main/main",
     "pages/index/index",
@@ -11,7 +11,6 @@
     "pages/onduty_teacher/onduty_teacher",
     "pages/share/share",
     "pages/course_teacher/course_teacher",
-    "pages/login/login",
     "pages/feedback/feedback",
     "pages/student_parent/student_parent",
     "pages/maintest/maintest",

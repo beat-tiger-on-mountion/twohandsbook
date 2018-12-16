@@ -94,7 +94,7 @@ Page({
         console.log(res.data)
         if (res.data != null) {
           if ( res.data.name != null) {
-            app.globalData.nickName = res.data.name
+            app.globalData.userName = res.data.name
           }else{
             app.globalData.nickName = app.globalData.userName
           }
