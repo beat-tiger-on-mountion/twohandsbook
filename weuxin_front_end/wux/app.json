@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/persional/persional",
     "pages/modify_data/modify_data",
     "pages/class_creat/class_creat",
     "pages/administrator/administrator",
@@ -8,7 +9,6 @@
     "pages/student_teacher/student_teacher",
     "pages/school_teacher/school_teacher",
     "pages/onduty_teacher/onduty_teacher",
-    "pages/persional/persional",
     "pages/share/share",
     "pages/course_teacher/course_teacher",
     "pages/login/login",
