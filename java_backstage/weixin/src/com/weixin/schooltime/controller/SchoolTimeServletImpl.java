@@ -50,7 +50,7 @@ public class SchoolTimeServletImpl {
          
     	 st.setGo(upschool);
     	 st.setBack(downschool);
-    	
+    	 System.out.println(upschool);
     	 schoolTimeServiceImpl.save(st);
 
      }
