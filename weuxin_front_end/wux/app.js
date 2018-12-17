@@ -2,11 +2,11 @@
 App({
   globalData: {
     nickName: "",
-<<<<<<< HEAD
+
     passWord: "",
     avatarUrl: "",
     newsid:"",
-=======
+
     avatarUrl: null,
     status: null,
     schoolId: null,
@@ -14,7 +14,7 @@ App({
     openId: '',
     userName:'',
     nowStatus:null,
->>>>>>> 737a233945730edf4d645fc2b43f99776a75dd4b
+
   },
   onLaunch: function() {
     var that = this;
