@@ -1,5 +1,5 @@
 <!--pages/homework_add/homework_add.wxml-->
-<view class="time">{{time}}作业</view>
+<view class="time">标题<input></input></view>
 <view class='line'></view>
  <view class="homework">{{manth}}</view>  
  <view class="homework">{{chinese}}</view>
