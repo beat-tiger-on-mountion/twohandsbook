@@ -1,41 +1,116 @@
 <view>
   <image src='{{head}}' class='headImg'></image>
 </view>
-<view class="nickName">韩泽豪爸爸</view>
+<view class="nickName">韩泽豪</view>
 
 
 
-<view class="table">
-  <view class="tr bg-w">
-    <view class="th "></view>
-    <view class="th">周一</view>
-    <view class="th">周二</view>
-    <view class="th ">周三</view>
-    <view class="th">周四</view>
-    <view class="th ">周五</view>
-    
+
+<form bindsubmit="formSubmit">
+  <view class="table">
+    <view class="tr bg-w">
+      <view class="th "></view>
+      <view class="th">周一</view>
+      <view class="th">周二</view>
+      <view class="th ">周三</view>
+      <view class="th">周四</view>
+      <view class="th ">周五</view>
+
+    </view>
+
+ <block >
+
+
+   <view class="tr"> 
+  
+      <view class="td">1</view>
+      <view class="td"><input name="i11"></input></view>
+      <view class="td"><input name="i12"></input></view>
+      <view class="td"><input name="i13"></input></view>
+      <view class="td"><input name="i14"></input></view>
+      <view class="td"><input name="i15"></input></view>
   </view>
-  <block wx:for="{{listData}}" wx:key="{{code}}">
-    <view class="tr bg-g" wx:if="{{index % 2 == 1}}">
-      <view class="td">{{item.code}}</view>
-      <view class="td">{{item.text}}</view>
-      <view class="td">{{item.type1}}</view>
-      <view class="td">{{item.type2}}</view>
-      <view class="td">{{item.type3}}</view>
-      <view class="td">{{item.type4}}</view>
-      <view class="td">{{item.type5}}</view>
-    </view>
-    <view class="tr" wx:else>
-      <view class="td">{{item.code}}</view>
-      <view class="td">{{item.text}}</view>
-      <view class="td">{{item.type1}}</view>
-      <view class="td">{{item.type2}}</view>
-      <view class="td">{{item.type3}}</view>
-      <view class="td">{{item.type4}}</view>
-      <view class="td">{{item.type5}}</view>
-    </view>
-  </block>
-</view>
 
 
-<view class='viewbutton'><button class='submit'>添加课程表</button></view>
+    <view class="tr bg-g" >
+      <view class="td">2</view>
+      <view class="td"><input name="i21"></input></view>
+      <view class="td"><input name="i22"></input></view>
+      <view class="td"><input name="i23"></input></view>
+      <view class="td"><input name="i24"></input></view>
+      <view class="td"><input name="i25"></input></view>
+   </view>
+    
+<!-- 
+     <view class="tr"> 
+  
+      <view class="td">3</view>
+      <view class="td"><input name="i31"></input></view>
+      <view class="td"><input name="i32"></input></view>
+      <view class="td"><input name="i33"></input></view>
+      <view class="td"><input name="i34"></input></view>
+      <view class="td"><input name="i35"></input></view>
+  </view>
+
+
+    <view class="tr bg-g" >
+      <view class="td">4</view>
+      <view class="td"><input name="i41"></input></view>
+      <view class="td"><input name="i42"></input></view>
+      <view class="td"><input name="i43"></input></view>
+      <view class="td"><input name="i44"></input></view>
+      <view class="td"><input name="i45"></input></view>
+   </view>
+
+       <view class="tr"> 
+  
+      <view class="td">5</view>
+      <view class="td"><input name="i51"></input></view>
+      <view class="td"><input name="i52"></input></view>
+      <view class="td"><input name="i53"></input></view>
+      <view class="td"><input name="i54"></input></view>
+      <view class="td"><input name="i55"></input></view>
+  </view>
+
+
+    <view class="tr bg-g" >
+      <view class="td">6</view>
+      <view class="td"><input name="i61"></input></view>
+      <view class="td"><input name="i62"></input></view>
+      <view class="td"><input name="i63"></input></view>
+      <view class="td"><input name="i64"></input></view>
+      <view class="td"><input name="i65"></input></view>
+   </view>
+   
+       <view class="tr"> 
+  
+      <view class="td">7</view>
+      <view class="td"><input name="i71"></input></view>
+      <view class="td"><input name="i72"></input></view>
+      <view class="td"><input name="i73"></input></view>
+      <view class="td"><input name="i74"></input></view>
+      <view class="td"><input name="i75"></input></view>
+  </view>
+
+
+    <view class="tr bg-g" >
+      <view class="td">8</view>
+      <view class="td"><input name="i81"></input></view>
+      <view class="td"><input name="i82"></input></view>
+      <view class="td"><input name="i83"></input></view>
+      <view class="td"><input name="i84"></input></view>
+      <view class="td"><input name="i85"></input></view>
+   </view> -->
+
+ 
+  
+  </block> 
+
+
+  </view>
+
+
+  <view class='viewbutton'>
+    <button class='submit' form-type="submit" >添加课程表 </button>
+  </view>
+</form>
