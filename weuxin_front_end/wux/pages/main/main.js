@@ -91,20 +91,17 @@ Page({
     })
   },
   // 新闻跳转
-<<<<<<< HEAD
+
   onclick: function(res) {
     app.globalData.newsid=res.currentTarget.dataset.name,
       console.log(app.globalData.newsid)
-    // wx.navigateTo({
-    //     url: '../News_detail_page/News_detail_page',
-        
-    //   })
-=======
-  onclick: function() {
     wx.navigateTo({
-      url: '../News_detail_page/News_detail_page',
-    })
->>>>>>> 737a233945730edf4d645fc2b43f99776a75dd4b
+        url: '../News_detail_page/News_detail_page',
+        
+      })
+
+
+
   },
   // 通知跳转
   notice: function() {
