@@ -1,8 +1,5 @@
 package com.weixin.myclass.dao;
 
-import javax.servlet.http.HttpServletResponse;
-
-import org.hibernate.SQLQuery;
 import org.springframework.stereotype.Repository;
 
 import com.weixin.entity.Classes;
@@ -37,6 +34,11 @@ public class MyClassDaoImpl extends BaseDao<Classes>{
     public Classes findOne(String hql, Object[] params) throws Exception {
 		
 		return super.findOne(hql, params);
+	}
+
+	@Override
+	public void update(Classes entity) throws Exception {
+		super.update(entity);
 	}
     
 }

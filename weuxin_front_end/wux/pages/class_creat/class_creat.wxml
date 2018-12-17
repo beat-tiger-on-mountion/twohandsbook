@@ -1,29 +1,60 @@
 <!--pages/class_creat/class_creat.wxml-->
-<view>
-  <image src='/images/news5.jpg' class='headImg'></image>
-</view>
-<view class='name'>用户名</view>
+<wux-toast id="wux-toast" />
+
 <wux-select id="wux-select1" />
 <wux-select id="wux-select2" />
 <wux-select id="wux-select3" />
 <!-- 年级班级板块 -->
 <view class='wrapper'>
-<view class="grade"><image class='classimage' src='/images/seltab4.png'></image><text class="text-content">添加年级</text></view>
-<view class='gradeselect'>
-<wux-cell title="" extra="{{ title1 }}" bind:click="onClick1"></wux-cell>
-</view>
-<view class="bclass"><image class='classimage' src='/images/seltab4.png'></image><text class="text-content">添加班级</text></view>
-<view class='bclassselect'>
-<wux-cell title="" extra="{{ title2 }}" bind:click="onClick2"></wux-cell>
-</view>
-<view class="teacher"><image class='classimage' src='/images/seltab4.png'></image><text class="text-content">添加老师</text></view>
-<view class='teacherselect'>
-<wux-cell title="" extra="{{ title3 }}" bind:click="onClick3"></wux-cell>
-</view>
+
+  <!--学校所在省-->
+  <view class="province">
+    <image class="classimage" src="/images/seltab4.png"></image>
+    <text class="text-content">学校所在省</text>
+  </view>
+  <textarea class='textarea1' bindblur='text1'></textarea>
+  <!--学校所在市-->
+  <view class="city">
+    <image class="classimage" src="/images/seltab4.png"></image>
+    <text class="text-content">学校所在市</text>
+  </view>
+  <textarea class='textarea2' bindblur='text2'></textarea>
+  <!--学校所在县-->
+  <view class="county">
+    <image class="classimage" src="/images/seltab4.png"></image>
+    <text class="text-content">学校所在县</text>
+  </view>
+  <textarea class='textarea3' bindblur='text3'></textarea>
+  <!--学校名称-->
+  <view class="name1">
+    <image class="classimage" src="/images/seltab4.png"></image>
+    <text class="text-content">学校名称</text>
+  </view>
+  <textarea class='textarea4' bindblur='text4'></textarea>
+
+
+  <!--添加年级-->
+  <view class="grade">
+    <image class='classimage' src='/images/seltab4.png'></image>
+    <text class="text-content">添加年级</text>
+  </view>
+  <view class='gradeselect'>
+    <wux-cell title="" extra="{{ title1 }}" bind:click="onClick1"></wux-cell>
+  </view>
+  <!--添加班级-->
+  <view class="bclass">
+    <image class='classimage' src='/images/seltab4.png'></image>
+    <text class="text-content">添加班级</text>
+  </view>
+  <view class='bclassselect'>
+    <wux-cell title="" extra="{{ title2 }}" bind:click="onClick2"></wux-cell>
+  </view>
 </view>
 
 <!-- 底部加入班级板块 -->
 <view class='jionclass'>
-<image class='classimage2' src='/images/seltab1.png' bindtap='qwe'></image>
-<view class='a'><text class="text-footer">创建</text></view>
+  <image class='classimage2' src='/images/seltab1.png' bindtap='qwe'></image>
+  <view class='a'>
+    <text class="text-footer">创建</text>
+  </view>
 </view>
