@@ -8,7 +8,6 @@ import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
-import com.weixin.entity.Activity;
 import com.weixin.entity.Schooltime;
 import com.weixin.util.BaseDao;
 

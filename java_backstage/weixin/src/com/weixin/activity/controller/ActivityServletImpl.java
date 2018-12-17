@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.weixin.activity.service.ActivityServiceImpl;
@@ -20,6 +21,7 @@ import net.sf.json.JSONArray;
 
 
 @Controller
+@Transactional(readOnly=false)
 public class ActivityServletImpl {
 	
     @Resource
@@ -40,17 +42,10 @@ public class ActivityServletImpl {
     	response.setCharacterEncoding("utf-8");
         response.setContentType("application/json");
           
-    	List<Activity> list=this.activityServiceImpl.list();  
-    	List<Activity> list2=new ArrayList<>();
-    	for(Activity a1:list) {
-    		Activity w=new Activity();
-    		w.setId(a1.getId());
-    		w.setaTime(a1.getaTime());
-    		w.setaBody(a1.getaBody());
-    		list2.add(w);
-    	}
     	
-       JSONArray j1=JSONArray.fromObject(list2);
+       List<Activity> list=this.activityServiceImpl.list(); 
+    	
+       JSONArray j1=JSONArray.fromObject(list);
        String j12String = j1.toString();
        System.out.println(j12String);
         
@@ -63,4 +58,22 @@ public class ActivityServletImpl {
 		}
     	return null;
     }
+    
+    
+    @RequestMapping("addactivity")
+    public void addactivity(HttpServletRequest request,HttpServletResponse response,String title,String text) {
+    	response.setCharacterEncoding("utf-8");
+        response.setContentType("application/json");
+        Activity et=new Activity();
+        try {
+        
+        	et.setaBody(text);
+			this.activityServiceImpl.addactivity(et);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+    
 }

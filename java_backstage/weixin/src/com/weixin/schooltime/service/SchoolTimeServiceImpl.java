@@ -1,5 +1,6 @@
 package com.weixin.schooltime.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -20,6 +21,7 @@ public class SchoolTimeServiceImpl {
 	public void save(Schooltime entity) {
 		try {
 			schoolTimeDaoImpl.save(entity);
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -28,11 +30,23 @@ public class SchoolTimeServiceImpl {
 	
 	 public List<Schooltime> list(){
 	    	try {
-				return this.schoolTimeDaoImpl.findAll();
+	    		List<Schooltime> list=this.schoolTimeDaoImpl.findAll();
+				List<Schooltime> list2=new ArrayList<>();
+		     	for(Schooltime a1:list) {
+		     		Schooltime w=new Schooltime();
+		     		w.setId(a1.getId());
+		     		w.setGo(a1.getGo());
+		     		w.setBack(a1.getBack());
+		     		w.setRemark(a1.getRemark());
+		     		w.setsTime(a1.getsTime());
+		     		list2.add(w);
+		     	}
+		     	return list2;
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				return null;
 			}
-			return null;
+			
 	    }
 }

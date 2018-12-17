@@ -94,9 +94,7 @@ Page({
   onclick: function(res) {
     app.globalData.newsid=res.currentTarget.dataset.name,
       console.log(app.globalData.newsid)
-     wx.navigateTo({
-         url: '../News_detail_page/News_detail_page',
-       })
+
   },
   // 通知跳转
   notice: function() {
