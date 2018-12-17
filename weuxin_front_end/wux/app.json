@@ -1,23 +1,20 @@
 {
   "pages": [
+     "pages/school_teacher/school_teacher",   
     "pages/main/main",
     "pages/index/index",
     "pages/student_teacher/student_teacher",
-     "pages/school_teacher/school_teacher",    "pages/onduty_teacher/onduty_teacher",
-
+     "pages/onduty_teacher/onduty_teacher",
     "pages/student_parent/student_parent",
-    "pages/login/login",
-
-    "pages/feedback/feedback",    "pages/myclass/myclass",
+    "pages/feedback/feedback",    
+    "pages/myclass/myclass",
+    "pages/persional/persional",
     "pages/homework_add/homework_add",
     "pages/comments/comments",
     "pages/homework_teacher/homework_teacher",
     "pages/homework_parent/homework_parent",
-
-    "pages/student_parent/student_parent",
     "pages/course_parent/course_parent",
     "pages/activity_list/activity_list",
-
     "pages/News_detail_page/News_detail_page",
     "pages/onduty_parent/onduty_parent",
     "pages/addnotice/addnotice",

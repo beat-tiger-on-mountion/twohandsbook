@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.weixin.entity.Activity;
+import com.weixin.entity.Classes;
 import com.weixin.entity.Schooltime;
 import com.weixin.schooltime.service.SchoolTimeServiceImpl;
 
@@ -49,6 +50,7 @@ public class SchoolTimeServletImpl {
          
     	 st.setGo(upschool);
     	 st.setBack(downschool);
+    	
     	 schoolTimeServiceImpl.save(st);
 
      }

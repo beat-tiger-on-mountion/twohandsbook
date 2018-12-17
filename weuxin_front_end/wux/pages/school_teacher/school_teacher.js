@@ -1,5 +1,5 @@
 // pages/achool_teacher/school_teacher.js
-
+var app = getApp()
 Page({
 
   /**
@@ -17,6 +17,7 @@ Page({
     downschool1:'4:00', 
     downschool2: '5:00', 
     downschool3: '5:30', 
+    
   },
 
   /**
@@ -42,7 +43,8 @@ Page({
       url: 'http://localhost:8080/weixin/schooltimecheck',
       method: 'GET',
       data: {
-        a:'1'
+        a:'1',
+        
       },
       header: {
         //  'content-type':'application/json'
@@ -106,7 +108,9 @@ Page({
         upschool3: this.data.upschool3,
         downschool1:this.data.downschool1,
         downschool2: this.data.downschool2,
-        downschool3: this.data.downschool3
+        downschool3: this.data.downschool3,
+        classId: app.globalData.classId,
+        schoolId: app.globalData.schoolId
       },
       header: {
         //  'content-type':'application/json'
