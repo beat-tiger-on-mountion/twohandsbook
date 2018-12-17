@@ -1,5 +1,6 @@
 // pages/achool_parent/school_parent.js
 import { $wuxSelect } from '../../dist/index'
+var app = getApp()
 Page({
 
   /**
@@ -100,12 +101,16 @@ Page({
   },
   button: function (e) {
     var that = this
+    console.log(app.globalData.classId)
     wx.request({
       url: 'http://localhost:8080/weixin/schooltime',
       method: 'GET',
       data: {
         upschool: this.data.title1,
         downschool: this.data.title2,
+        classId: '1',
+        // classId: app.globalData.classId,
+        // schoolId: app.globalData.schoolId
       },
       header: {
         //  'content-type':'application/json'

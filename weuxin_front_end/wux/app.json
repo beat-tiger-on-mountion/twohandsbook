@@ -1,7 +1,9 @@
 
 {
   "pages": [
-"pages/school_teacher/school_teacher",     
+    "pages/school_parent/school_parent",
+"pages/school_teacher/school_teacher",  
+
     "pages/class_creat/class_creat",
     "pages/persional/persional",
     "pages/modify_data/modify_data",

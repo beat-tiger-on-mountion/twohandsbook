@@ -99,7 +99,7 @@ Page({
   button:function(e){    
     var that = this
     wx.request({
-      url: 'http://localhost:8080/weixin/schooltime',
+      url: 'http://localhost:8080/weixin/time',
       method: 'GET',
       data: {
         upschool1: this.data.upschool1,
@@ -109,7 +109,6 @@ Page({
         downschool2: this.data.downschool2,
         downschool3: this.data.downschool3,
         classId: app.globalData.classId,
-        schoolId: app.globalData.schoolId
       },
       header: {
         //  'content-type':'application/json'

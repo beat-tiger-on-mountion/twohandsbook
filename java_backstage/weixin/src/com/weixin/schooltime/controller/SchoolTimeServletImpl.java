@@ -42,17 +42,18 @@ public class SchoolTimeServletImpl {
          * @throws
       */
      @RequestMapping("/schooltime")
-     public void save(HttpServletRequest request,HttpServletResponse response,String upschool,String downschool) {
+     public void save(HttpServletRequest request,HttpServletResponse response,String upschool,String downschool,String classId) {
     	 response.setCharacterEncoding("utf-8");
          response.setContentType("application/json");
-         Schooltime st=new Schooltime();
-
          
+         Schooltime st=new Schooltime();
+         System.out.println(classId);
+         int s=Integer.parseInt(classId);
     	 st.setGo(upschool);
     	 st.setBack(downschool);
-    	 System.out.println();
+    	 
     	 schoolTimeServiceImpl.save(st);
-
+    	 System.out.println("1");
      }
      
      /**
