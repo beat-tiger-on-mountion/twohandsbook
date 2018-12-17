@@ -16,7 +16,14 @@ import com.weixin.time.dao.TimeDaoImpl;
 public class TimeServiceImpl {
      @Resource
      public TimeDaoImpl timeDaoImpl;
-     
+     /**
+      * 
+         * @Title: 保存数据
+         * @Description: TODO  
+         * @Param@param entity
+         * @Return void
+         * @throws
+      */
      public void save(Time entity) {
  		try {
  			timeDaoImpl.save(entity);
@@ -26,7 +33,14 @@ public class TimeServiceImpl {
  			e.printStackTrace();
  		}
  	}
- 	
+ 	/**
+ 	 *  
+ 	    * @Title: 查询数据
+ 	    * @Description: TODO  
+ 	    * @Param@return
+ 	    * @Return List<Time>
+ 	    * @throws
+ 	 */
  	 public List<Time> list(){
  	    	try {
  	    		List<Time> list=this.timeDaoImpl.findAll();
