@@ -35,5 +35,4 @@ public class SchoolTimeServiceImpl {
 			}
 			return null;
 	    }
-
 }

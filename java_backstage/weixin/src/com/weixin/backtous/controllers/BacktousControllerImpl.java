@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.weixin.backtous.services.BacktousServiceImpl;
 import com.weixin.entity.User;
 
-  
     /**  
     * @ClassName: BacktousControllerImpl  
     * @Description: 保存用户反馈意见  
@@ -24,11 +23,8 @@ import com.weixin.entity.User;
     
 @Controller
 public class BacktousControllerImpl {
-
 	@Resource
 	private BacktousServiceImpl backtousServiceImpl;
-	
-	
 	/**
 	 * 
 	    * @Title: saveSuggest  
@@ -51,7 +47,5 @@ public class BacktousControllerImpl {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
 	}
 }

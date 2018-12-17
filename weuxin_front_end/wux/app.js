@@ -2,6 +2,9 @@
 App({
   globalData: {
     nickName: "",
+    passWord: "",
+    avatarUrl: "",
+    newsid:"",
     avatarUrl: null,
     status: null,
     schoolId: null,

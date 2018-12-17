@@ -1,12 +1,14 @@
 var app = getApp()
 // pages/main/main.js
+var app=getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    
+    s:"",
   },
 
   /**
@@ -26,8 +28,26 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
-
+  onShow: function () {
+    var that = this
+    wx.request({
+      url: 'http://localhost:8080/weixin/news',
+      method: "GET",
+      data: {
+        a: '1'
+      },
+      header: {
+        //  'content-type':'application/json'
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        var a = res.data
+        that.setData({
+          s: a
+        })
+        console.log(res.data)
+      }
+    })
   },
 
   /**
@@ -71,10 +91,12 @@ Page({
     })
   },
   // 新闻跳转
-  onclick: function() {
-    wx.navigateTo({
-      url: '../News_detail_page/News_detail_page',
-    })
+  onclick: function(res) {
+    app.globalData.newsid=res.currentTarget.dataset.name,
+      console.log(app.globalData.newsid)
+     wx.navigateTo({
+         url: '../News_detail_page/News_detail_page',
+       })
   },
   // 通知跳转
   notice: function() {
@@ -82,6 +104,7 @@ Page({
       url: '../notice_teacher/notice_teacher',
     })
   },
+
   // 上下学签到跳转
   schooltime: function() {
     wx: wx.navigateTo({
@@ -94,4 +117,5 @@ Page({
       url: '../homework_teacher/homework_teacher',
     })
   }
+
 })

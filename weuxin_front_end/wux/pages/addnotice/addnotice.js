@@ -5,7 +5,38 @@ Page({
    * 页面的初始数据
    */
   data: {
+    title:'',
+    content:''
+  },
 
+  /**
+   * 和后台连接
+   */
+  onclick: function () {
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/weixin_back/notice', //仅为示例，并非真实的接口地址
+      data: {
+       nTime: {title},
+       nBody: {content}
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      method: 'post',
+      success: function (res) {
+        console.log('submit success');
+      },
+      fail: function (res) {
+        console.log('submit fail');
+      },
+      complete: function (res) {
+        console.log('submit complete');
+      }
+    })
+    wx.navigateBack({
+      url: '../notice_teacher/notice_teacher',
+    })
   },
 
   /**
@@ -25,9 +56,10 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow:function (){
 
-  },
+}
+  ,
 
   /**
    * 生命周期函数--监听页面隐藏

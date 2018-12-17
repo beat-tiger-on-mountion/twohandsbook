@@ -44,7 +44,6 @@ public class SchoolTimeServletImpl {
      public void save(HttpServletRequest request,HttpServletResponse response,Schooltime st,Schooltime st2,Schooltime st3,String upschool1,String upschool2,String upschool3,String downschool1,String downschool2,String downschool3) {
     	 response.setCharacterEncoding("utf-8");
          response.setContentType("application/json");
-         
     	 st.setGo(upschool1);
     	 st.setBack(downschool1);
     	 schoolTimeServiceImpl.save(st);

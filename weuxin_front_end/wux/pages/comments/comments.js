@@ -7,13 +7,35 @@ Page({
   data: {
     avatarUrl: '/images/loop3.jpg',
     nickname:"wang",
-    date1:""
+    date1:"",
+    s: '',
   },
 
   image: {
     src: "/images/loop3.jpg",
     width: 200,
     heigth: 200
+  },
+  onShow: function () {
+    var that = this
+    wx.request({
+      url: 'http://localhost:8080/weixin/comments',
+      method: "GET",
+      data: {
+        a: '1'
+      },
+      header: {
+        //  'content-type':'application/json'
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        var a = res.data
+        that.setData({
+          s: a
+        })
+        console.log(res.data)
+      }
+    })
   },
 
   /**
@@ -85,6 +107,7 @@ Page({
 
   },
   onclick:function(){
+  
     wx.navigateTo({
       url: '../common/common',
       success: function(res) {},
