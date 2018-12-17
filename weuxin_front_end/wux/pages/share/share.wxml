@@ -1,0 +1,9 @@
+
+<view class='body'>
+  <view class='image'>
+    <image src='{{img}}' class='img'></image>
+  </view>
+  <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" class='start'>开始使用</button>
+  <button open-type="openSetting" class='open'>打开授权设置页</button>
+
+</view>

@@ -1,9 +1,7 @@
 /* pages/comments/comments.wxss */
 @import '../../dist/styles/index.wxss';
 
-image{
-  border-radius: 50%;
-}
+
 .page__bd{
   margin-top: 20px;
   margin-left: 300px;

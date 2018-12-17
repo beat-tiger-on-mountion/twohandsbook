@@ -1,4 +1,6 @@
 <!--pages/modify_data/modify_data.wxml-->
+<wux-toast id="wux-toast" />
+
 <view>
   <text class="title">编辑资料</text>
 </view>
@@ -11,5 +13,3 @@
   <textarea class='student'></textarea>
 </view>
 <button class="btn" size='mini' form-type="submit"  bindtap='onclick'> 提交 </button>
-
-

@@ -18,7 +18,7 @@
   <block wx:for="{{listData}}" wx:key="{{code}}">
     <view class="tr bg-g" wx:if="{{index % 2 == 1}}">
       <view class="td">{{item.code}}</view>
-      <view class="td">{{item.text}}</view>
+      <view class="td"><input></input></view>
       <view class="td">{{item.type1}}</view>
       <view class="td">{{item.type2}}</view>
       <view class="td">{{item.type3}}</view>

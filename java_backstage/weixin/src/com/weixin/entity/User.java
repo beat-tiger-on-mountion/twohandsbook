@@ -13,6 +13,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.GenericGenerator;
+
 /**
  * 
     * @ClassName: User  
@@ -40,6 +42,7 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	
 	public int getId() {
 		return id;
 	}
@@ -118,7 +121,7 @@ public class User {
 		this.school = school;
 	}
 
-	@OneToMany(mappedBy="user",targetEntity=Schooltime.class,cascade= {CascadeType.PERSIST})
+	@OneToMany(mappedBy="user",targetEntity=Schooltime.class)
 	public Set<Schooltime> getSchooltimes() {
 		return schooltimes;
 	}
@@ -127,7 +130,7 @@ public class User {
 		this.schooltimes = schooltimes;
 	}
 
-	@OneToMany(mappedBy="user", targetEntity=Notice.class,cascade= {CascadeType.PERSIST})
+	@OneToMany(mappedBy="user", targetEntity=Notice.class)
 	public Set<Notice> getNotices() {
 		return notices;
 	}
@@ -136,7 +139,7 @@ public class User {
 		this.notices = notices;
 	}
 	
-	@OneToMany(mappedBy="user",targetEntity=Comments.class,cascade= {CascadeType.PERSIST})
+	@OneToMany(mappedBy="user",targetEntity=Comments.class)
 	public Set<Comments> getComments() {
 		return comments;
 	}
@@ -145,7 +148,7 @@ public class User {
 		this.comments = comments;
 	}
 
-	@OneToMany(mappedBy="user",targetEntity=Backtous.class,cascade= {CascadeType.PERSIST})
+	@OneToMany(mappedBy="user",targetEntity=Backtous.class)
 	public Set<Backtous> getBacktous() {
 		return backtous;
 	}

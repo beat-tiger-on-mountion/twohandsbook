@@ -1,79 +1,27 @@
-// pages/homework_teacher/homework_teacher.js
+//index.js
+//获取应用实例
+let app = getApp()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    time: "11月14日",
-    math: "数学：做完练习题",
-    chinese: " 语文：背诵全文",
-    english: " 英语：做阅读理解,完形填空,背写单词",
-    physical: "物理：做完练习题",
-    biological: "生物：做完试卷",
-    img:"/images/add.png"
+    currentTab: 0,
+    idx: 0,
+    tabArray: ["首页", "学生信息", "评论墙", "个人中心"],
 
   },
+  //事件处理函数
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-  //老师添加作业
-  addhomework: function () {
-    wx.navigateTo({
-      url: '../homework_add/homework_add',
+  swichNav: function (e) {
+    var that = this;
+    that.setData({
+      idx: e.target.dataset.ss
     })
-  }
+    if (this.data.currentTab === e.target.dataset.ss) {
+      return false;
+    } else {
+      that.setData({
+        currentTab: e.target.dataset.ss
+      })
+    }
+  },
+
 })

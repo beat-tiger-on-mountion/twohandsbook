@@ -1,154 +1,208 @@
 /* pages/class_creat/class_creat.wxss */
- /* 可以添加背景颜色 */
+
+/* 可以添加背景颜色 */
+
 /* page{
   background-color: #eaeaea;
 } */
 
 /* 用户头像 */
-.headImg{
+
+.headImg {
   width: 191rpx;
-	height: 191rpx;
-	left: 300rpx;
+  height: 191rpx;
+  left: 300rpx;
   margin-top: 60rpx;
   margin-left: 280rpx;
-	top: 216rpx;
-	border-radius: 96rpx;
+  top: 216rpx;
+  border-radius: 96rpx;
 }
+
 /* 用户姓名 */
-.name{
+
+.name {
   height: 20rpx;
   margin-top: 40rpx;
-  font-weight:bold;
-  text-align:center; 
+  font-weight: bold;
+  text-align: center;
 }
+
 /* 年级班级总体样式 */
-.wrapper{
+
+.wrapper {
   margin-top: 100rpx;
   margin-left: 0rpx;
 }
+
 /* 年级班级图标 */
-.classimage{
+
+.classimage {
   height: 59rpx;
   width: 70rpx;
   float: left;
 }
+
 /* 年级班级老师字体样式 */
-.text-content{
+
+.text-content {
   margin-left: 10rpx;
 }
+
 /*学校所在省*/
-.province{
+
+.province {
   margin-left: 80rpx;
 }
-.textarea1{
+
+.textarea1 {
   margin-top: -50rpx;
-  margin-left: 370rpx; 
-  border: 3rpx ridge #DDDDDD;
-  width: 146rpx;
+  margin-left: 370rpx;
+  border: 3rpx ridge #ddd;
+  width: 300rpx;
   height: 75rpx;
+  font-size: 50rpx;
 }
-/*学校所在省*/
-.county{
+
+.city {
   margin-left: 80rpx;
   margin-top: 25rpx;
 }
-.textarea2{
+.textarea2 {
   margin-top: -50rpx;
-  margin-left: 370rpx; 
   border: 3rpx ridge #DDDDDD;
+  margin-left: 370rpx;
   width: 300rpx;
   height: 75rpx;
+  font-size: 50rpx;
 }
+
+/*学校所在省*/
+
+.county {
+  margin-left: 80rpx;
+  margin-top: 25rpx;
+}
+
+.textarea3 {
+  margin-top: -50rpx;
+  margin-left: 370rpx;
+  border: 3rpx ridge #ddd;
+  width: 300rpx;
+  height: 75rpx;
+  font-size: 50rpx;
+}
+
 /*学校名称*/
-.name1{
+
+.name1 {
   margin-left: 80rpx;
   margin-top: 25rpx;
 }
-.textarea3{
+
+.textarea4 {
   margin-top: -50rpx;
-  margin-left: 370rpx; 
-  border: 3rpx ridge #DDDDDD;
+  margin-left: 370rpx;
+  border: 3rpx ridge #ddd;
   width: 300rpx;
   height: 75rpx;
 }
+
 /* 添加年级样式 */
-.grade{
+
+.grade {
   margin-top: 25rpx;
   width: 270rpx;
-	height: 59rpx;
-	left: 108rpx;
-	color: rgba(0, 0, 0, 1);
-	line-height: 150%;
-  margin-left: 80rpx;  
+  height: 59rpx;
+  left: 108rpx;
+  color: rgba(0, 0, 0, 1);
+  line-height: 150%;
+  margin-left: 80rpx;
 }
 
 /* 添加年级选择框 */
-.gradeselect{
+
+.gradeselect {
   width: 40%;
-  height:59rpx;
+  height: 59rpx;
   border: 2rpx solid #ddd;
-  margin-left:370rpx;
+  margin-left: 370rpx;
   margin-top: -60rpx;
 }
+
 /* 添加班级样式 */
-.bclass{
+
+.bclass {
   width: 270rpx;
-	height: 59rpx;
-	left: 108rpx;
-	top: 124rpx;
-	color: rgba(0, 0, 0, 1);
-	line-height: 150%;
+  height: 59rpx;
+  left: 108rpx;
+  top: 124rpx;
+  color: rgba(0, 0, 0, 1);
+  line-height: 150%;
   margin-top: 60rpx;
   margin-left: 80rpx;
 }
+
 /* 添加班级选择框 */
-.bclassselect{
+
+.bclassselect {
   width: 40%;
-  height:59rpx;
+  height: 59rpx;
   border: 1px solid #ddd;
-  margin-left:370rpx;
+  margin-left: 370rpx;
   margin-top: -60rpx;
 }
+
 /* 添加老师样式 */
-.teacher{
- width: 270rpx;
-	height: 59rpx;
-	left: 150rpx;
-	top: 124rpx;
-	color: rgba(0, 0, 0, 1);
-	line-height: 150%;
+
+.teacher {
+  width: 270rpx;
+  height: 59rpx;
+  left: 150rpx;
+  top: 124rpx;
+  color: rgba(0, 0, 0, 1);
+  line-height: 150%;
   margin-top: 60rpx;
   margin-left: 80rpx;
 }
+
 /* 添加老师选择框 */
-.teacherselect{
+
+.teacherselect {
   width: 40%;
-  height:59rpx;
+  height: 59rpx;
   border: 1px solid #ddd;
-  margin-left:370rpx;
+  margin-left: 370rpx;
   margin-top: -60rpx;
 }
+
 /* 底部加入班级 */
-.jionclass{
+
+.jionclass {
   margin-left: 230rpx;
   margin-top: 150rpx;
 }
+
 /* 底部图标样式 */
-.classimage2{
+
+.classimage2 {
   width: 100rpx;
   height: 100rpx;
-	left: 300rpx;
+  left: 300rpx;
   margin-top: 60rpx;
   background-color: rgba(32, 209, 200, 0.774);
-	top: 216rpx;
-	border-radius: 96rpx;
+  top: 216rpx;
+  border-radius: 96rpx;
 }
+
 /* 底部文本样式 */
-.text-footer{
+
+.text-footer {
   font-size: 80rpx;
 }
+
 /* 文本位置调整 */
-.a{
+
+.a {
   margin-left: 150rpx;
   margin-top: -110rpx;
 }

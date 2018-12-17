@@ -1,5 +1,11 @@
 // pages/class_creat/class_creat.js
-import { $wuxSelect } from '../../dist/index'
+var app = getApp()
+import {
+  $wuxToast
+} from '../../dist/index'
+import {
+  $wuxSelect
+} from '../../dist/index'
 Page({
 
   /**
@@ -12,7 +18,11 @@ Page({
     title2: '1',
     value3: '',
     title3: '语文老师',
-    s:'',
+    s: '',
+    text1: null,
+    text2: null,
+    text3: null,
+    text4: null,
   },
   onClick1() {
     $wuxSelect('#wux-select1').open({
@@ -65,7 +75,7 @@ Page({
     $wuxSelect('#wux-select3').open({
       value: this.data.value3,
       options: [
-        '北京市','天津市','上海市','重庆市','河北省','山西省','辽宁省','吉林省','黑龙江省'
+        '北京市', '天津市', '上海市', '重庆市', '河北省', '山西省', '辽宁省', '吉林省', '黑龙江省'
       ],
       onConfirm: (value, index, options) => {
         console.log('onConfirm', value, index, options)
@@ -79,95 +89,133 @@ Page({
     })
   },
   // 创建班级的点击事件
-  qwe:function(e){
-    var that=this
+  qwe: function(e) {
+    var that = this
     wx.request({
-      url: 'http://localhost:8080/weixin/myclass',
-      method:"GET",
-      data:{
+      url: 'http://localhost:8080/weixin/creatClass',
+      method: "GET",
+      data: {
+        wxName: app.globalData.openId,
+        province: that.data.text1,
+        city: that.data.text2,
+        county: that.data.text3,
+        name1: that.data.text4,
         grade: this.data.title1,
-        classint:this.data.title2
+        classint: this.data.title2,
+
       },
       header: {
-        //  'content-type':'application/json'
         'content-type': 'application/x-www-form-urlencoded'
       },
-      success: function (res) {
+      success: function(res) {
         var a = res.data
-        that.setData({
-          s: a,
-        })
-        console.log(res.data)
+        console.log(a)
+        app.globalData.schoolId = a.school.schoolId,
+          app.globalData.classId = a.classs.classId,
+          console.log("schoolId", app.globalData.schoolId),
+          console.log("classId", app.globalData.classId),
+          $wuxToast().show({
+            type: 'text',
+            duration: 1500,
+            color: '#fff',
+            text: '创建班级成功',
+            success: function() {
+              wx.switchTab({
+                url: '../persional/persional',
+              })
+            }
+          })
       }
     })
-    
+
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
 
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
 
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
+  onShow: function() {
+    console.log("wxName", app.globalData.openId)
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
-  }
+  },
+  text1: function(e) {
+    this.setData({
+      text1: e.detail.value
+    })
+  },
+  text2: function(e) {
+    this.setData({
+      text2: e.detail.value
+    })
+  },
+  text3: function(e) {
+    this.setData({
+      text3: e.detail.value
+    })
+  },
+  text4: function(e) {
+    this.setData({
+      text4: e.detail.value
+    })
+    console.log(this.data.text4)
+  },
 })
