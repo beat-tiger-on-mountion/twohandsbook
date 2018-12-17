@@ -76,7 +76,7 @@ public class Classes {
 		this.school = school;
 	}
 
-	@OneToMany(mappedBy = "classs", targetEntity = Activity.class,cascade= {CascadeType.PERSIST})
+	@OneToMany(mappedBy = "classs", targetEntity = Activity.class)
 	public Set<Activity> getActivities() {
 		return activities;
 	}
@@ -85,7 +85,7 @@ public class Classes {
 		this.activities = activities;
 	}
 
-	@OneToMany(mappedBy = "classs", targetEntity = Check.class,cascade= {CascadeType.PERSIST})
+	@OneToMany(mappedBy = "classs", targetEntity = Check.class)
 	public Set<Check> getChecks() {
 		return checks;
 	}
@@ -94,7 +94,7 @@ public class Classes {
 		this.checks = checks;
 	}
 
-	@OneToMany(mappedBy = "classs", targetEntity = Homework.class,cascade= {CascadeType.PERSIST})
+	@OneToMany(mappedBy = "classs", targetEntity = Homework.class)
 	public Set<Homework> getHomeworks() {
 		return homeworks;
 	}
@@ -103,7 +103,7 @@ public class Classes {
 		this.homeworks = homeworks;
 	}
 
-	@OneToMany(mappedBy = "classs", targetEntity = Onduty.class,cascade= {CascadeType.PERSIST})
+	@OneToMany(mappedBy = "classs", targetEntity = Onduty.class)
 	public Set<Onduty> getOnduties() {
 		return onduties;
 	}
@@ -112,7 +112,7 @@ public class Classes {
 		this.onduties = onduties;
 	}
 
-	@OneToMany(mappedBy = "classs", targetEntity = User.class,cascade= {CascadeType.PERSIST})
+	@OneToMany(mappedBy = "classs", targetEntity = User.class)
 	public Set<User> getUsers() {
 		return users;
 	}
@@ -121,7 +121,7 @@ public class Classes {
 		this.users = users;
 	}
 
-	@OneToMany(mappedBy = "classs", targetEntity = Time.class,cascade= {CascadeType.PERSIST})
+	@OneToMany(mappedBy = "classs", targetEntity = Time.class)
 	public Set<Time> getTimes() {
 		return times;
 	}
@@ -130,7 +130,7 @@ public class Classes {
 		this.times = times;
 	}
 
-	@OneToMany(mappedBy = "classs", targetEntity = Schooltime.class,cascade= {CascadeType.PERSIST})
+	@OneToMany(mappedBy = "classs", targetEntity = Schooltime.class)
 	public Set<Schooltime> getSchooltimes() {
 		return schooltimes;
 	}
@@ -139,7 +139,7 @@ public class Classes {
 		this.schooltimes = schooltimes;
 	}
 
-	@OneToMany(mappedBy = "user", targetEntity = Notice.class,cascade= {CascadeType.PERSIST})
+	@OneToMany(mappedBy = "user", targetEntity = Notice.class)
 	public Set<Notice> getNotices() {
 		return notices;
 	}
@@ -148,7 +148,7 @@ public class Classes {
 		this.notices = notices;
 	}
 
-	@OneToMany(mappedBy="classs",targetEntity=Comments.class,cascade= {CascadeType.PERSIST})
+	@OneToMany(mappedBy="classs",targetEntity=Comments.class)
 	public Set<Comments> getComments() {
 		return comments;
 	}
@@ -157,7 +157,7 @@ public class Classes {
 		this.comments = comments;
 	}
 
-	@OneToMany(mappedBy="classs", targetEntity=Students.class,cascade= {CascadeType.PERSIST})
+	@OneToMany(mappedBy="classs", targetEntity=Students.class)
 	public Set<Students> getStudents() {
 		return students;
 	}

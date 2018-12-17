@@ -1,3 +1,4 @@
+var app = getApp()
 // pages/main/main.js
 var app=getApp()
 Page({
@@ -14,7 +15,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    console.log(app.globalData.classId)
   },
 
   /**
@@ -84,12 +85,13 @@ Page({
 
   },
   // 活动跳转页面
-  actvity:function(){
+  actvity: function() {
     wx.navigateTo({
       url: '../activity_list/activity_list',
     })
   },
   // 新闻跳转
+<<<<<<< HEAD
   onclick: function(res) {
     app.globalData.newsid=res.currentTarget.dataset.name,
       console.log(app.globalData.newsid)
@@ -97,6 +99,12 @@ Page({
     //     url: '../News_detail_page/News_detail_page',
         
     //   })
+=======
+  onclick: function() {
+    wx.navigateTo({
+      url: '../News_detail_page/News_detail_page',
+    })
+>>>>>>> 737a233945730edf4d645fc2b43f99776a75dd4b
   },
   // 通知跳转
   notice: function() {
@@ -108,13 +116,13 @@ Page({
  
 
   // 上下学签到跳转
-  schooltime:function(){
-    wx:wx.navigateTo({
+  schooltime: function() {
+    wx: wx.navigateTo({
       url: '../school_parent/school_parent',
     })
   },
   // 作业跳转
-  homework: function () {
+  homework: function() {
     wx.navigateTo({
       url: '../homework_teacher/homework_teacher',
     })

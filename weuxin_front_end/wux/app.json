@@ -1,5 +1,6 @@
 {
   "pages": [
+<<<<<<< HEAD
 
 
 
@@ -21,13 +22,28 @@
     
    
     "pages/persional_teacher/persional_teacher",
-    "pages/feedback/feedback",
-    "pages/myclass/myclass",
-    "pages/class_join/class_join",
+=======
     "pages/class_creat/class_creat",
+    "pages/persional/persional",
+    "pages/modify_data/modify_data",
+    "pages/administrator/administrator",
+    "pages/main/main",
+    "pages/index/index",
+    "pages/student_teacher/student_teacher",
+    "pages/school_teacher/school_teacher",
+    "pages/onduty_teacher/onduty_teacher",
+    "pages/share/share",
+    "pages/course_teacher/course_teacher",
+>>>>>>> 737a233945730edf4d645fc2b43f99776a75dd4b
+    "pages/feedback/feedback",
+    "pages/student_parent/student_parent",
+    "pages/maintest/maintest",
+    "pages/myclass/myclass",
     "pages/homework_add/homework_add",
+    "pages/comments/comments",
     "pages/homework_teacher/homework_teacher",
     "pages/homework_parent/homework_parent",
+<<<<<<< HEAD
     "pages/course_teacher/course_teacher",
     "pages/school_teacher/school_teacher",
     "pages/student_teacher/student_teacher",
@@ -39,12 +55,18 @@
     "pages/activity_detail/zactivity_detail",
     "pages/comments/comments",
 
+=======
+    "pages/course_parent/course_parent",
+    "pages/activity_list/activity_list",
+    "pages/school_parent/school_parent",
+>>>>>>> 737a233945730edf4d645fc2b43f99776a75dd4b
     "pages/News_detail_page/News_detail_page",
 
     "pages/onduty_parent/onduty_parent",
     
     "pages/activity_detail/activity_detail",
     "pages/activity_newbuilt/activity_newbuilt",
+<<<<<<< HEAD
     "pages/login/login",
    
     
@@ -71,6 +93,9 @@
    
     
 
+=======
+    "pages/notice_teacher/notice_teacher"
+>>>>>>> 737a233945730edf4d645fc2b43f99776a75dd4b
   ],
   "window": {
     "navigationBarBackgroundColor": "#00baad",
