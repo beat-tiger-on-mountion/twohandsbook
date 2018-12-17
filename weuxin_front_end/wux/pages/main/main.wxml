@@ -42,30 +42,14 @@
   <view class='news'>
     <view class='news-title'>每日新闻</view>
 
-    <view class='news-body' bindtap='onclick'>
+    <block wx:for="{{s}}" data-item="item" wx:for-index="idx" >
+    <view class='news-body' bindtap='onclick' data-name="{{idx}}">
       <image class='news-img' src='/images/news5.jpg'></image>
-      <view class='body-title'>小学生走进车厢</view>
-      <view class='body-body'> 光路小学的同学们来到市北巴士第一分公司场站，从最早的公交车型开始学习了解。</view>
+      <view class='body-title'>{{item.nTitle}}</view>
+     
     </view>
-    <view class='news-body'>
-      <image class='news-img' src='/images/news5.jpg'></image>
-      <view class='body-title'>小学生走进车厢</view>
-      <view class='body-body'> 光路小学的同学们来到市北巴士第一分公司场站，从最早的公交车型开始学习了解。</view>
-    </view>
-    <view class='news-body'>
-      <image class='news-img' src='/images/news5.jpg'></image>
-      <view class='body-title'>小学生走进车厢</view>
-      <view class='body-body'> 光路小学的同学们来到市北巴士第一分公司场站，从最早的公交车型开始学习了解。</view>
-    </view>
-    <view class='news-body'>
-      <image class='news-img' src='/images/news5.jpg'></image>
-      <view class='body-title'>小学生走进车厢</view>
-      <view class='body-body'> 光路小学的同学们来到市北巴士第一分公司场站，从最早的公交车型开始学习了解。</view>
-    </view>
-    <view class='news-body'>
-      <image class='news-img' src='/images/news5.jpg'></image>
-      <view class='body-title'>小学生走进车厢</view>
-      <view class='body-body'> 光路小学的同学们来到市北巴士第一分公司场站，从最早的公交车型开始学习了解。</view>
-    </view>
-  </view>
+      </block>
+
+  
+</view>
 </view>
