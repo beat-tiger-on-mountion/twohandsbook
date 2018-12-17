@@ -12,8 +12,9 @@
 <!--学校所在省-->
 <view class="province">
   <image class="classimage" src="/images/seltab4.png"></image>
-  <text class="text-content">学校所在省</text></view>
+  <text class="text-content">学校所在省</text>
   <textarea class='textarea1'></textarea>
+  </view>
 <!--学校所在县-->
 <view class="county">
   <image class="classimage" src="/images/seltab4.png"></image>

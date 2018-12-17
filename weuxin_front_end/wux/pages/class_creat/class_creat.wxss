@@ -44,7 +44,7 @@
   margin-top: -50rpx;
   margin-left: 370rpx; 
   border: 3rpx ridge #DDDDDD;
-  width: 300rpx;
+  width: 146rpx;
   height: 75rpx;
 }
 /*学校所在省*/
