@@ -7,7 +7,6 @@ Page({
    */
   data: {
     value1: '',
-    title1: '8:00',
     value2: '',
     title2: '5:00',
     s: '',

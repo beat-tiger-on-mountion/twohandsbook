@@ -1,6 +1,11 @@
+
 {
   "pages": [
-     "pages/school_teacher/school_teacher",   
+"pages/school_teacher/school_teacher",     
+    "pages/class_creat/class_creat",
+    "pages/persional/persional",
+    "pages/modify_data/modify_data",
+    "pages/administrator/administrator",
     "pages/main/main",
     "pages/index/index",
     "pages/student_teacher/student_teacher",
@@ -8,7 +13,6 @@
     "pages/student_parent/student_parent",
     "pages/feedback/feedback",    
     "pages/myclass/myclass",
-    "pages/persional/persional",
     "pages/homework_add/homework_add",
     "pages/comments/comments",
     "pages/homework_teacher/homework_teacher",

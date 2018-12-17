@@ -6,21 +6,21 @@
     </view>
     
 
-
+<block wx:for="{{s}}" data-item="item" wx:for-index="idx">
 <view class="one">
   <view>
     <image src='/images/seltab4.png' class='headImg'></image>
   </view>
   <view class="title">
-    六一活动通知
+    {{item.cBody}}
   </view>
   <view class="time">
   作者  <view class="">{{date1}}</view>
   </view>
   <view class="text">
-    <form>和平路小学将于2018年六月一日举办“美好童年”的六一庆祝活动，届时请各位同学家长到场</form>
+    <view class='text1'><text>{{item.cBody}}</text></view>
   </view>
   <view class='line'></view>
 </view>
-
+</block>
 </view>

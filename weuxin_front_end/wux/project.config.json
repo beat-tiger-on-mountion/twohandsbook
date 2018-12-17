@@ -18,7 +18,16 @@
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
+
+	"isGameTourist": false,
+	"appid": "wx2f30b468844af36c",
+
+
+	"projectname": "%E5%AE%B6%E6%A0%A1%E4%BA%92%E9%80%9A%E4%B8%8A%E5%AD%A6%E5%AE%9D",
+
+
 	"scripts": {},
+
 	"condition": {
 		"search": {
 			"current": -1,
