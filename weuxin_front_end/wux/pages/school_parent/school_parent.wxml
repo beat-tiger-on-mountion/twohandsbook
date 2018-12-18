@@ -1,22 +1,29 @@
  <!-- pages/school_parent/school_parent.wxml -->
-  <view class='school_teacher'>
-<form>
+<view class='school_teacher'>
+<wux-select id="wux-select1" />
+<wux-select id="wux-select2" />
+<wux-select id="wux-select3" />
+
  <image class='image' src='/images/122.png'></image>
  <view class='text'>上学时间</view>
- <view>
-<input class='time' value="{{title1}}" bindblur='upschool'></input>
+ <view class='time'>
+<!-- <input class='time' value="{{title1}}" bindblur='upschool'></input> -->
+<wux-cell title="" extra="{{title1}}" bind:click="onClick1" bindtap='title1'></wux-cell>
 </view>
 
  <view class='img'><image class='image' src='/images/122.png'></image></view>
  <view class='text'>下学时间</view>
- <view>
-<input class='time' value="{{title1}}" bindblur='downschool'></input>
+
+<!-- <input class='time' value="{{title1}}" bindblur='downschool'></input> -->
+<view class='time' placeholder="{{upschool}}">
+<wux-cell title="" extra="{{title2}}" bind:click="onClick2" bindtap='title2'></wux-cell>
 </view>
+
 
  <view class='img'><image class='image' src='/images/132.png'></image></view>
  <view class='text'>添加备注</view>
  <view>
-<input class='time' value="{{title1}}"></input>
+<input class='time' value="{{title3}}"></input>
 </view>
 
 <!-- 表格 -->
@@ -31,16 +38,15 @@
       </view>
       <view class="tr">
           <view class="td td1">提示展示</view>
-          <view class="td td2"></view>
-          <view class="td td3"></view>
+          <view class="td td2">{{title1}}</view>
+          <view class="td td3">{{title2}}</view>
           <view class="td td4"></view>
       </view>
     </view>
  </view>
 <!-- 提交按钮 -->
 <view class='button'>
-<wux-button block type="positive">提交</wux-button>
+<wux-button block type="positive" bindtap='button'>提交</wux-button>
 </view>
 
-</form>
 </view>

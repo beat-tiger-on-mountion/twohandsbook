@@ -14,7 +14,7 @@
 /* 上学框 */
 .time{
   width: 260rpx;
-  height: 50rpx;
+  height: 88rpx;
   margin-left: 250rpx;
   margin-top: 30rpx;
   border: 2rpx solid rgb(134, 234, 241);

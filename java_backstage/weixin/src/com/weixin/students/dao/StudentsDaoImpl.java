@@ -17,8 +17,7 @@ public class StudentsDaoImpl extends BaseDao<Students> {
 	    private SessionFactory sessionFactory;
 	    /*
 	     * 
-	        *   
-	        *   重写BaseDao查询功能 从Students中查询数据
+	        * 重写BaseDao查询功能 从Students中查询数据
 	        * @return
 	        * @throws Exception  
 	        * @see com.weixin.util.BaseDao#findAll()
@@ -31,8 +30,5 @@ public class StudentsDaoImpl extends BaseDao<Students> {
 		public Students findOne(String hql, Object[] params) throws Exception {
 			// TODO Auto-generated method stub
 			return super.findOne(hql, params);
-		}
-	    
-	    
-	    
+		} 
 }

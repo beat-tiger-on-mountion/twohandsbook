@@ -32,5 +32,8 @@ public class ActivityDaoImpl extends BaseDao<Activity>{
 			Query query = this.sessionFactory.getCurrentSession().createQuery("from " + entityClass);
 			return query.list();
 		}
-     
+     @Override
+     public void save(Activity entity) throws Exception {
+ 		super.save(entity);
+ 	}
 }

@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.weixin.entity.Activity;
+import com.weixin.entity.Classes;
 import com.weixin.entity.Schooltime;
 import com.weixin.schooltime.service.SchoolTimeServiceImpl;
 
@@ -41,13 +42,17 @@ public class SchoolTimeServletImpl {
          * @throws
       */
      @RequestMapping("/schooltime")
-     public void save(HttpServletRequest request,HttpServletResponse response,Schooltime st,Schooltime st2,Schooltime st3,String upschool1,String upschool2,String upschool3,String downschool1,String downschool2,String downschool3) {
+     public void save(HttpServletRequest request,HttpServletResponse response,String upschool,String downschool,String classId) {
     	 response.setCharacterEncoding("utf-8");
          response.setContentType("application/json");
-         
-    	 st.setGo(upschool1);
-    	 st.setBack(downschool1);
+         Schooltime st=new Schooltime();
+         System.out.println(classId);
+         int s=Integer.parseInt(classId);
+    	 st.setGo(upschool);
+    	 st.setBack(downschool);
+    	 
     	 schoolTimeServiceImpl.save(st);
+    	 System.out.println("1");
      }
      
      /**
@@ -67,18 +72,8 @@ public class SchoolTimeServletImpl {
         response.setContentType("application/json");
            
      	List<Schooltime> list=this.schoolTimeServiceImpl.list();  
-     	List<Schooltime> list2=new ArrayList<>();
-     	for(Schooltime a1:list) {
-     		Schooltime w=new Schooltime();
-     		w.setId(a1.getId());
-     		w.setGo(a1.getGo());
-     		w.setBack(a1.getBack());
-     		w.setRemark(a1.getRemark());
-     		w.setsTime(a1.getsTime());
-     		list2.add(w);
-     	}
      	
-        JSONArray j1=JSONArray.fromObject(list2);
+        JSONArray j1=JSONArray.fromObject(list);
         String j12String = j1.toString();
         System.out.println(j12String);
          

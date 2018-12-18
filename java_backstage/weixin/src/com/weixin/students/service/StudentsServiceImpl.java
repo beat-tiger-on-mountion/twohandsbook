@@ -1,6 +1,5 @@
 package com.weixin.students.service;
 
-
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -29,7 +28,6 @@ public class StudentsServiceImpl{
 		 String hql="from Students where classId=?";
 		 Object[] ob = new Object[1];
 		 ob[0]=id;
-         
 		 try {
 			return this.studentsDaoImpl.find(hql,ob);			
 		 }catch (Exception e) {
@@ -37,12 +35,9 @@ public class StudentsServiceImpl{
 				e.printStackTrace();
 				return null;
 			}
-    	
-    	 
      }
      
-     
-     
+        
      /**
       * 
          * @Title: findOne  
@@ -62,19 +57,6 @@ public class StudentsServiceImpl{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return null;
-		}
-		
-
-		
+		}		
 	}
-     
-     
-     
-     
-     
-     
-     
-     
-     
-   
 }

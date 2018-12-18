@@ -91,16 +91,9 @@ Page({
     })
   },
   // 新闻跳转
-
   onclick: function(res) {
     app.globalData.newsid=res.currentTarget.dataset.name,
       console.log(app.globalData.newsid)
-    wx.navigateTo({
-        url: '../News_detail_page/News_detail_page',
-        
-      })
-
-
 
   },
   // 通知跳转
@@ -109,8 +102,6 @@ Page({
       url: '../notice_teacher/notice_teacher',
     })
   },
-
- 
 
   // 上下学签到跳转
   schooltime: function() {

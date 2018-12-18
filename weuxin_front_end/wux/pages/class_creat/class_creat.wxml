@@ -6,7 +6,7 @@
 <wux-select id="wux-select3" />
 <!-- 年级班级板块 -->
 <view class='wrapper'>
-
+  
   <!--学校所在省-->
   <view class="province">
     <image class="classimage" src="/images/seltab4.png"></image>

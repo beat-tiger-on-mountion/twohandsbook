@@ -9,9 +9,10 @@
 
 /* 标题 */
 .titleview{
-
+  
   margin-left: 90rpx;
-  width: 30%; 
+  margin-top: 50rpx;
+  width: 100%; 
   font-weight: bolder;
 
   
@@ -38,7 +39,7 @@
 .releasebutton{
   width: 30%;
   margin-left: 60%;
-  margin-top: 40rpx;
+  margin-top: 720rpx;
   background-color: #00baad;
   /* background:; */
 }

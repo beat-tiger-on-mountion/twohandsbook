@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+     title:'',
+     tx:''
   },
 
   /**
@@ -26,9 +27,41 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+     var that=this
+     wx.request({
+       url: '',
+       method:'GET',
+       data:{
+         title:this.data.title,
+         text:this.data.tx
+       },
+       header: {
+         'content-type': 'application/x-www-form-urlencoded'
+       },
+       success: function (res) {
+         var a = res.data
+         that.setData({
+           s: a
+         })
+         console.log(res.data)
+       }
+     })
+  },
+  // 标题获取
+  titlename:function(e){
+    var that=this
+    that.setData({
+      title:e.data.title
+    })
   },
 
+  // 内容获取
+  text: function (e) {
+    var that = this
+    that.setData({
+      tx: e.data.tx
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */
@@ -56,6 +89,7 @@ Page({
   onReachBottom: function () {
 
   },
+
 
   /**
    * 用户点击右上角分享
