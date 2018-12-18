@@ -4,14 +4,14 @@ App({
     nickName: "",
     passWord: "",
     avatarUrl: "",
-    newsid:"",
+    newsid: "",
     avatarUrl: null,
     status: null,
     schoolId: null,
     classId: null,
     openId: '',
-    userName:'',
-    nowStatus:null,
+    userName: '',
+    nowStatus: null,
   },
   onLaunch: function() {
     var that = this;
@@ -36,7 +36,7 @@ App({
           method: 'GET',
           success: function(res) {
             that.globalData.openId = res.data.openid
-            
+
           },
           fail: function(res) {},
           complete: function(res) {},
@@ -78,7 +78,20 @@ App({
     console.log(this.globalData.status)
   },
   onShareAppMessage: function() {
+    var that = this;
+    var schoolId = app.globalData.schoolId
+    var classId = app.globalData.classId
+    var msg = [schoolId, classId]
+    var smsg = msg.join(",")
+    return {
+      title: '弹出分享时显示的分享标题',
+      desc: '分享页面的内容',
+      path: '/pages/share/share?msg=' + smsg, // 路径，传递参数到指定页面。
+      success: function(res) {
+        console.log("yes", res)
 
+      }
+    }
 
   },
 

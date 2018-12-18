@@ -113,13 +113,8 @@ Page({
    */
   onGotUserInfo: function(e) {
     var that = this;
-    console.log(app.globalData.openId)
-    wx.getUserInfo({
-      success: function(res) {
-        app.globalData.userName=res.userInfo.nickName
-        console.log(app.globalData.userName)
-        that.login()
-      }
-    })
+    app.globalData.userName = e.detail.userInfo.nickName
+    app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
+    that.login()
   },
 })

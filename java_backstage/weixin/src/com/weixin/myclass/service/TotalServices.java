@@ -35,25 +35,35 @@ public class TotalServices {
 
 	public String total(String wxName, int grade, int classint, String province, String city, String county,
 			String name1) {
-		System.out.println("wxNamw" + wxName);
-		this.schoolsServicesImpl.save(province, city, county, name1);
 		int s = this.schoolsServicesImpl.findOne(province, city, county, name1);
-		
+		if (s == 0) {
+			this.schoolsServicesImpl.save(province, city, county, name1);
+		}
 		this.myClassServiceImpl.save(grade, classint, province, city, county, name1);
-		Classes c = this.myClassServiceImpl.findOne(grade, classint,s);
-		System.out.println("shooolsId"+c.getSchool().getSchoolId());
+		int classId = this.myClassServiceImpl.findOne(grade, classint, s);
+		Classes c = this.myClassServiceImpl.findClass(classId);
 		c.getSchool().setSchoolId(s);
 		User u = this.userServicesImpl.findOne(wxName);
 		u.getSchool().setSchoolId(s);
 		u.getClasss().setClassId(c.getClassId());
-
 		try {
 			this.userDaoImpl.update(u);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		JSONObject obj = JSONObject.fromObject(u);
+		User user = new User();
+		Classes classes = new Classes();
+		Schools school = new Schools();
+		user.setClasss(classes);
+		user.setSchool(school);
+		user.getSchool().setSchoolId(u.getSchool().getSchoolId());
+		user.getClasss().setClassId(u.getClasss().getClassId());
+		user.setName(u.getName());
+		user.setWxName(u.getWxName());
+		user.setStatus(u.getStatus());
+		user.setStudentId(u.getStudentId());
+		JSONObject obj = JSONObject.fromObject(user);
 		return obj.toString();
 
 	}

@@ -40,12 +40,13 @@
   </view>
 
   <view class='news'>
-    <view class='news-title'>每日新闻</view>    <block wx:for="{{s}}" data-item="item" wx:for-index="idx" >
-    <view class='news-body' bindtap='onclick' data-name="{{idx}}">
-      <image class='news-img' src='/images/news5.jpg'></image>
-      <view class='body-title'>{{item.nTitle}}</view>   
-    </view>
+    <view class='news-title'>每日新闻</view>
+    <block wx:for="{{s}}" data-item="item" wx:for-index="idx">
+      <view class='news-body' bindtap='onclick' data-name="{{idx}}">
+        <image class='news-img' src='/images/news5.jpg'></image>
+        <view class='body-title'>{{item.nTitle}}</view>
+      </view>
     </block>
-</view>
+  </view>
 
-  </view></view>
+</view>

@@ -41,9 +41,8 @@ public class StudentsServletImpl {
            response.setContentType("application/json");
 //    	   通过班级表获得班级ID
     	   System.out.println(grade);
-    	   Classes cl2=this.myClassServiceImpl.findOne(grade, classInt,schoolId);
+    	   int id =this.myClassServiceImpl.findOne(grade, classInt,schoolId);
   	   
-    	   int id = cl2.getClassId();
     	   System.out.println(id);
     	   
     	   

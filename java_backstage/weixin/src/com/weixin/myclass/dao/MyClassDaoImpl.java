@@ -1,5 +1,8 @@
 package com.weixin.myclass.dao;
 
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.stereotype.Repository;
 
 import com.weixin.entity.Classes;
@@ -34,6 +37,18 @@ public class MyClassDaoImpl extends BaseDao<Classes>{
     public Classes findOne(String hql, Object[] params) throws Exception {
 		
 		return super.findOne(hql, params);
+	}
+
+    
+    
+	@Override
+	public Map<String, Object> findOneBySql(String sql, Object[] params) throws Exception {
+		return super.findOneBySql(sql, params);
+	}
+
+	@Override
+	public List<Classes> find(String hql, Object[] params) throws Exception {
+		return super.find(hql, params);
 	}
 
 	@Override

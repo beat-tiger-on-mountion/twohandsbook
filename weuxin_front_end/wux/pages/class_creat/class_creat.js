@@ -89,7 +89,7 @@ Page({
     })
   },
   // 创建班级的点击事件
-  qwe: function(e) {
+  qwe: function() {
     var that = this
     wx.request({
       url: 'http://localhost:8080/weixin/creatClass',
