@@ -41,7 +41,7 @@
       <view class="td"><input name="i25"></input></view>
    </view>
     
-<!-- 
+
      <view class="tr"> 
   
       <view class="td">3</view>
@@ -100,7 +100,7 @@
       <view class="td"><input name="i83"></input></view>
       <view class="td"><input name="i84"></input></view>
       <view class="td"><input name="i85"></input></view>
-   </view> -->
+   </view>
 
  
   
@@ -111,6 +111,6 @@
 
 
   <view class='viewbutton'>
-    <button class='submit' form-type="submit" >添加课程表 </button>
+    <button class='submit' form-type="submit" bindtap='add'>添加课程表 </button>
   </view>
 </form>

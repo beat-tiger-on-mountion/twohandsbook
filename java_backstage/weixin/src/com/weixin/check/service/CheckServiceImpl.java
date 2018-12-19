@@ -31,18 +31,22 @@ public class CheckServiceImpl {
 	/**
 	 * 
 	    * @Title: findAbsence  
-	    * @Description: 查询请假学生  
-	    * @param @return
+	    * @Description: 通过班级id查询请假学生  
+	    * @param classId   班级id
 	    * @return List<Check>
 	    * @throws
 	 */
-	public List<Check> findAbsence() {
+	public List<Check> findAbsence(String classId) {
+		List<Check> list0 = new ArrayList<Check>();
 		List<Check> list1 = new ArrayList<Check>();
 		List<Check> list;
-		Object[] object = new Object[1];
-		object[0] = "0";
+		int classId1 = Integer.parseInt(classId);
+		Object[] object = new Object[2];
+		object[0] = classId1;
+		object[1] = "0";
 		try {
-			list = this.checkDaoImpl.find("from Check where delay =?", object);
+			list = this.checkDaoImpl.find("from Check where classId=? and delay =? order by id desc", object);
+
 			for (Check r : list) {
 				Check r1 = new Check();
 				r1.setId(r.getId());
@@ -51,29 +55,47 @@ public class CheckServiceImpl {
 				r1.setDelay(r.getDelay());
 				list1.add(r1);
 			}
+
+			if (list1.size() < 8) {
+				for (int i = 0; i < list.size(); i++) {
+
+					list0.add(list1.get(i));
+
+				}
+			} else {
+				for (int i = 0; i < 8; i++) {
+
+					list0.add(list1.get(i));
+
+				}
+			}
+
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		return list1;
+		return list0;
 	}
 
 	/**
 	 * 
 	    * @Title: findDelay  
-	    * @Description:查询迟到学生 
-	    * @param @return
+	    * @Description:通过班级id查询迟到学生 
+	    * @param classId  班级id
 	    * @return List<Check>
 	    * @throws
 	 */
-	public List<Check> findDelay() {
+	public List<Check> findDelay(String classId) {
+		List<Check> list0 = new ArrayList<Check>();
 		List<Check> list1 = new ArrayList<Check>();
 		List<Check> list;
-		Object[] object = new Object[1];
-		object[0] = "0";
+		int classId1 = Integer.parseInt(classId);
+		Object[] object = new Object[2];
+		object[0] = classId1;
+		object[1] = "0";
 		try {
-			list = this.checkDaoImpl.find("from Check where absence =?", object);
+			list = this.checkDaoImpl.find("from Check where classId=? and absence =? order by id desc", object);
 			for (Check r : list) {
 				Check r1 = new Check();
 				r1.setId(r.getId());
@@ -82,12 +104,27 @@ public class CheckServiceImpl {
 				r1.setDelay(r.getDelay());
 				list1.add(r1);
 			}
+
+			if (list1.size() < 8) {
+				for (int i = 0; i < list.size(); i++) {
+
+					list0.add(list1.get(i));
+
+				}
+			} else {
+				for (int i = 0; i < 8; i++) {
+
+					list0.add(list1.get(i));
+
+				}
+			}
+
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		return list1;
+		return list0;
 	}
 
 	/**

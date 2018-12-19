@@ -1,121 +1,76 @@
- "pages/main/main","pages/course_teacher/course_teacher",
-    "pages/TEST/TEST",
-    "pages/homework_add/homework_add",
-    "pages/homework_teacher/homework_teacher",    "pages/index/index",
-    
-   
-    "pages/persional_teacher/persional_teacher",
-=======
-    "pages/class_creat/class_creat",
-    "pages/persional/persional",
-    "pages/modify_data/modify_data",
-    "pages/administrator/administrator",
-    "pages/main/main",
-    "pages/index/index",
-    "pages/student_teacher/student_teacher",
-    "pages/school_teacher/school_teacher",
-    "pages/onduty_teacher/onduty_teacher",
-    "pages/share/share",
-    "pages/course_teacher/course_teacher",
->>>>>>> 737a233945730edf4d645fc2b43f99776a75dd4b
-    "pages/student_teacher/student_teacher",
-    "pages/course_parent/course_parent",
-    "pages/student_parent/student_parent",
-    "pages/feedback/feedback",
-    "pages/student_parent/student_parent",
-    "pages/maintest/maintest",
-    "pages/myclass/myclass",
-   "pages/homework_add/homework_add",
-    "pages/comments/comments",
-    "pages/homework_teacher/homework_teacher",
-    "pages/homework_parent/homework_parent",
-<<<<<<< HEAD
-    "pages/course_teacher/course_teacher",
-    "pages/school_teacher/school_teacher",
-    "pages/student_teacher/student_teacher",
- "pages/class_join/class_join",    "pages/persional/persional",
-    "pages/activity_list/activity_list",
-    "pages/school_parent/school_parent",
-    "pages/activity_detail/zactivity_detail",
-    "pages/comments/comments",
-
-=======
-    "pages/course_parent/course_parent",
-    "pages/activity_list/activity_list",
-    "pages/school_parent/school_parent",
->>>>>>> 737a233945730edf4d645fc2b43f99776a75dd4b
-    "pages/News_detail_page/News_detail_page",
-
-    "pages/onduty_parent/onduty_parent",
-    "pages/addnotice/addnotice",    "pages/activity_detail/activity_detail",
-    "pages/activity_newbuilt/activity_newbuilt",
-<<<<<<< HEAD
-    "pages/login/login",
-   
-    
-    
-   
-   
-    
-
-    "pages/onduty_teacher/onduty_teacher",
-
-
-    "pages/course_parent/course_parent",
-    "pages/addnotice/addnotice",
-   
-
-   
-    "pages/student_parent/student_parent",
-
-   
-    "pages/common/common",
-
-    "pages/notice_teacher/notice_teacher"
-
-   
-    
-
-=======
-    "pages/notice_teacher/notice_teacher"
->>>>>>> 737a233945730edf4d645fc2b43f99776a75dd4b
-  ],
-  "window": {
-    "navigationBarBackgroundColor": "#00baad",
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "上学宝",
-    "backgroundColor": "#eeeeee",
-    "backgroundTextStyle": "light"
+{
+"pages":[
+"pages/course_teacher/course_teacher",
+"pages/course_parent/course_parent",
+"pages/student_parent/student_parent",
+"pages/student_teacher/student_teacher",
+"pages/myclass/myclass",
+"pages/TEST/TEST",
+"pages/homework_add/homework_add",
+"pages/homework_teacher/homework_teacher",
+"pages/persional_teacher/persional_teacher",
+"pages/class_creat/class_creat",
+"pages/persional/persional",
+"pages/modify_data/modify_data",
+"pages/administrator/administrator",
+"pages/main/main",
+"pages/index/index",
+"pages/school_teacher/school_teacher",
+"pages/onduty_teacher/onduty_teacher",
+"pages/share/share",
+"pages/feedback/feedback",
+"pages/maintest/maintest",
+"pages/comments/comments",
+"pages/homework_parent/homework_parent",
+"pages/class_join/class_join",
+"pages/activity_list/activity_list",
+"pages/school_parent/school_parent",
+"pages/activity_detail/zactivity_detail",
+"pages/News_detail_page/News_detail_page",
+"pages/onduty_parent/onduty_parent",
+"pages/addnotice/addnotice",
+"pages/activity_detail/activity_detail",
+"pages/activity_newbuilt/activity_newbuilt",
+"pages/login/login",
+"pages/common/common",
+ "pages/notice_teacher/notice_teacher"
+],
+"window": {
+"navigationBarBackgroundColor": "#00baad",
+"navigationBarTextStyle": "black",
+"navigationBarTitleText": "上学宝",
+"backgroundColor": "#eeeeee",
+"backgroundTextStyle": "light"
+},
+"tabBar": {
+"backgroundColor": "#00baad",
+"color": "#FFF",
+"selectedColor": "#000",
+"list": [
+  {
+    "pagePath": "pages/main/main",
+    "text": "首页",
+    "iconPath": "images/tab1.png",
+    "selectedIconPath": "images/seltab1.png"
   },
-  "tabBar": {
-    "backgroundColor": "#00baad",
-    "color": "#FFF",
-    "selectedColor": "#000",
-    "list": [
-      {
-        "pagePath": "pages/main/main",
-        "text": "首页",
-        "iconPath": "images/tab1.png",
-        "selectedIconPath": "images/seltab1.png"
-      },
-      {
-        "pagePath": "pages/student_parent/student_parent",
-        "text": "学生信息",
-        "iconPath": "images/tab2.png",
-        "selectedIconPath": "images/seltab2.png"
-      },
-      {
-        "pagePath": "pages/comments/comments",
-        "text": "评论墙",
-        "iconPath": "images/tab3.png",
-        "selectedIconPath": "images/seltab3.png"
-      },
-      {
-        "pagePath": "pages/persional/persional",
-        "text": "个人中心",
-        "iconPath": "images/tab4.png",
-        "selectedIconPath": "images/seltab4.png"
-      }
-    ]
+  {
+    "pagePath": "pages/student_parent/student_parent",
+    "text": "学生信息",
+    "iconPath": "images/tab2.png",
+    "selectedIconPath": "images/seltab2.png"
+  },
+  {
+    "pagePath": "pages/comments/comments",
+    "text": "评论墙",
+    "iconPath": "images/tab3.png",
+    "selectedIconPath": "images/seltab3.png"
+  },
+  {
+    "pagePath": "pages/persional/persional",
+    "text": "个人中心",
+    "iconPath": "images/tab4.png",
+    "selectedIconPath": "images/seltab4.png"
   }
+]
+}
 }

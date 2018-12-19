@@ -1,13 +1,10 @@
-// pages/onduty_parent/onduty_parent.js
-
-// const app = getApp()
+// pages/login/login.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    head: "/images/1.png",
 
   },
 
@@ -29,30 +26,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var that = this;
-    wx.request({
-      url: 'http://localhost:8080/weixin/courseparent', //仅为示例，并非真实的接口地址
-      data: {
-        classId:1,
-
-      },
-      header: {
-        'content-type': 'application/x-www-form-urlencoded' // 默认值
-      },
-      method: 'post',
-      success(res) {
-        // console.log(res)
-        var list1 = res.data;
-        console.log(list1);
-        that.setData({
-          list: res.data
-        });
-      },
-      fail: function (res) {
-        console.log(res);
-      }
-    })
-
 
   },
 

@@ -46,16 +46,17 @@ public class StudentsServiceImpl{
      /**
       * 
          * @Title: findOne  
-         * @Description: 根据学生姓名查学生  
-         * @param @param studentName  学生姓名
+         * @Description: 根据学生班级和姓名查学生  
+         * @param @param studentName  学生姓名，classId 学生班级
          * @param @return
          * @return Students
          * @throws
       */
- 	public Students findOne(String studentName) {
-		String hql = "from Students where name=?";
-		Object[] ob = new Object[1];
-		ob[0] = studentName;
+ 	public Students findOne(int classId,String studentName) {
+		String hql = "from Students  where classId=? and  name=? ";
+		Object[] ob = new Object[2];
+		ob[0]=classId;
+		ob[1] = studentName;
 		try {
 			return this.studentsDaoImpl.findOne(hql, ob);
 		} catch (Exception e) {

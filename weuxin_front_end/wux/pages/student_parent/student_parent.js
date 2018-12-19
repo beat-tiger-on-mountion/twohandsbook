@@ -29,7 +29,9 @@ Page({
     var that = this;
     wx.request({
         url: 'http://localhost:8080/weixin/delay', //仅为示例，并非真实的接口地址
-
+      data: {
+        classId: 1,
+      },
         header: {
           'content-type': 'application/x-www-form-urlencoded' // 默认值
         },
@@ -49,7 +51,9 @@ Page({
 
       wx.request({
         url: 'http://localhost:8080/weixin/absence', //仅为示例，并非真实的接口地址
-
+      data: {
+        classId: 1,
+      },
         header: {
           'content-type': 'application/x-www-form-urlencoded' // 默认值
         },

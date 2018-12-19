@@ -94,6 +94,7 @@ Page({
       data: {
         studentName: that.data.studentName,
         studentDate: that.data.studentDate,
+        classId:1,
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded'
@@ -119,6 +120,7 @@ Page({
       data: {
         studentName1: that.data.studentName1,
         studentDate1: that.data.studentDate1,
+        classId:1,
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded'

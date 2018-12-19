@@ -34,6 +34,15 @@ public class CheckDaoImpl extends BaseDao<Check> {
 		return super.find(hql, params);
 	}
 
+	/**
+	 * 
+	    * @Title: insertAbsence  
+	    * @Description: 插入请假表中
+	    * @param @param studentDate  请假日期
+	    * @param @param s
+	    * @return void
+	    * @throws
+	 */
 	public void insertAbsence(String studentDate, Students s) {
 		Session session = this.sessionFactory.getCurrentSession();
 		Query query = session.createSQLQuery("insert into tbl_check(cTime,absence,delay,classId) values(?,?,?,?)");
@@ -45,6 +54,15 @@ public class CheckDaoImpl extends BaseDao<Check> {
 
 	}
 
+	/**
+	 * 
+	    * @Title: insertDelay  
+	    * @Description: 插入迟到表中 
+	    * @param @param studentDate  迟到日期
+	    * @param @param s
+	    * @return void
+	    * @throws
+	 */
 	public void insertDelay(String studentDate, Students s) {
 		Session session = this.sessionFactory.getCurrentSession();
 		Query query = session.createSQLQuery("insert into tbl_check(cTime,absence,delay,classId) values(?,?,?,?)");

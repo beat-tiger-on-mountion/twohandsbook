@@ -15,25 +15,94 @@
     <view class="th ">周五</view>
     
   </view>
-  <block wx:for="{{listData}}" wx:key="{{code}}">
-    <view class="tr bg-g" wx:if="{{index % 2 == 1}}">
-      <view class="td">{{item.code}}</view>
-      <view class="td">{{item.text}}</view>
-      <view class="td">{{item.type1}}</view>
-      <view class="td">{{item.type2}}</view>
-      <view class="td">{{item.type3}}</view>
-      <view class="td">{{item.type4}}</view>
-      <view class="td">{{item.type5}}</view>
-    </view>
-    <view class="tr" wx:else>
-      <view class="td">{{item.code}}</view>
-      <view class="td">{{item.text}}</view>
-      <view class="td">{{item.type1}}</view>
-      <view class="td">{{item.type2}}</view>
-      <view class="td">{{item.type3}}</view>
-      <view class="td">{{item.type4}}</view>
-      <view class="td">{{item.type5}}</view>
-    </view>
-  </block>
+
+<!-- <view class="td">{{list[0].content}}</view> -->
+
+
+ <view class="tr"> 
+  
+      <view class="td">1</view>
+      <view class="td">{{list[0].content}}</view>
+      <view class="td">{{list[1].content}}</view>
+      <view class="td">{{list[2].content}}</view>
+      <view class="td">{{list[3].content}}</view>
+      <view class="td">{{list[4].content}}</view>
+  </view>
+
+
+    <view class="tr bg-g" >
+      <view class="td">2</view>
+      <view class="td">{{list[5].content}}</view>
+      <view class="td">{{list[6].content}}</view>
+      <view class="td">{{list[7].content}}</view>
+      <view class="td">{{list[8].content}}</view>
+      <view class="td">{{list[9].content}}</view>
+   </view>
+
+   <view class="tr"> 
+  
+      <view class="td">3</view>
+      <view class="td">{{list[10].content}}</view>
+      <view class="td">{{list[11].content}}</view>
+      <view class="td">{{list[12].content}}</view>
+      <view class="td">{{list[13].content}}</view>
+      <view class="td">{{list[14].content}}</view>
+  </view>
+
+
+    <view class="tr bg-g" >
+      <view class="td">4</view>
+      <view class="td">{{list[15].content}}</view>
+      <view class="td">{{list[16].content}}</view>
+      <view class="td">{{list[17].content}}</view>
+      <view class="td">{{list[18].content}}</view>
+      <view class="td">{{list[19].content}}</view>
+   </view>
+
+
+
+
+    <view class="tr"> 
+  
+      <view class="td">5</view>
+      <view class="td">{{list[20].content}}</view>
+      <view class="td">{{list[21].content}}</view>
+      <view class="td">{{list[22].content}}</view>
+      <view class="td">{{list[23].content}}</view>
+      <view class="td">{{list[24].content}}</view>
+  </view>
+
+
+    <view class="tr bg-g" >
+      <view class="td">6</view>
+      <view class="td">{{list[25].content}}</view>
+      <view class="td">{{list[26].content}}</view>
+      <view class="td">{{list[27].content}}</view>
+      <view class="td">{{list[28].content}}</view>
+      <view class="td">{{list[29].content}}</view>
+   </view>
+
+
+ <view class="tr"> 
+  
+      <view class="td">7</view>
+      <view class="td">{{list[30].content}}</view>
+      <view class="td">{{list[31].content}}</view>
+      <view class="td">{{list[32].content}}</view>
+      <view class="td">{{list[33].content}}</view>
+      <view class="td">{{list[34].content}}</view>
+  </view>
+
+
+    <view class="tr bg-g" >
+      <view class="td">8</view>
+      <view class="td">{{list[35].content}}</view>
+      <view class="td">{{list[36].content}}</view>
+      <view class="td">{{list[37].content}}</view>
+      <view class="td">{{list[38].content}}</view>
+      <view class="td">{{list[39].content}}</view>
+   </view>
+
+
 </view>
 

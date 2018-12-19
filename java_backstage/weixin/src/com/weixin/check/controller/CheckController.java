@@ -42,13 +42,14 @@ public class CheckController {
 	    * @Description: 查询请假学生 
 	    * @param @param request
 	    * @param @param response
+	    * @param @param classId 班级ID
 	    * @return void
 	    * @throws
 	 */
 	@RequestMapping(value = "/absence")
-	public void printAbsence(HttpServletRequest request, HttpServletResponse response) {
+	public void printAbsence(HttpServletRequest request, HttpServletResponse response, String classId) {
 		response.setCharacterEncoding("UTF-8");
-		List<Check> list = this.checkServiceImpl.findAbsence();
+		List<Check> list = this.checkServiceImpl.findAbsence(classId);
 		JSONArray j1 = JSONArray.fromObject(list);
 		String j12String = j1.toString();
 
@@ -69,13 +70,14 @@ public class CheckController {
 	    * @Description: 查询迟到学生 
 	    * @param @param request
 	    * @param @param response
+	    * @param @param classId 班级ID
 	    * @return void
 	    * @throws
 	 */
 	@RequestMapping(value = "/delay")
-	public void printDelay(HttpServletRequest request, HttpServletResponse response) {
+	public void printDelay(HttpServletRequest request, HttpServletResponse response, String classId) {
 		response.setCharacterEncoding("UTF-8");
-		List<Check> list = this.checkServiceImpl.findDelay();
+		List<Check> list = this.checkServiceImpl.findDelay(classId);
 		JSONArray j1 = JSONArray.fromObject(list);
 		String j12String = j1.toString();
 
@@ -98,15 +100,17 @@ public class CheckController {
 	    * @param @param response
 	    * @param @param studentName  迟到学生姓名
 	    * @param @param studentDate   迟到时间
+	    * @param @param classId 班级ID
 	    * @return void
 	    * @throws
 	 */
 	@Transactional(readOnly = false)
 	@RequestMapping(value = "/delayteacher")
-	public void writeDelay(HttpServletRequest request, HttpServletResponse response, String studentName,
+	public void writeDelay(HttpServletRequest request, HttpServletResponse response, String classId, String studentName,
 			String studentDate) {
 		response.setCharacterEncoding("UTF-8");
-		Students s = this.studentsServiceImpl.findOne(studentName);
+		int classId1 = Integer.parseInt(classId);
+		Students s = this.studentsServiceImpl.findOne(classId1, studentName);
 		System.out.println(s);
 		if (null != s) {
 			this.checkServiceImpl.updateCheckDelay(studentDate, s);
@@ -122,16 +126,17 @@ public class CheckController {
 	    * @param @param response
 	    * @param @param studentName1  请假学生姓名
 	    * @param @param studentDate1 请假时间
+	    * @param @param classId 班级ID
 	    * @return void
 	    * @throws
 	 */
 	@Transactional(readOnly = false)
 	@RequestMapping(value = "/absenceteacher")
-	public void writeAbsence(HttpServletRequest request, HttpServletResponse response, String studentName1,
-			String studentDate1) {
-
+	public void writeAbsence(HttpServletRequest request, HttpServletResponse response, String classId,
+			String studentName1, String studentDate1) {
+		int classId1 = Integer.parseInt(classId);
 		response.setCharacterEncoding("UTF-8");
-		Students s = this.studentsServiceImpl.findOne(studentName1);
+		Students s = this.studentsServiceImpl.findOne(classId1, studentName1);
 		System.out.println(s);
 		if (null != s) {
 			System.out.println("jinlaiel");

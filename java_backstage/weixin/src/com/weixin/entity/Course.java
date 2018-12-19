@@ -17,6 +17,7 @@ public class Course {
 	private int id;
     private int  workday;
     private int  lesson;
+    private String content;
     private Classes classes;
     @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,8 +39,15 @@ public class Course {
 	public void setLesson(int lesson) {
 		this.lesson = lesson;
 	}
-	@OneToOne(cascade=CascadeType.ALL  )     
-	@PrimaryKeyJoinColumn(name="classid")
+	
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	@OneToOne 
+	@PrimaryKeyJoinColumn(name="classId")
 	public Classes getClasses() {
 		return classes;
 	}
