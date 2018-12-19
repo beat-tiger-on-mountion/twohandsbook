@@ -17,7 +17,14 @@ import com.weixin.schooltime.dao.SchoolTimeDaoImpl;
 public class SchoolTimeServiceImpl {
 	@Resource
 	private SchoolTimeDaoImpl schoolTimeDaoImpl;
-	
+	/**
+	 * 
+	    * @Title: save  
+	    * @Description: 保存上下学数据 
+	    * @Param@param entity
+	    * @Return void
+	    * @throws
+	 */
 	public void save(Schooltime entity) {
 		try {
 			schoolTimeDaoImpl.save(entity);
@@ -27,7 +34,14 @@ public class SchoolTimeServiceImpl {
 			e.printStackTrace();
 		}
 	}
-	
+	/**
+	 * 
+	    * @Title: list  
+	    * @Description: 查询上下学表中的数据 返回一个集合
+	    * @Param@return
+	    * @Return List<Schooltime>
+	    * @throws
+	 */
 	 public List<Schooltime> list(){
 	    	try {
 	    		List<Schooltime> list=this.schoolTimeDaoImpl.findAll();

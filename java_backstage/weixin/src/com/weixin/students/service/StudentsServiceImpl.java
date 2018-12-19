@@ -1,5 +1,6 @@
 package com.weixin.students.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -29,7 +30,15 @@ public class StudentsServiceImpl{
 		 Object[] ob = new Object[1];
 		 ob[0]=id;
 		 try {
-			return this.studentsDaoImpl.find(hql,ob);			
+			 List<Students> list=this.studentsDaoImpl.find(hql,ob);	
+			 List<Students> list2=new ArrayList<>();
+	          for(Students l:list) {
+	        	  Students s=new Students();
+	        	  s.setId(l.getId());
+	        	  s.setName(l.getName());        	  
+	        	  list2.add(s);
+	          }
+	          return list2;
 		 }catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

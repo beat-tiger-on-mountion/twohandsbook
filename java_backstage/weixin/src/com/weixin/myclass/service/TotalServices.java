@@ -32,7 +32,21 @@ public class TotalServices {
 	private MyClassServiceImpl myClassServiceImpl;
 	@Resource
 	private MyClassDaoImpl myClassDaoImpl;
-
+    /**
+     * 
+        * @Title: total  
+        * @Description:将与班级相关联的数据保存在相应的数据库中  
+        * @Param@param wxName
+        * @Param@param grade
+        * @Param@param classint
+        * @Param@param province
+        * @Param@param city
+        * @Param@param county
+        * @Param@param name1
+        * @Param@return
+        * @Return String
+        * @throws
+     */
 	public String total(String wxName, int grade, int classint, String province, String city, String county,
 			String name1) {
 		int s = this.schoolsServicesImpl.findOne(province, city, county, name1);

@@ -75,7 +75,15 @@ public class MyClassServiceImpl {
 		}
 		return c1.getClassId();
 	}
-
+    /**
+     * 
+        * @Title: findClass  
+        * @Description: 根据ID查询班级  
+        * @Param@param classId
+        * @Param@return
+        * @Return Classes
+        * @throws
+     */
 	public Classes findClass(int classId) {
 		String hql = "from Classes where classId=?";
 		Object[] ob = new Object[1];
@@ -87,7 +95,14 @@ public class MyClassServiceImpl {
 			return null;
 		}
 	}
-
+    /**
+     * 
+        * @Title: update  
+        * @Description:修改班级属性值
+        * @Param@param c
+        * @Return void
+        * @throws
+     */
 	public void update(Classes c) {
 		try {
 			this.myClassDaoImpl.update(c);
