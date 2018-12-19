@@ -52,6 +52,7 @@ public class NewsServletImpl {
 	    		w.setId(a1.getId());
 	    		w.setnTitle(a1.getnTitle());
 	    		w.setnBody(a1.getnBody());
+	    		w.setnTime(a1.getnTime());
 	    		list2.add(w);
 	    	}
 	    	

@@ -3,7 +3,6 @@ package com.weixin.comments.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,9 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.weixin.activity.service.ActivityServiceImpl;
 import com.weixin.comments.service.CommentsServiceImpl;
-import com.weixin.entity.Activity;
 import com.weixin.entity.Comments;
 
 import net.sf.json.JSONArray;

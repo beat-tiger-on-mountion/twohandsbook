@@ -4,7 +4,7 @@ App({
     nickName: "",
     passWord: "",
     avatarUrl: "",
-    newsid:"",
+    news:"",
     avatarUrl: null,
     status: null,
     schoolId: null,

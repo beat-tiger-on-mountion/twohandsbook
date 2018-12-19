@@ -1,10 +1,9 @@
 <!--pages/News_detail_page/News_detail_page.wxml-->
   <view class=''>
-  <view class="title">{{s}}</view>
-  
-     <view class="p">2018年11月21日，省教育部下发普及无人机的通知。我校组织高年级同学学习实践，激发同学们的学习兴趣。</view>
-     <view class="p"> 中国民用航空局副局长李健引述相关研究结果称，无人驾驶航空器实现初步普及，大概需要5-8年。也就是说，到2022年，在农业生产、娱乐航拍领域将率先实现初步的行业普及。</view>
-     <view class="p"> 我校响应教育部号召，组织小学生无人机普及工作，六年级一班的刘成同学，作为学生代表上台发言。</view>
-     <view class="wux-text--right,p">2018年11月22日报</view>
+  <view class="title">{{n_title}}</view>
+  <block wx:for="{{n_body}}" data-item="item"  >
+     <view class="p">{{item}}</view>
+   </block>  
+     <view class="wux-text--right,p">{{n_time}}</view>
   </view>
  
