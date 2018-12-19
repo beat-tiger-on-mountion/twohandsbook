@@ -1,5 +1,5 @@
 // pages/achool_teacher/school_teacher.js
-
+var app = getApp()
 Page({
 
   /**
@@ -7,7 +7,6 @@ Page({
    */
   data: {
     value1: '',
-    title1: '8:00',
     value2: '',
     title2: '5:00',
     s: '',
@@ -17,6 +16,7 @@ Page({
     downschool1:'4:00', 
     downschool2: '5:00', 
     downschool3: '5:30', 
+    
   },
 
   /**
@@ -42,7 +42,9 @@ Page({
       url: 'http://localhost:8080/weixin/schooltimecheck',
       method: 'GET',
       data: {
-        a:'1'
+        a:'1',
+        classId:1,
+        
       },
       header: {
         //  'content-type':'application/json'
@@ -98,7 +100,7 @@ Page({
   button:function(e){    
     var that = this
     wx.request({
-      url: 'http://localhost:8080/weixin/schooltime',
+      url: 'http://localhost:8080/weixin/time',
       method: 'GET',
       data: {
         upschool1: this.data.upschool1,
@@ -106,7 +108,8 @@ Page({
         upschool3: this.data.upschool3,
         downschool1:this.data.downschool1,
         downschool2: this.data.downschool2,
-        downschool3: this.data.downschool3
+        downschool3: this.data.downschool3,
+        classId: app.globalData.classId,
       },
       header: {
         //  'content-type':'application/json'

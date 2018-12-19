@@ -10,7 +10,7 @@ Page({
     userInfo: "",
     rawData: "",
     img: "../../images/1.png",
-    status:null,
+    status: null,
   },
 
   /**
@@ -132,7 +132,7 @@ Page({
           app.globalData.schoolId = res.data.school.schoolId,
             app.globalData.classId = res.data.classs.classId,
             app.globalData.status = res.data.status
-          console.log("index",app.globalData)
+          console.log("index", app.globalData)
           wx.switchTab({
             url: '../main/main',
           })
@@ -151,14 +151,10 @@ Page({
    */
   onGotUserInfo: function(e) {
     var that = this;
-    wx.getUserInfo({
-      success: function(res) {
-        app.globalData.userName = res.userInfo.nickName
-        that.getUser()
-      }
-    })
+    app.globalData.userName = e.detail.userInfo.nickName
+    app.globalData.avatarUrl = e.detail.userInfo.avatarUrl
+    that.getUser()
   },
-
 })
 /**
  * 也不知道是什么

@@ -43,4 +43,8 @@ public class SchoolTimeDaoImpl extends BaseDao<Schooltime>{
 			Query query = this.sessionFactory.getCurrentSession().createQuery("from " + entityClass);
 			return query.list();
 		}
+    @Override
+    public List<Schooltime> find(String hql, Object[] params) throws Exception {
+          return super.find(hql, params);
+    }
 }

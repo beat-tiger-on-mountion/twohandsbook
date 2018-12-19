@@ -1,3 +1,4 @@
+
 {
 "pages":[
 "pages/course_teacher/course_teacher",
@@ -51,8 +52,7 @@
     "pagePath": "pages/main/main",
     "text": "首页",
     "iconPath": "images/tab1.png",
-    "selectedIconPath": "images/seltab1.png"
-  },
+    "selectedIconPath": "images/seltab1.png"  },
   {
     "pagePath": "pages/student_parent/student_parent",
     "text": "学生信息",

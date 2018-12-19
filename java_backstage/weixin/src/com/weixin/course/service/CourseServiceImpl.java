@@ -24,7 +24,7 @@ public class CourseServiceImpl {
 	/**
 	 * 
 	    * @Title: updateCourse  
-	    * @Description: 更新新的课程表  
+	    * @Description: �����µĿγ̱�  
 	    * @param @param classId
 	    * @param @param lists
 	    * @return void
@@ -74,7 +74,7 @@ public class CourseServiceImpl {
 	/**
 	 * 
 	    * @Title: findCourse  
-	    * @Description: 查询课程表
+	    * @Description: ��ѯ�γ̱�
 	    * @param @param classId
 	    * @param @return
 	    * @return List
@@ -116,7 +116,7 @@ public class CourseServiceImpl {
 	/**
 	 * 
 	    * @Title: deleteCourse  
-	    * @Description: 删除原来的课程表 
+	    * @Description: ɾ��ԭ���Ŀγ̱� 
 	    * @param @param classId
 	    * @return void
 	    * @throws

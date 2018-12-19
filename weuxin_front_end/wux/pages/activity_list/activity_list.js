@@ -31,7 +31,8 @@ Page({
       url: 'http://localhost:8080/weixin/activity',
       method: "GET",
       data: {
-        a: '1'
+        a: '1',
+        classId:1,
       },
       header: {
         //  'content-type':'application/json'

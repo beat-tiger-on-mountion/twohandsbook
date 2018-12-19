@@ -11,7 +11,6 @@ public class BacktousDaoImpl extends BaseDao<Backtous> {
 
 	@Override
 	public void save(Backtous entity) throws Exception {
-		// TODO Auto-generated method stub
 		super.save(entity);
 	}
 

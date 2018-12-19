@@ -163,7 +163,6 @@ public class UserServicesImpl {
 			user.setId(u.getId());
 			u.setSchool(s);
 			u.setClasss(c);
-			
 			return u;
 		} catch (Exception e) {
 			e.printStackTrace();

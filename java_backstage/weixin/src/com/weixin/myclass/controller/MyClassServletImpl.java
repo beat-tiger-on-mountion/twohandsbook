@@ -26,7 +26,7 @@ public class MyClassServletImpl {
 	    * @Param@param grade
 	    * @Param@param classint
 	    * @Return void
-	    * @throws
+	    * @throws 
 	 */
 	@RequestMapping("/creatClass")
 	public void save(HttpServletResponse response, String wxName, int grade, int classint, String province, String city,

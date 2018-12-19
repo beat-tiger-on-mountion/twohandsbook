@@ -41,25 +41,17 @@ public class StudentsServletImpl {
            response.setContentType("application/json");
 //    	   通过班级表获得班级ID
     	   System.out.println(grade);
-    	   Classes cl2=this.myClassServiceImpl.findOne(grade, classInt,schoolId);
+    	   int id =this.myClassServiceImpl.findOne(grade, classInt,schoolId);
   	   
-    	   int id = cl2.getClassId();
     	   System.out.println(id);
     	   
     	   
 
-//          ?形成死循环了如何解决
+//        根据班级ID查询数据库中学生    
           List<Students> list=this.studentsServiceImpl.findById(id);
-          System.out.println(list);
-          List<Students> list2=new ArrayList<>();
-          for(Students l:list) {
-        	  Students s=new Students();
-        	  s.setId(l.getId());
-        	  s.setName(l.getName());        	  
-        	  list2.add(s);
-          }
+  
 //            将数据转换成json字符串
-           JSONArray j1=JSONArray.fromObject(list2);
+           JSONArray j1=JSONArray.fromObject(list);
            String j12String = j1.toString();
            System.out.println(j12String);
             

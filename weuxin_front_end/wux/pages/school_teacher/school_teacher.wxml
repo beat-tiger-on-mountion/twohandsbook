@@ -7,23 +7,23 @@
 <form>
 <!-- 上学时间设定 -->
 <view>
-<input class='time' value="{{title1}}" name="upschool1" bindinput='upschoolinput'></input>
+<input class='time' placeholder="{{upschool1}}" name="upschool1" bindinput='upschoolinput'></input>
 </view>
 <view>
-<input class='time' value="{{title1}}" name="upschool2" bindinput='upschoolinput2'></input>
+<input class='time' placeholder="{{upschool2}}" name="upschool2" bindinput='upschoolinput2'></input>
 </view>
 <view>
-<input class='time' value="{{title1}}" name="upschool3" bindinput='upschoolinput3'></input>
+<input class='time' placeholder="{{upschool3}}" name="upschool3" bindinput='upschoolinput3'></input>
 </view>
 <!-- 下学时间设定 -->
 <view>
-<input class='time2' value="{{title2}}" bindinput='downschoolinput'></input>
+<input class='time2' placeholder="{{downschool1}}" bindinput='downschoolinput'></input>
 </view>
 <view>
-<input class='time3' value="{{title2}}" bindinput='downschoolinput2'></input>
+<input class='time3' placeholder="{{downschool2}}" bindinput='downschoolinput2'></input>
 </view>
 <view>
-<input class='time4' value="{{title2}}" bindinput='downschoolinput3'></input>
+<input class='time4' placeholder="{{downschool3}}" bindinput='downschoolinput3'></input>
 </view>
 <!-- 提交时间按钮 -->
 <view class='button'>
@@ -40,8 +40,9 @@
       <view class="tr">
           <view class="th th1">序号</view>
           <view class="th th2">学生姓名</view>
-          <view class="th th3">上下学时间</view>
-          <view class="th th4">备注</view>
+          <view class="th th3">上学</view>
+          <view class="th th4">下学</view>
+          <view class="th th5">备注</view>
       </view>
      
       <view class="tr" wx:for="{{s}}" data-item="item" wx:for-index="idx">
@@ -49,7 +50,8 @@
           <view class="td td1"></view>
           <view class="td td2"></view>
           <view class="td td3">{{item.go}}</view>
-          <view class="td td4"></view>
+          <view class="td td4">{{item.back}}</view>
+          <view class="td td5"></view>
       
       </view>
       

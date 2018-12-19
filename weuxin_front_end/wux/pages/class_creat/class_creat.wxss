@@ -69,8 +69,8 @@
 }
 .textarea2 {
   margin-top: -50rpx;
+  border: 3rpx ridge #DDDDDD;
   margin-left: 370rpx;
-  border: 3rpx ridge #ddd;
   width: 300rpx;
   height: 75rpx;
   font-size: 50rpx;

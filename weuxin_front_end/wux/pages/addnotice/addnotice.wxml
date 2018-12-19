@@ -1,8 +1,8 @@
 <!--pages/addnotice/addnotice.wxml-->
 <view>
-  <textarea class="title">标题</textarea>
+  <textarea class="title" placeholder='标题' value='{{title}}'></textarea>
 </view>
 <view>
-  <textarea class="text">内容</textarea> 
+  <textarea class="text" placeholder='内容' value='{{content}}'></textarea> 
 </view>
 <button class="btn" size='mini'  form-type="submit"  bindtap='onclick'> 提交 </button>

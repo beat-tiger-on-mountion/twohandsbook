@@ -1,0 +1,45 @@
+.stuNum {
+  margin-top: 50rpx;
+}
+
+.num {
+  border: 1rpx #000 solid;
+  width: 40%;
+  height: 75rpx;
+  margin-left: 10%;
+}
+
+.confirmNum {
+  height: 85rpx;
+  width: 30%;
+  margin-top: -80rpx;
+  margin-left: 60%;
+  background-color: #00baad;
+}
+
+.students {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 30rpx;
+}
+
+.student {
+  border: 1rpx #000 solid;
+  width: 40%;
+  height: 60rpx;
+  float: left;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-bottom: 14rpx;
+}
+.confirmStu{
+  width: 80%;
+  margin-top: 20rpx;
+  background-color: #00baad
+}
+.hidden{
+  display: none
+}
+.show{
+  display: block
+}

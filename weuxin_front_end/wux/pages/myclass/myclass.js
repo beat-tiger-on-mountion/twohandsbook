@@ -1,4 +1,5 @@
 // pages/myclass/myclass.js
+var app=getApp()
 Page({
 
   /**
@@ -57,6 +58,8 @@ Page({
         //  classInt:'2'
          grade:this.data.grade,
          classInt:this.data.classInt,
+         schoolId:1,
+        //  schoolId: app.globalData.schoolId,
        },
        header:{
          //  'content-type':'application/json'

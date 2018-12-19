@@ -1,0 +1,11 @@
+<view>
+  <view class='stuNum'>
+    <input type='number' class='num' placeholder='请输入学生个数' bindblur='num'>as</input>
+    <button class='confirmNum' bindtap='confirmNum'>确认</button>
+  </view>
+  <view class='students'>
+    <input class='student' wx:for="{{stuNum}}" bindblur='stuName'></input>
+
+  </view>
+  <button class='confirmStu {{hidden}}' bindtap='confirmCommit'>确认提交</button>
+</view>

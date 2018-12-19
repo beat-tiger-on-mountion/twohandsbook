@@ -5,7 +5,6 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.hibernate.Query;
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
@@ -32,5 +31,12 @@ public class ActivityDaoImpl extends BaseDao<Activity>{
 			Query query = this.sessionFactory.getCurrentSession().createQuery("from " + entityClass);
 			return query.list();
 		}
-     
+     @Override
+	    public List<Activity> find(String hql, Object[] params) throws Exception {
+	          return super.find(hql, params);
+	    }
+     @Override
+     public void save(Activity entity) throws Exception {
+ 		super.save(entity);
+ 	}
 }

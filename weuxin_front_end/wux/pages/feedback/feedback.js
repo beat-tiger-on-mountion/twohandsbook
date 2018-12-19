@@ -1,3 +1,6 @@
+import {
+  $wuxToast
+} from '../../dist/index'
 const app = getApp()
 
 Page({
@@ -40,7 +43,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function(e) {
-   
+
   },
 
   /**
@@ -93,32 +96,33 @@ Page({
   sub: function(e) {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/weixin/backtous',
+      url: 'http://localhost:8080/weixin/mybacktous',
       data: {
-        userName: app.globalData.userInfo.nickName,
+        userName: app.globalData.openId,
         suggest: that.data.suggest,
       },
       header: {
-        'content-type': 'application/x-www-form-urlencodedn',
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
+      method: "post",
       success(res) {
         var result = res.data;
         if (result == true) {
-
           console.log(that.data.suggest)
-          wx.switchTab({
-              url: '../main/main',
-            }),
-            wx.showToast({
-              title: '提交成功',
-              icon: 'succes',
-              duration: 1000,
-              mask: true
-            })
+          $wuxToast().show({
+            type: 'success',
+            duration: 1500,
+            color: '#fff',
+            text: '提交成功',
+            success: function() {
+              wx.switchTab({
+                url: '../main/main',
+              })
+            }
+          })
         }
       }
     })
   },
-
 
 })

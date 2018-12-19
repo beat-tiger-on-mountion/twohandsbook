@@ -11,24 +11,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.weixin.backtous.services.BacktousServiceImpl;
-import com.weixin.entity.User;
 
-  
-    /**  
-    * @ClassName: BacktousControllerImpl  
-    * @Description: 保存用户反馈意见  
-    * @author Energy_Filed  
-    * @date 2018年12月5日  
-    *    
-    */  
-    
 @Controller
 public class BacktousControllerImpl {
-
 	@Resource
 	private BacktousServiceImpl backtousServiceImpl;
-	
-	
+
 	/**
 	 * 
 	    * @Title: saveSuggest  
@@ -40,10 +28,11 @@ public class BacktousControllerImpl {
 	    * @return void	
 	    * @throws
 	 */
-	@RequestMapping(value="backtous")
+	@RequestMapping(value = "mybacktous")
 	public void saveSuggest(HttpServletRequest request, HttpServletResponse response, String userName, String suggest) {
-		String s = this.backtousServiceImpl.saveSuggest(userName, suggest);
+
 		response.setCharacterEncoding("utf-8");
+		String s = this.backtousServiceImpl.saveS(userName, suggest);
 		try {
 			PrintWriter writer = response.getWriter();
 			writer.write(s);
@@ -51,7 +40,5 @@ public class BacktousControllerImpl {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
 	}
 }
