@@ -20,37 +20,39 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    console.log("avata",app.globalData.avatarUrl)
     var that = this;
     that.setData({
-      userName:app.globalData.userName
+      userName: app.globalData.userName,
+      head: app.globalData.avatarUrl
     })
     wx.getUserInfo({
       success: function(res) {
+        console.log("asd")
         that.setData({
-          head: res.userInfo.avatarUrl,
+          
         })
       }
     })
-
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function (options) {
+  onReady: function(options) {
     var that = this
-   console.log("nowStatus",app.globalData.nowStatus)
+    console.log("nowStatus", app.globalData.nowStatus)
 
-   if(app.globalData.status == 1005){
-     that.setData({
-       s:"teacher"
-     })
-   }
-   if(app.globalData.status == 1008){
-     that.setData({
-       s:"parent"
-     })
-   }
+    if (app.globalData.status == 1005) {
+      that.setData({
+        s: "teacher"
+      })
+    }
+    if (app.globalData.status == 1008) {
+      that.setData({
+        s: "parent"
+      })
+    }
     if (app.globalData.nowStatus == 1005) {
       $wuxToast().show({
         type: 'text',
@@ -75,7 +77,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    var that = this;
+    that.setData({
+      userName: app.globalData.userName
+    })
+    wx.getUserInfo({
+      success: function(res) {
+        console.log("asd")
+        that.setData({
+          head: res.userInfo.avatarUrl,
+        })
+      }
+    })
   },
 
   /**
@@ -195,9 +208,9 @@ Page({
     })
   },
   //增加评论
-  addComm: function() {
+  addstudent: function() {
     wx.navigateTo({
-      url: '../common/common',
+      url: '../addstudent/addstudent',
     })
   },
   //上下学时间

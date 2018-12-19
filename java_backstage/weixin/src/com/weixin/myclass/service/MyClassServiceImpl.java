@@ -1,5 +1,8 @@
 package com.weixin.myclass.service;
 
+import java.util.List;
+import java.util.Map;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -17,6 +20,7 @@ public class MyClassServiceImpl {
 	private MyClassDaoImpl myClassDaoImpl;
 	@Resource
 	private SchoolsServicesImpl schoolsServicesImpl;
+
 	/**
 	* @return 
 	 * 
@@ -26,8 +30,7 @@ public class MyClassServiceImpl {
 	    * @Return void
 	    * @throws
 	 */
-	public void save(int grade, int classint,String province, String city,
-			String county, String name1) {
+	public void save(int grade, int classint, String province, String city, String county, String name1) {
 		int s = this.schoolsServicesImpl.findOne(province, city, county, name1);
 		try {
 			Classes c = new Classes();
@@ -52,26 +55,54 @@ public class MyClassServiceImpl {
 	    * @Return Classes
 	    * @throws
 	 */
-	public Classes findOne(int grade, int classInt,int schoolId) {
+	public int findOne(int grade, int classInt, int schoolId) {
+
 		String hql = "from Classes cl where cl.grade=? and cl.classInt=? ";
 		Object[] ob = new Object[2];
 		ob[0] = grade;
 		ob[1] = classInt;
-		Classes c = new Classes();
-		Schools s = new Schools();
+		Classes c1 = new Classes();
 		try {
-			Classes c2 = this.myClassDaoImpl.findOne(hql, ob);
-			c.setSchool(s);
-			c.setClassId(c2.getClassId());
-			c.setGrade(c2.getGrade());
-			c.setClassInt(c2.getClassInt());
-			return c;
+			List<Classes> c2 = this.myClassDaoImpl.find(hql, ob);
+			for (Classes c : c2) {
+				if (c.getSchool().getSchoolId() == schoolId) {
+					c1.setClassId(c.getClassId());
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return 0;
+		}
+		return c1.getClassId();
+	}
+    /**
+     * 
+        * @Title: findClass  
+        * @Description: 根据ID查询班级  
+        * @Param@param classId
+        * @Param@return
+        * @Return Classes
+        * @throws
+     */
+	public Classes findClass(int classId) {
+		String hql = "from Classes where classId=?";
+		Object[] ob = new Object[1];
+		ob[0] = classId;
+		try {
+			return this.myClassDaoImpl.findOne(hql, ob);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;
 		}
-
 	}
+    /**
+     * 
+        * @Title: update  
+        * @Description:修改班级属性值
+        * @Param@param c
+        * @Return void
+        * @throws
+     */
 	public void update(Classes c) {
 		try {
 			this.myClassDaoImpl.update(c);

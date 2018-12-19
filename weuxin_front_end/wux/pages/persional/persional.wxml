@@ -41,8 +41,8 @@
           <image src='/images/seltab1.png'  class="image1"></image>修改值日</wux-button>
         <wux-button block outline type="dark" bindtap='modCurr'>
           <image src='/images/seltab1.png' class="image1" ></image>修改课程表</wux-button>
-        <wux-button block outline type="dark" bindtap='addComm'>
-          <image src='/images/seltab1.png'  class="image1"></image>增加评论</wux-button>
+        <wux-button block outline type="dark" bindtap='addstudent'>
+          <image src='/images/seltab1.png'  class="image1"></image>添加学生</wux-button>
         <wux-button block outline type="dark"  bindtap='modSchool'>
           <image src='/images/seltab1.png' class="image1"></image>上下学时间</wux-button>
       </view>

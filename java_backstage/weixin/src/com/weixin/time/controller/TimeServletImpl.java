@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.weixin.entity.Classes;
 import com.weixin.entity.Schooltime;
 import com.weixin.entity.Time;
 import com.weixin.schooltime.service.SchoolTimeServiceImpl;
@@ -42,23 +43,32 @@ public class TimeServletImpl {
         * @throws
      */
     @RequestMapping("/time")
-    public void save(HttpServletRequest request,HttpServletResponse response,String upschool1,String upschool2,String upschool3,String downschool1,String downschool2,String downschool3) {
+    public void save(HttpServletRequest request,HttpServletResponse response,String upschool1,String upschool2,String upschool3,String downschool1,String downschool2,String downschool3,int classId) {
    	 response.setCharacterEncoding("utf-8");
      response.setContentType("application/json");
        
      Time st=new Time();        
    	 st.setGo(upschool1);
    	 st.setBack(downschool1);
+   	 Classes a=new Classes();
+   	 st.setClasss(a);
+   	 st.getClasss().setClassId(classId);
    	 timeServiceImpl.save(st);
    	 
      Time st2=new Time();    	 
    	 st2.setGo(upschool2);
    	 st2.setBack(downschool2);
+   	 Classes a1=new Classes();
+  	 st.setClasss(a1);
+  	 st.getClasss().setClassId(classId);
    	 timeServiceImpl.save(st2);
    	 
    	 Time st3=new Time();
    	 st3.setGo(upschool3);
    	 st3.setBack(downschool3);
+   	 Classes a2=new Classes();
+  	 st.setClasss(a2);
+  	 st.getClasss().setClassId(classId);
    	 timeServiceImpl.save(st3);
     }
     
@@ -74,11 +84,11 @@ public class TimeServletImpl {
         * @throws
      */
     @RequestMapping("/timecheck")
-    public String find(HttpServletRequest request,HttpServletResponse response,String a){
+    public String find(HttpServletRequest request,HttpServletResponse response,String a,int classId){
     	response.setCharacterEncoding("utf-8");
        response.setContentType("application/json");
           
-    	List<Time> list=this.timeServiceImpl.list();  
+    	List<Time> list=this.timeServiceImpl.list(classId);  
        JSONArray j1=JSONArray.fromObject(list);
        String j12String = j1.toString();
        System.out.println(j12String);

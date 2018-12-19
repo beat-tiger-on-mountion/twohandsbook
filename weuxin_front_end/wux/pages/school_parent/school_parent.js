@@ -39,7 +39,8 @@ Page({
        url: 'http://localhost:8080/weixin/timecheck',
        method:'GET',
        data : {
-          a:'1'
+          a:'1',
+          classId:1,
        },
        header: {
          //  'content-type':'application/json'
@@ -108,7 +109,7 @@ Page({
       data: {
         upschool: this.data.title1,
         downschool: this.data.title2,
-        classId: '1',
+        classId: 1,
         // classId: app.globalData.classId,
         // schoolId: app.globalData.schoolId
       },
