@@ -78,6 +78,7 @@ Page({
    */
   onShow: function() {
     var that = this;
+    console.log("username",app.globalData.userName)
     that.setData({
       userName: app.globalData.userName
     })

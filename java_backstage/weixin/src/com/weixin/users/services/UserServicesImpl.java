@@ -8,20 +8,24 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.weixin.entity.Classes;
 import com.weixin.entity.Schools;
+import com.weixin.entity.Students;
 import com.weixin.entity.User;
 import com.weixin.myclass.service.MyClassServiceImpl;
+import com.weixin.students.service.StudentsServiceImpl;
 import com.weixin.users.dao.UserDaoImpl;
 
 import net.sf.json.JSONObject;
 
 @Service
-@Transactional(readOnly=false)
+@Transactional(readOnly = false)
 public class UserServicesImpl {
 
 	@Resource
 	private UserDaoImpl userDaoImpl;
 	@Resource
 	private MyClassServiceImpl myClassServiceImpl;
+	@Resource
+	private StudentsServiceImpl studentsServiceImpl;
 
 	/**
 	 * 
@@ -149,21 +153,85 @@ public class UserServicesImpl {
 
 	}
 
+	/**
+	 * 
+	    * @Title: findOne  
+	    * @Description: 根据openID查询用户  
+	    * @param @param wxName
+	    * @param @return
+	    * @return User
+	    * @throws
+	 */
 	public User findOne(String wxName) {
+		System.out.println("wxName" + wxName);
 		String hql = "from User where wxName=?";
 		Object[] obj = new Object[1];
 		obj[0] = wxName;
-		User user = new User();
 		User u;
 		Schools s = new Schools();
 		Classes c = new Classes();
 		try {
 			u = this.userDaoImpl.findOne(hql, obj);
-			System.out.println("u.id"+u.getId());
-			user.setId(u.getId());
+			System.out.println("u.id" + u.getId());
 			u.setSchool(s);
 			u.setClasss(c);
 			return u;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	/**
+	 * 
+	    * @Title: teacherUpdate  
+	    * @Description: 更新教师信息，也就一个名字  
+	    * @param @param wxName
+	    * @param @param userName
+	    * @param @return
+	    * @return String
+	    * @throws
+	 */
+	public String teacherUpdate(String wxName, String userName) {
+		String hql = "from User where wxName=?";
+		Object[] obj = new Object[1];
+		obj[0] = wxName;
+		try {
+			User u = this.userDaoImpl.findOne(hql, obj);
+			u.setName(userName);
+			this.userDaoImpl.update(u);
+			User user = new User();
+			user.setName(u.getName());
+			JSONObject jb = new JSONObject().fromObject(user);
+			return jb.toString();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	/**
+	 * 
+	    * @Title: parentUpdate  
+	    * @Description: 更新家长信息，也 也是就是一个用户名  
+	    * @param @param wxName
+	    * @param @param userName
+	    * @param @param stuName
+	    * @param @return
+	    * @return String
+	    * @throws
+	 */
+	public String parentUpdate(String wxName, String userName, String stuName) {
+		Students s = this.studentsServiceImpl.find(stuName);
+		String hql = "from User where wxName=?";
+		Object[] obj = new Object[1];
+		obj[0] = wxName;
+		try {
+			User u = this.userDaoImpl.findOne(hql, obj);
+			u.setName(userName);
+			u.setStudentId(s.getId());
+			this.userDaoImpl.update(u);
+			return "true";
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;

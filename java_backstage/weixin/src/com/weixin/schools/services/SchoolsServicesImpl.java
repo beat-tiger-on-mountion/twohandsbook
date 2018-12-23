@@ -47,16 +47,20 @@ public class SchoolsServicesImpl {
 	    * @throws
 	 */
 	public int findOne(String province, String city, String county, String name1) {
-		String hql = "from Schools cl where cl.province=? and cl.city=? and cl.county=? and cl.schoolName=?";
+		System.out.println(city);
+		String hql = "from Schools where province=? and city=? and county=? and schoolName=?";
 		Object[] ob = new Object[4];
 		ob[0] = province;
 		ob[1] = city;
 		ob[2] = county;
 		ob[3] = name1;
-		Schools s1 = new Schools();
 		try {
 			Schools s2 = this.schoolsDaoImpl.findOne(hql, ob);
-			return s2.getSchoolId();
+			if(s2!=null) {
+				return s2.getSchoolId();
+			}else {
+				return 0;
+			}		
 		} catch (Exception e) {
 			e.printStackTrace();
 			return 0;

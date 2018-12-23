@@ -1,5 +1,4 @@
 // pages/myclass/myclass.js
-var app=getApp()
 Page({
 
   /**
@@ -23,8 +22,7 @@ Page({
       { "type1": "张三三", "type2": "李四四", "type3": "王五五", "type4": "赵六六" },
       { "type1": "李四四", "type2": "张三三", "type3": "赵六六", "type4": "王五五" },
       { "type1": "张三三", "type2": "李四四", "type3": "王五五", "type4": "赵六六" },
-      { "type1": "李四四", "type2": "张三三", "type3": "赵六六", "type4": "王五五" },
-   
+      { "type1": "李四四", "type2": "张三三", "type3": "赵六六", "type4": "王五五" }, 
     ],
     grade: '3', 
     classInt:'2',
@@ -58,8 +56,6 @@ Page({
         //  classInt:'2'
          grade:this.data.grade,
          classInt:this.data.classInt,
-         schoolId:1,
-        //  schoolId: app.globalData.schoolId,
        },
        header:{
          //  'content-type':'application/json'

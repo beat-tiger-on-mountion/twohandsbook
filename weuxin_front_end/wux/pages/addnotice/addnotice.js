@@ -5,8 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
-    tit: ""
+    tit:null,
   },
 
   /**
@@ -17,8 +16,8 @@ Page({
     wx.request({
       url: 'http://localhost:8080/weixin_back/notice', //仅为示例，并非真实的接口地址
       data: {
-        nTime: { title },
-        nBody: { content }
+       nTime: {title},
+       nBody: {content}
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded' // 默认值
@@ -56,9 +55,9 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow:function (){
 
-  }
+}
   ,
 
   /**
@@ -96,7 +95,7 @@ Page({
 
   },
   //跳转
-  onclick: function () {
+  onclick:function(){
     wx.navigateBack({
       url: '../notice_teacher/notice_teacher',
     })

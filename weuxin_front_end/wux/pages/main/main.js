@@ -1,3 +1,4 @@
+var app = getApp()
 // pages/main/main.js
 var app=getApp()
 Page({
@@ -33,7 +34,7 @@ Page({
       url: 'http://localhost:8080/weixin/news',
       method: "GET",
       data: {
-      
+        a: '1'
       },
       header: {
         //  'content-type':'application/json'
@@ -91,14 +92,8 @@ Page({
   },
   // 新闻跳转
   onclick: function(res) {
-    
-      app.globalData.news = res.currentTarget.dataset.news,
-     
-      console.log(res.currentTarget.dataset.news.nTitle)
-     
-      wx.navigateTo({
-      url: '../News_detail_page/News_detail_page',
-      })
+    app.globalData.newsid=res.currentTarget.dataset.name,
+      console.log(app.globalData.newsid)
 
   },
   // 通知跳转

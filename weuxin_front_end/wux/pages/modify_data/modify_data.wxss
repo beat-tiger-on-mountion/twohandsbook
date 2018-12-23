@@ -32,3 +32,9 @@
   width: 400rpx;
   height: 50rpx;
 }
+.hidden{
+  display: none
+}
+.show{
+  display: block
+}

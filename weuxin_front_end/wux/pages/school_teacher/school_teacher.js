@@ -43,7 +43,6 @@ Page({
       method: 'GET',
       data: {
         a:'1',
-        classId:1,
         
       },
       header: {

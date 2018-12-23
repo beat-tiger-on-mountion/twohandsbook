@@ -1,5 +1,4 @@
 // pages/activity_newbuilt/activity_newbuilt.js
-var app=getApp()
 Page({
 
   /**
@@ -27,25 +26,42 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
+  onShow: function () {
+     var that=this
+     wx.request({
+       url: '',
+       method:'GET',
+       data:{
+         title:this.data.title,
+         text:this.data.tx
+       },
+       header: {
+         'content-type': 'application/x-www-form-urlencoded'
+       },
+       success: function (res) {
+         var a = res.data
+         that.setData({
+           s: a
+         })
+         console.log(res.data)
+       }
+     })
+  },
   // 标题获取
-  titlename: function (e) {
-    this.setData({
-      title: e.detail.value
+  titlename:function(e){
+    var that=this
+    that.setData({
+      title:e.data.title
     })
-    console.log(this.data.title)
   },
 
   // 内容获取
   text: function (e) {
-    this.setData({
-      tx: e.detail.value
+    var that = this
+    that.setData({
+      tx: e.data.tx
     })
-    console.log(this.data.tx)
   },
-  onShow: function () {
-     
-  },
- 
   /**
    * 生命周期函数--监听页面隐藏
    */
@@ -81,32 +97,10 @@ Page({
   onShareAppMessage: function () {
 
   },
-
-  //点击添加数据库
   activitylist:function(){
-    var that = this
-    wx.request({
-      url: 'http://localhost:8080/weixin/addactivity',
-      method: 'GET',
-      data: {
-        //  title:this.data.title,
-        text: this.data.tx,
-         classId:1,
-      },
-      header: {
-        'content-type': 'application/x-www-form-urlencoded'
-      },
-      success: function (res) {
-        var a = res.data
-        that.setData({
-          s: a
-        })
-        console.log(res.data)
-      }
+    wx.redirectTo({
+      url: '../',
+      // 这的跳转路径还没有写
     })
-  //   wx.redirectTo({
-  //     url: '../',
-  //     // 这的跳转路径还没有写
-  //   })
   },
 })

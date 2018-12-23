@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
     <wb-module deploy-name="weixin">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
@@ -7,13 +6,3 @@
         <property name="java-output-path" value="/weixin/build/classes"/>
     </wb-module>
 </project-modules>
-=======
-<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="weixin">
-        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="weixin"/>
-        <property name="java-output-path" value="/weixin/build/classes"/>
-    </wb-module>
-</project-modules>
->>>>>>> ebca6093170cf7a979699d531c05b06f13b493b3

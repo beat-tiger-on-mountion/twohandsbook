@@ -14,11 +14,12 @@
   <view class="itemView">
      <form bindsubmit="bindFormSubmit">
         <view class='textarea'>
-     <textarea bindblur="bindTextAreaBlur" placeholder="分享新鲜事"  focus="true" >{{ceshis}}</textarea>
+     <textarea bindblur="bindTextAreaBlur" placeholder="分享新鲜事"  focus="false" ></textarea>
         </view>
         <view>
      <button class="btn" size='mini'  form-type="submit"  bindtap='onclick'> 提交 </button>
         </view>
      </form>
-     
+     <!--读数据-->
+     <view>{{ceshis}}</view>
   </view>

@@ -36,6 +36,7 @@ public class UserControllerImpl {
 	public void checkUserAgain(HttpServletRequest request, HttpServletResponse response, String wxName, String status) {
 		response.setCharacterEncoding("utf-8");
 		String s = this.userServicesImpl.findOneTeacher(wxName, status);
+		System.out.println();
 		try {
 			PrintWriter writer = response.getWriter();
 			writer.write(s);
@@ -43,6 +44,7 @@ public class UserControllerImpl {
 			e.printStackTrace();
 		}
 	}
+
 	/**
 	 * 
 	    * @Title: checkUser  
@@ -91,4 +93,59 @@ public class UserControllerImpl {
 		}
 
 	}
+
+	/**
+	 * 
+	    * @Title: teacherUpdate  
+	    * @Description: 更新教师信息
+	    * @param @param request
+	    * @param @param response
+	    * @param @param wxName
+	    * @param @param userName
+	    * @return void
+	    * @throws
+	 */
+	@RequestMapping(value = "teacherUpdate")
+	@Transactional(readOnly = false)
+	public void teacherUpdate(HttpServletRequest request, HttpServletResponse response, String wxName,
+			String userName) {
+		response.setCharacterEncoding("utf-8");
+		String res = this.userServicesImpl.teacherUpdate(wxName, userName);
+		try {
+			PrintWriter writer = response.getWriter();
+			writer.write(res);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	/**
+	 * 
+	    * @Title: parentUpdate  
+	    * @Description: 更新家长信息  
+	    * @param @param request
+	    * @param @param response
+	    * @param @param wxName
+	    * @param @param userName
+	    * @param @param stuName
+	    * @return void
+	    * @throws
+	 */
+	@RequestMapping(value = "parentUpdate")
+	@Transactional(readOnly = false)
+	public void parentUpdate(HttpServletRequest request, HttpServletResponse response, String wxName, String userName,
+			String stuName) {
+		response.setCharacterEncoding("utf-8");
+
+		String res = this.userServicesImpl.parentUpdate(wxName, userName, stuName);
+		try {
+			PrintWriter writer = response.getWriter();
+			writer.write(res);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
 }

@@ -32,26 +32,30 @@ public class TotalServices {
 	private MyClassServiceImpl myClassServiceImpl;
 	@Resource
 	private MyClassDaoImpl myClassDaoImpl;
-    /**
-     * 
-        * @Title: total  
-        * @Description:将与班级相关联的数据保存在相应的数据库中  
-        * @Param@param wxName
-        * @Param@param grade
-        * @Param@param classint
-        * @Param@param province
-        * @Param@param city
-        * @Param@param county
-        * @Param@param name1
-        * @Param@return
-        * @Return String
-        * @throws
-     */
+
+	/**
+	 * 
+	    * @Title: total  
+	    * @Description: 新建班级，保存学校信息，班级信息，更新用户信息  
+	    * @param @param wxName
+	    * @param @param grade
+	    * @param @param classint
+	    * @param @param province
+	    * @param @param city
+	    * @param @param county
+	    * @param @param name1
+	    * @param @return
+	    * @return String
+	    * @throws
+	 */
 	public String total(String wxName, int grade, int classint, String province, String city, String county,
 			String name1) {
+		
 		int s = this.schoolsServicesImpl.findOne(province, city, county, name1);
+		System.out.println(s);
 		if (s == 0) {
 			this.schoolsServicesImpl.save(province, city, county, name1);
+			s = this.schoolsServicesImpl.findOne(province, city, county, name1);
 		}
 		this.myClassServiceImpl.save(grade, classint, province, city, county, name1);
 		int classId = this.myClassServiceImpl.findOne(grade, classint, s);
@@ -63,7 +67,6 @@ public class TotalServices {
 		try {
 			this.userDaoImpl.update(u);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		User user = new User();

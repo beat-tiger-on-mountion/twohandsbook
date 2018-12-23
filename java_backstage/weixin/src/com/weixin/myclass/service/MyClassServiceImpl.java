@@ -1,8 +1,6 @@
 package com.weixin.myclass.service;
 
 import java.util.List;
-import java.util.Map;
-
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -75,39 +73,43 @@ public class MyClassServiceImpl {
 		}
 		return c1.getClassId();
 	}
-    /**
-     * 
-        * @Title: findClass  
-        * @Description: 根据ID查询班级  
-        * @Param@param classId
-        * @Param@return
-        * @Return Classes
-        * @throws
-     */
+
+	/**
+	 * 
+	    * @Title: findClass  
+	    * @Description: 根据班级ID查询班级
+	    * @param @param classId
+	    * @param @return
+	    * @return Classes
+	    * @throws
+	 */
 	public Classes findClass(int classId) {
 		String hql = "from Classes where classId=?";
 		Object[] ob = new Object[1];
 		ob[0] = classId;
+		Schools s = new Schools();
 		try {
-			return this.myClassDaoImpl.findOne(hql, ob);
+			 Classes c = this.myClassDaoImpl.findOne(hql, ob);
+			 c.setSchool(s);
+			 return c;
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;
 		}
 	}
-    /**
-     * 
-        * @Title: update  
-        * @Description:修改班级属性值
-        * @Param@param c
-        * @Return void
-        * @throws
-     */
+
+	/**
+	 * 
+	    * @Title: update  
+	    * @Description: 更新班级信息 
+	    * @param @param c
+	    * @return void
+	    * @throws
+	 */
 	public void update(Classes c) {
 		try {
 			this.myClassDaoImpl.update(c);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

@@ -8,7 +8,6 @@ import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
-
 import com.weixin.entity.Time;
 import com.weixin.util.BaseDao;
 @Repository
@@ -39,10 +38,6 @@ public class TimeDaoImpl extends BaseDao<Time>{
 	        * @throws Exception  
 	        * @see com.weixin.util.BaseDao#findAll()
 	     */
-	    @Override
-	    public List<Time> find(String hql, Object[] params) throws Exception {
-	          return super.find(hql, params);
-	    }
 	    @Override
 		 public List<Time> findAll() throws Exception {
 				Query query = this.sessionFactory.getCurrentSession().createQuery("from " + entityClass);

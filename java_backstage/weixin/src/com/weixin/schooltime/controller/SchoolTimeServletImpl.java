@@ -42,15 +42,12 @@ public class SchoolTimeServletImpl {
          * @throws
       */
      @RequestMapping("/schooltime")
-     public void save(HttpServletRequest request,HttpServletResponse response,String upschool,String downschool,int classId) {
+     public void save(HttpServletRequest request,HttpServletResponse response,String upschool,String downschool,String classId) {
     	 response.setCharacterEncoding("utf-8");
          response.setContentType("application/json");
          Schooltime st=new Schooltime();
          System.out.println(classId);
-//         int s=Integer.parseInt(classId);
-         Classes a=new Classes();
-         st.setClasss(a);
-         st.getClasss().setClassId(classId);
+         int s=Integer.parseInt(classId);
     	 st.setGo(upschool);
     	 st.setBack(downschool);
     	 
@@ -70,11 +67,11 @@ public class SchoolTimeServletImpl {
          * @throws
       */
      @RequestMapping("/schooltimecheck")
-     public String find(HttpServletRequest request,HttpServletResponse response,String a,int classId){
+     public String find(HttpServletRequest request,HttpServletResponse response,String a){
      	response.setCharacterEncoding("utf-8");
         response.setContentType("application/json");
            
-     	List<Schooltime> list=this.schoolTimeServiceImpl.list(classId);  
+     	List<Schooltime> list=this.schoolTimeServiceImpl.list();  
      	
         JSONArray j1=JSONArray.fromObject(list);
         String j12String = j1.toString();

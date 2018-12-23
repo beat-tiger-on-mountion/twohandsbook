@@ -1,16 +1,16 @@
-<!--pages/administrator/administrator.wxml-->
-<wux-select id="wux-select1" />
-<view>
-  <text class="title">管理员页面</text>
-</view>
-<!--选择老师-->
-<view class="teacher">
-   <text class="text-content">选择老师</text>
-</view>
-<view class='teacherselect'>
-   <wux-cell title="" placeohld="" extra="{{title1}}" bind:click="onclick" ></wux-cell>
-</view>
-<button class="btn" size='mini' form-type="submit"  bindtap='onclick1'> 提交 </button>
+<wux-toast id="wux-toast" />
+<view class="page">
 
-
-
+  <view class="page__bd">
+    <form bindsubmit="formSubmit">
+      <wux-checkbox-group name="a" value="{{ value1 }}" title="请选择任课老师" bind:change="onChange1" data-ids="{{ids}}">
+        <block wx:for="{{teachers}}" wx:for-item="item">
+          <wux-checkbox color="calm" title="{{item[1]}}" value="{{item[0]}}" />
+        </block>
+      </wux-checkbox-group>
+      <button class="btn" size='mini' form-type="submit" formType="submit"> 提交 </button>
+    </form>
+  </view>
+  <view class="btn-area">
+  </view>
+</view>

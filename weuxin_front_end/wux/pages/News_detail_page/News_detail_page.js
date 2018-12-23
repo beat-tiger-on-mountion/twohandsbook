@@ -1,14 +1,11 @@
 // pages/News_detail_page/News_detail_page.js
-var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    n_title:"",
-    n_body:null,
-    n_time:""
+    s:""
   },
 
   /**
@@ -29,14 +26,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
-    this.setData({
-      n_title: app.globalData.news.nTitle,
-      n_body: app.globalData.news.nBody.split("  "),
-      n_time: app.globalData.news.nTime
-
-    })
-    console.log(this.data.n_body)
 
   },
 

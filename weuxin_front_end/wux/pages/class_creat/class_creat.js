@@ -1,11 +1,10 @@
 // pages/class_creat/class_creat.js
 var app = getApp()
+import { $wuxSelect } from '../../dist/index'
 import {
   $wuxToast
 } from '../../dist/index'
-import {
-  $wuxSelect
-} from '../../dist/index'
+
 Page({
 
   /**
@@ -91,43 +90,44 @@ Page({
   // 创建班级的点击事件
   qwe: function() {
     var that = this
-    wx.request({
-      url: 'http://localhost:8080/weixin/creatClass',
-      method: "GET",
-      data: {
-        wxName: app.globalData.openId,
-        province: that.data.text1,
-        city: that.data.text2,
-        county: that.data.text3,
-        name1: that.data.text4,
-        grade: this.data.title1,
-        classint: this.data.title2,
+    setTimeout(function() {
+      wx.request({
+        url: 'http://localhost:8080/weixin/creatClass',
+        method: "GET",
+        data: {
+          wxName: app.globalData.openId,
+          province: that.data.text1,
+          city: that.data.text2,
+          county: that.data.text3,
+          name1: that.data.text4,
+          grade: that.data.title1,
+          classint: that.data.title2,
 
-      },
-      header: {
-        'content-type': 'application/x-www-form-urlencoded'
-      },
-      success: function(res) {
-        var a = res.data
-        console.log(a)
-        app.globalData.schoolId = a.school.schoolId,
-          app.globalData.classId = a.classs.classId,
-          console.log("schoolId", app.globalData.schoolId),
-          console.log("classId", app.globalData.classId),
-          $wuxToast().show({
-            type: 'text',
-            duration: 1500,
-            color: '#fff',
-            text: '创建班级成功',
-            success: function() {
-              wx.switchTab({
-                url: '../persional/persional',
-              })
-            }
-          })
-      }
-    })
-
+        },
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        success: function(res) {
+          var a = res.data
+          console.log(a)
+          app.globalData.schoolId = a.school.schoolId,
+            app.globalData.classId = a.classs.classId,
+            console.log("schoolId", app.globalData.schoolId),
+            console.log("classId", app.globalData.classId),
+            $wuxToast().show({
+              type: 'text',
+              duration: 1500,
+              color: '#fff',
+              text: '创建班级成功',
+              success: function() {
+                wx.switchTab({
+                  url: '../persional/persional',
+                })
+              }
+            })
+        }
+      })
+    }, 300)
   },
   /**
    * 生命周期函数--监听页面加载
