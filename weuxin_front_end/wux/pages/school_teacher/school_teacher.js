@@ -10,13 +10,13 @@ Page({
     value2: '',
     title2: '5:00',
     s: '',
-    upschool1 :'7:00', 
-    upschool2: '8:00', 
-    upschool3: '8:30', 
-    downschool1:'4:00', 
-    downschool2: '5:00', 
-    downschool3: '5:30', 
-    
+    upschool1: '7:00',
+    upschool2: '8:00',
+    upschool3: '8:30',
+    downschool1: '4:00',
+    downschool2: '5:00',
+    downschool3: '5:30',
+
   },
 
   /**
@@ -42,8 +42,9 @@ Page({
       url: 'http://localhost:8080/weixin/schooltimecheck',
       method: 'GET',
       data: {
-        a:'1',
-       
+        a: '1',
+        classId: 1,
+        // classId: app.globalData.classId,
       },
       header: {
         //  'content-type':'application/json'
@@ -96,20 +97,19 @@ Page({
     console.log(this.data.downschool3)
   },
   // 提交上下学数据到后台
-  button:function(e){    
+  button: function (e) {
     var that = this
     wx.request({
       url: 'http://localhost:8080/weixin/time',
-      method: 'POST',
+      method: 'GET',
       data: {
         upschool1: this.data.upschool1,
         upschool2: this.data.upschool2,
         upschool3: this.data.upschool3,
-        downschool1:this.data.downschool1,
+        downschool1: this.data.downschool1,
         downschool2: this.data.downschool2,
         downschool3: this.data.downschool3,
-        // classId: app.globalData.classId,
-        classId: 1,
+        classId: app.globalData.classId,
       },
       header: {
         //  'content-type':'application/json'

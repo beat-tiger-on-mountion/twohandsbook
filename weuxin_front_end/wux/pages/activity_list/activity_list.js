@@ -1,4 +1,5 @@
 // pages/activity_list/activity_list.js
+var app=getApp()
 Page({
 
   /**
@@ -31,7 +32,9 @@ Page({
       url: 'http://localhost:8080/weixin/activity',
       method: "GET",
       data: {
-        a: '1'
+        a: '1',
+        classId: 1,
+        // classId: app.globalData.classId,
       },
       header: {
         //  'content-type':'application/json'

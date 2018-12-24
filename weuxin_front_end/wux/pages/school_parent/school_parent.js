@@ -7,13 +7,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-     s:'',
-     value1:'',
-     upschool:'8:00',
-     value2: '',
-     value3: '',
-     title1:'上学时间',
-     title2:'下学时间',
+    s: '',
+    value1: '',
+    upschool: '8:00',
+    value2: '',
+    value3: '',
+    title1: '上学时间',
+    title2: '下学时间',
   },
 
   /**
@@ -34,32 +34,33 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-     var that=this
-     wx.request({
-       url: 'http://localhost:8080/weixin/timecheck',
-       method:'GET',
-       data : {
-          a:'1'
-       },
-       header: {
-         //  'content-type':'application/json'
-         'content-type': 'application/x-www-form-urlencoded'
-       },
-       success:function(res){
-         var a=res.data
-         that.setData({
-           s: a
-         })
-         console.log(res.data)
-       }
-     })
+    var that = this
+    wx.request({
+      url: 'http://localhost:8080/weixin/timecheck',
+      method: 'GET',
+      data: {
+        a: '1',
+        classId: 1,
+      },
+      header: {
+        //  'content-type':'application/json'
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        var a = res.data
+        that.setData({
+          s: a
+        })
+        console.log(res.data)
+      }
+    })
   },
 
   onClick1() {
-    var that=this
-    
+    var that = this
+
     $wuxSelect('#wux-select1').open({
-      
+
       value: this.data.value1,
       options: [
         that.data.s[0].go,
@@ -108,7 +109,7 @@ Page({
       data: {
         upschool: this.data.title1,
         downschool: this.data.title2,
-        classId: '1',
+        classId: 1,
         // classId: app.globalData.classId,
         // schoolId: app.globalData.schoolId
       },
