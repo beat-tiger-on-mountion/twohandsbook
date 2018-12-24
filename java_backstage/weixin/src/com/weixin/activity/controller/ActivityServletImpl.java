@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.weixin.activity.service.ActivityServiceImpl;
 import com.weixin.entity.Activity;
+import com.weixin.entity.Classes;
 
 import net.sf.json.JSONArray;
 
@@ -38,12 +39,12 @@ public class ActivityServletImpl {
         * @throws
      */
     @RequestMapping("/activity")
-    public String find(HttpServletRequest request,HttpServletResponse response,String a){
+    public String find(HttpServletRequest request,HttpServletResponse response,String a,int classId){
     	response.setCharacterEncoding("utf-8");
         response.setContentType("application/json");
           
     	
-       List<Activity> list=this.activityServiceImpl.list(); 
+       List<Activity> list=this.activityServiceImpl.list(classId); 
     	
        JSONArray j1=JSONArray.fromObject(list);
        String j12String = j1.toString();
@@ -61,13 +62,17 @@ public class ActivityServletImpl {
     
     
     @RequestMapping("addactivity")
-    public void addactivity(HttpServletRequest request,HttpServletResponse response,String title,String text) {
+    public void addactivity(HttpServletRequest request,HttpServletResponse response,String title,String text,int classId) {
     	response.setCharacterEncoding("utf-8");
         response.setContentType("application/json");
         Activity et=new Activity();
+        Classes a=new Classes();
+        System.out.println(text);
         try {
-        
+//        	et.setTitle();
         	et.setaBody(text);
+        	et.setClasss(a);
+        	et.getClasss().setClassId(classId);
 			this.activityServiceImpl.addactivity(et);
 			
 		} catch (Exception e) {

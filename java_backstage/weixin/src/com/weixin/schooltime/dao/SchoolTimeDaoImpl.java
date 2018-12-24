@@ -8,6 +8,7 @@ import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
+
 import com.weixin.entity.Schooltime;
 import com.weixin.util.BaseDao;
 
@@ -42,4 +43,8 @@ public class SchoolTimeDaoImpl extends BaseDao<Schooltime>{
 			Query query = this.sessionFactory.getCurrentSession().createQuery("from " + entityClass);
 			return query.list();
 		}
+    @Override
+    public List<Schooltime> find(String hql, Object[] params) throws Exception {
+          return super.find(hql, params);
+    }
 }

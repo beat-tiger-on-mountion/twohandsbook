@@ -2,7 +2,7 @@ package com.weixin.time.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
+
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -11,11 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import com.weixin.entity.Classes;
-import com.weixin.entity.Schooltime;
 import com.weixin.entity.Time;
-import com.weixin.schooltime.service.SchoolTimeServiceImpl;
 import com.weixin.time.service.TimeServiceImpl;
 
 import net.sf.json.JSONArray;
@@ -47,28 +44,28 @@ public class TimeServletImpl {
    	 response.setCharacterEncoding("utf-8");
      response.setContentType("application/json");
        
-     Time st=new Time();
-     Classes a=new Classes();
-     st.setClasss(a);
-     st.getClasss().setClassId(classId);
+     Time st=new Time();        
    	 st.setGo(upschool1);
    	 st.setBack(downschool1);
+   	 Classes a=new Classes();
+   	 st.setClasss(a);
+   	 st.getClasss().setClassId(classId);
    	 timeServiceImpl.save(st);
    	 
-     Time st2=new Time(); 
-     Classes a1=new Classes();
-     st.setClasss(a1);
-     st.getClasss().setClassId(classId);
+     Time st2=new Time();    	 
    	 st2.setGo(upschool2);
    	 st2.setBack(downschool2);
+   	 Classes a1=new Classes();
+  	 st2.setClasss(a1);
+  	 st2.getClasss().setClassId(classId);
    	 timeServiceImpl.save(st2);
    	 
    	 Time st3=new Time();
-     Classes a2=new Classes();
-     st.setClasss(a2);
-     st.getClasss().setClassId(classId);
    	 st3.setGo(upschool3);
    	 st3.setBack(downschool3);
+   	 Classes a2=new Classes();
+  	 st3.setClasss(a2);
+  	 st3.getClasss().setClassId(classId);
    	 timeServiceImpl.save(st3);
     }
     
@@ -84,11 +81,11 @@ public class TimeServletImpl {
         * @throws
      */
     @RequestMapping("/timecheck")
-    public String find(HttpServletRequest request,HttpServletResponse response,String a){
+    public String find(HttpServletRequest request,HttpServletResponse response,String a,int classId){
     	response.setCharacterEncoding("utf-8");
        response.setContentType("application/json");
           
-    	List<Time> list=this.timeServiceImpl.list();  
+    	List<Time> list=this.timeServiceImpl.list(classId);  
        JSONArray j1=JSONArray.fromObject(list);
        String j12String = j1.toString();
        System.out.println(j12String);

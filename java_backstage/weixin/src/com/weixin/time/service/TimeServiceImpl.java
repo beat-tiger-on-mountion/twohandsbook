@@ -61,5 +61,36 @@ public class TimeServiceImpl {
  			}
  			
  	    }
+ 	 /**
+ 	  * 
+ 	     * @Title: list  
+ 	     * @Description: 根据班级ID查询时间表中数据
+ 	     * @Param@return
+ 	     * @Return List<Time>
+ 	     * @throws
+ 	  */
+ 	 public List<Time> list(int id){
+ 		 String hql="from Time where classId=?";
+		 Object[] ob = new Object[1];
+		 ob[0]=id;
+	    	try {
+	    		List<Time> list=this.timeDaoImpl.find(hql,ob);
+				List<Time> list2=new ArrayList<>();
+		     	for(Time a1:list) {
+		     		Time w=new Time();
+		     		w.setId(a1.getId());
+		     		w.setGo(a1.getGo());
+		     		w.setBack(a1.getBack());
+		     		
+		     		list2.add(w);
+		     	}
+		     	return list2;
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return null;
+			}
+			
+	    }
      
 }
