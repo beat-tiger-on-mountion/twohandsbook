@@ -43,7 +43,7 @@ Page({
       method: 'GET',
       data: {
         a:'1',
-        
+       
       },
       header: {
         //  'content-type':'application/json'
@@ -100,7 +100,7 @@ Page({
     var that = this
     wx.request({
       url: 'http://localhost:8080/weixin/time',
-      method: 'GET',
+      method: 'POST',
       data: {
         upschool1: this.data.upschool1,
         upschool2: this.data.upschool2,
@@ -108,7 +108,8 @@ Page({
         downschool1:this.data.downschool1,
         downschool2: this.data.downschool2,
         downschool3: this.data.downschool3,
-        classId: app.globalData.classId,
+        // classId: app.globalData.classId,
+        classId: 1,
       },
       header: {
         //  'content-type':'application/json'

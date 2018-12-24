@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.weixin.entity.Classes;
 import com.weixin.entity.Schooltime;
 import com.weixin.entity.Time;
 import com.weixin.schooltime.service.SchoolTimeServiceImpl;
@@ -42,21 +43,30 @@ public class TimeServletImpl {
         * @throws
      */
     @RequestMapping("/time")
-    public void save(HttpServletRequest request,HttpServletResponse response,String upschool1,String upschool2,String upschool3,String downschool1,String downschool2,String downschool3) {
+    public void save(HttpServletRequest request,HttpServletResponse response,String upschool1,String upschool2,String upschool3,String downschool1,String downschool2,String downschool3,int classId) {
    	 response.setCharacterEncoding("utf-8");
      response.setContentType("application/json");
        
-     Time st=new Time();        
+     Time st=new Time();
+     Classes a=new Classes();
+     st.setClasss(a);
+     st.getClasss().setClassId(classId);
    	 st.setGo(upschool1);
    	 st.setBack(downschool1);
    	 timeServiceImpl.save(st);
    	 
-     Time st2=new Time();    	 
+     Time st2=new Time(); 
+     Classes a1=new Classes();
+     st.setClasss(a1);
+     st.getClasss().setClassId(classId);
    	 st2.setGo(upschool2);
    	 st2.setBack(downschool2);
    	 timeServiceImpl.save(st2);
    	 
    	 Time st3=new Time();
+     Classes a2=new Classes();
+     st.setClasss(a2);
+     st.getClasss().setClassId(classId);
    	 st3.setGo(upschool3);
    	 st3.setBack(downschool3);
    	 timeServiceImpl.save(st3);

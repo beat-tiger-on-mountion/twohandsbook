@@ -30,7 +30,7 @@ import com.weixin.users.dao.UserDaoImpl;
 		    * @return String		无错误返回true 有错返回false
 		    * @throws
 		 */
-		public String saveComment(String userName, String cBody,Boolen anonymity) {
+		public String saveComment(String userName, String cBody,Boolean anonymity) {
 			String hql = "from User where name=?";
 			Object[] params = new Object[1];
 			params[0] = userName;
